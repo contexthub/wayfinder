@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CHAppDelegate.h"
+#import "CHBeaconMetadata.h"
 
 @interface CHWelcomeViewController : UIViewController
-
+@property (nonatomic, strong) CHBeaconMetadata *currentBeaconMetadata;
 @end

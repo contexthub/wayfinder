@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CHBeaconMetadata.h"
 
 @interface CHEnRouteViewController : UIViewController
 @property (nonatomic, strong) NSString *userAtBeaconName;
 @property (weak, nonatomic) IBOutlet UIImageView *mapView;
-
+@property (nonatomic, strong) CHBeaconMetadata *destinationBeaconMetadata;
+@property (nonatomic, strong) CHBeaconMetadata *currentBeaconMetadata;
 @end
