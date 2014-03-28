@@ -8,7 +8,7 @@
 
 #import "CHBeaconMetadataViewController.h"
 #import "CHEnRouteViewController.h"
-#import "CHBeaconMetadata.h"
+
 
 @interface CHBeaconMetadataViewController ()
 
