@@ -28,7 +28,8 @@
 
 - (void)loadCurrentBeaconMetadata {
     NSArray *beaconsMetadata = [[CHAppDelegate sharedAppDelegate]beaconsMetadata];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.name like B1"];
+    NSString *name = @"B1";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.name like %@", name];
     NSArray *filteredData = [beaconsMetadata filteredArrayUsingPredicate:predicate];
     self.currentBeaconMetadata = filteredData[0];
 }
