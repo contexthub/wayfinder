@@ -152,6 +152,28 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kr-vl-f6l">
                                 <rect key="frame" x="55" y="382" width="218" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-filled.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nyc-LQ-9GU">
+                                        <rect key="frame" x="6" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZAM-wp-MPx">
+                                        <rect key="frame" x="49" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-3P-7Vy">
+                                        <rect key="frame" x="95" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="bEk-cK-J8a">
+                                        <rect key="frame" x="177" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-qA-djc">
+                                        <rect key="frame" x="136" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -379,6 +401,8 @@
     <resources>
         <image name="Default.png" width="320" height="480"/>
         <image name="location-icon.png" width="50" height="50"/>
+        <image name="prize-marker-empty.png" width="28" height="28"/>
+        <image name="prize-marker-filled.png" width="28" height="28"/>
         <image name="start-tour-btn-selected.png" width="270" height="60"/>
         <image name="straight-left-arrow.png" width="114" height="116"/>
         <image name="tour-c1-logo-large.png" width="258" height="64"/>
