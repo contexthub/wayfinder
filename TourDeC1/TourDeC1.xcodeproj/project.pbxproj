@@ -25,6 +25,8 @@
 		59FC2BAD18E5D3D300887C2A /* CHEnRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */; };
 		59FC2BB018E5D59E00887C2A /* CHCancelTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BAF18E5D59E00887C2A /* CHCancelTourViewController.m */; };
 		59FC2BB318E5D76900887C2A /* CHOffRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BB218E5D76900887C2A /* CHOffRouteViewController.m */; };
+		59FC2BB718E5D81C00887C2A /* CHBeaconsRouteService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */; };
+		59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */; };
 		953C0F60E76F4CC4BC579AF3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7706A0A53154AE99775E372 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,11 @@
 		59FC2BAF18E5D59E00887C2A /* CHCancelTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCancelTourViewController.m; sourceTree = "<group>"; };
 		59FC2BB118E5D76900887C2A /* CHOffRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOffRouteViewController.h; sourceTree = "<group>"; };
 		59FC2BB218E5D76900887C2A /* CHOffRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOffRouteViewController.m; sourceTree = "<group>"; };
+		59FC2BB518E5D81C00887C2A /* CHBeaconsRouteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconsRouteService.h; sourceTree = "<group>"; };
+		59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconsRouteService.m; sourceTree = "<group>"; };
+		59FC2BB818E5D97800887C2A /* CGGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGlobals.h; sourceTree = "<group>"; };
+		59FC2BBA18E5DA9900887C2A /* CHBeaconMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconMetadata.h; sourceTree = "<group>"; };
+		59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconMetadata.m; sourceTree = "<group>"; };
 		E7706A0A53154AE99775E372 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,12 +137,15 @@
 		59FC2B7518E5CEF600887C2A /* TourDeC1 */ = {
 			isa = PBXGroup;
 			children = (
+				59FC2BB918E5DA7C00887C2A /* Models */,
+				59FC2BB418E5D7E200887C2A /* Service */,
 				59FC2BA418E5CFC800887C2A /* View Controllers */,
 				59FC2B7E18E5CEF600887C2A /* CHAppDelegate.h */,
 				59FC2B7F18E5CEF600887C2A /* CHAppDelegate.m */,
 				59FC2B8118E5CEF600887C2A /* Main.storyboard */,
 				59FC2B8718E5CEF600887C2A /* Images.xcassets */,
 				59FC2B7618E5CEF600887C2A /* Supporting Files */,
+				59FC2BB818E5D97800887C2A /* CGGlobals.h */,
 			);
 			path = TourDeC1;
 			sourceTree = "<group>";
@@ -184,6 +194,24 @@
 				59FC2BB218E5D76900887C2A /* CHOffRouteViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		59FC2BB418E5D7E200887C2A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2BB518E5D81C00887C2A /* CHBeaconsRouteService.h */,
+				59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		59FC2BB918E5DA7C00887C2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2BBA18E5DA9900887C2A /* CHBeaconMetadata.h */,
+				59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,12 +347,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */,
 				59FC2BB318E5D76900887C2A /* CHOffRouteViewController.m in Sources */,
 				59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */,
 				59FC2BB018E5D59E00887C2A /* CHCancelTourViewController.m in Sources */,
 				59FC2BAA18E5D20F00887C2A /* CHPointOfInterestViewController.m in Sources */,
 				59FC2B7C18E5CEF600887C2A /* main.m in Sources */,
 				59FC2B8018E5CEF600887C2A /* CHAppDelegate.m in Sources */,
+				59FC2BB718E5D81C00887C2A /* CHBeaconsRouteService.m in Sources */,
 				59FC2BAD18E5D3D300887C2A /* CHEnRouteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +484,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,6 +499,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
