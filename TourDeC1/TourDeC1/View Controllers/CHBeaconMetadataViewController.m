@@ -16,23 +16,24 @@
 
 @implementation CHBeaconMetadataViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self layoutMetada];
+}
+
+- (void)layoutMetada {
+    NSLog(@"layout info string, and setup buttons");
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   if([segue.identifier isEqualToString:@"showEnRoute"]){
     CHEnRouteViewController *routeViewController = segue.destinationViewController;
-    routeViewController.userAtBeaconName = self.currentBeaconMetadata.name;
+    routeViewController.currentBeaconMetadata = self.currentBeaconMetadata;
   }
 }
 

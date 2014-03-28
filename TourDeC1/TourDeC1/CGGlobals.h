@@ -18,4 +18,15 @@ static NSString * const BeaconB2 = @"B2";
 static NSString * const BeaconB3 = @"B3";
 
 static NSString * const BeaconUdid = @"E2C56DB5-DFFB-48D2-B060-8876223462A3";
+
+
+static NSString * const EstimoteUdid = @"B9407F30-F5F8-466E-AFF9-25556B57FE6D";
+
+static NSString * const Beacon2Major = @"13152";
+static NSString * const Beacon2Minor = @"41710";
+
+static NSString * const Beacon3Major = @"1";
+static NSString * const Beacon3Minor = @"1";
+
+
 #endif

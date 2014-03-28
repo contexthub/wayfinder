@@ -38,7 +38,7 @@
       if([eventName isEqualToString:CHBeaconInEventName]
           && [udid isEqualToString:BeaconUdid]
           && [beaconName isEqualToString:BeaconB1]) {
-        [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
+        [self performSegueWithIdentifier:@"welcomeStartTour" sender:nil];
       }
     }
 }
