@@ -29,19 +29,18 @@
 }
 
 - (void)handleEvent:(NSNotification *)notification {
-  NSDictionary *event = notification.userInfo;
-  NSString *eventName = [event valueForKeyPath:@"name"];
-  NSDictionary *beacon = [event valueForKeyPath:@"beacon"];
-  NSString *beaconName = [beacon valueForKeyPath:@"name"];
+  NSDictionary *event = notification.object;
+  NSString *eventName = [event valueForKeyPath:@"event.name"];
+  NSDictionary *beacon = [event valueForKeyPath:@"event.beacon"];
   NSString *udid = [beacon valueForKeyPath:@"udid"];
   NSString *state = [beacon valueForKeyPath:@"state"];
   
-  if([eventName isEqualToString:CHBeaconInEventName]
-     && [beaconName isEqualToString:BeaconB1]
-     && [udid isEqualToString:BeaconUdid]
-     && [state isEqualToString:@"immediate_state"]){
-    [self performSegueWithIdentifier:@"startedTour" sender:nil];
-  }
+    if([eventName isEqualToString:CHBeaconChangedEventName]) {
+         if ([udid isEqualToString:BeaconUdid]
+             && [state isEqualToString:@"immediate_state"]) {
+             [self performSegueWithIdentifier:@"startTour" sender:nil];
+         }
+    }
 }
 
 #pragma mark - Navigation
