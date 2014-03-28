@@ -14,27 +14,34 @@
 
 @implementation CHWelcomeViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [[NSNotificationCenter defaultCenter]addObserver:self
+                                          selector:@selector(handleEvent:)
+                                              name:CCHContextEventManagerDidPostEvent
+                                            object:nil];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)viewDidDisappear:(BOOL)animated {
+  [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)handleEvent:(NSNotification *)notification {
+  NSDictionary *event = notification.userInfo;
+  NSString *eventName = [event valueForKeyPath:@"name"];
+  NSDictionary *beacon = [event valueForKeyPath:@"beacon"];
+  NSString *beaconName = [beacon valueForKeyPath:@"name"];
+  NSString *udid = [beacon valueForKeyPath:@"udid"];
+  NSString *state = [beacon valueForKeyPath:@"state"];
+  
+  if([eventName isEqualToString:CHBeaconInEventName]
+     && [beaconName isEqualToString:BeaconB1]
+     && [udid isEqualToString:BeaconUdid]
+     && [state isEqualToString:@"immediate_state"]){
+    [self performSegueWithIdentifier:@"showStartTourScreen" sender:nil];
+  }
 }
-
 /*
 #pragma mark - Navigation
 

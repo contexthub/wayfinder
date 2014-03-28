@@ -23,7 +23,7 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 - (void)handleEvent:(NSNotification *)notification {
@@ -32,10 +32,12 @@
   NSDictionary *beacon = [event valueForKeyPath:@"beacon"];
   NSString *beaconName = [beacon valueForKeyPath:@"name"];
   NSString *udid = [beacon valueForKeyPath:@"udid"];
+  NSString *state = [beacon valueForKeyPath:@"state"];
   
   if([eventName isEqualToString:CHBeaconInEventName]
-     && [beaconName isEqualToString:BeaconB1]
-     && [udid isEqualToString:BeaconUdid]){
+      && [udid isEqualToString:BeaconUdid]
+      && [beaconName isEqualToString:BeaconB1]
+      && [state isEqualToString:@"near_state"]){
     [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
   }
 }
