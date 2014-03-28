@@ -1,5 +1,5 @@
 //
-//  CHViewController.h
+//  CHWelcomeViewController.h
 //  TourDeC1
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CHViewController : UIViewController
+@interface CHWelcomeViewController : UIViewController
 
 @end

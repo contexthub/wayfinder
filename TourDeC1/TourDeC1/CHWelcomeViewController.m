@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHViewController.h"
+#import "CHWelcomeViewController.h"
 
-@interface CHViewController ()
+@interface CHWelcomeViewController ()
 
 @end
 
-@implementation CHViewController
+@implementation CHWelcomeViewController
 
 - (void)viewDidLoad
 {
