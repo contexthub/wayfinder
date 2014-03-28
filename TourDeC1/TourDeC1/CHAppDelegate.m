@@ -14,6 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
+  
     [[CHBeaconsRouteService sharedService]getAllBeaconsMetadata:^(NSArray *beacons) {
       NSLog(@"%@",beacons);
     } andFailure:^(NSError *error) {

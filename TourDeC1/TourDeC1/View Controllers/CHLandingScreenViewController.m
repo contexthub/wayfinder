@@ -26,8 +26,18 @@
 
 }
 
-- (void)handleEvent:(NSDictionary *)event {
+- (void)handleEvent:(NSNotification *)notification {
+  NSDictionary *event = notification.userInfo;
+  NSString *eventName = [event valueForKeyPath:@"name"];
+  NSDictionary *beacon = [event valueForKeyPath:@"beacon"];
+  NSString *beaconName = [beacon valueForKeyPath:@"name"];
+  NSString *udid = [beacon valueForKeyPath:@"udid"];
   
+  if([eventName isEqualToString:CHBeaconInEventName]
+     && [beaconName isEqualToString:BeaconB1]
+     && [udid isEqualToString:BeaconUdid]){
+    [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
+  }
 }
 /*
 #pragma mark - Navigation
@@ -40,7 +50,7 @@
 }
 */
 
--
+
 
 
 

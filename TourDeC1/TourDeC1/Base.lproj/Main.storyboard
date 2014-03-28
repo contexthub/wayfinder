@@ -7,7 +7,9 @@
         <!--Navigation Controller-->
         <scene sceneID="xFC-h0-toj">
             <objects>
-                <navigationController definesPresentationContext="YES" id="TDv-Jz-mxE" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="TDv-Jz-mxE" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MWO-PY-RHu">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -19,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-2084" y="-197"/>
         </scene>
-        <!--View Controller-->
+        <!--Landing Screen View Controller-->
         <scene sceneID="2dY-0y-Pl6">
             <objects>
-                <viewController id="a89-8t-Jol" sceneMemberID="viewController">
+                <viewController id="a89-8t-Jol" customClass="CHLandingScreenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6e-Al-1s9"/>
                         <viewControllerLayoutGuide type="bottom" id="AWg-Lb-wFb"/>
@@ -44,7 +46,7 @@
                     <navigationItem key="navigationItem" id="Do2-Zf-LN1"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="push" id="tDE-42-3NN"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="showWelcomeScreen" id="tDE-42-3NN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLW-ii-mih" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -260,7 +262,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="k1k-5U-fsu"/>
-        <segue reference="bYa-K2-GHT"/>
+        <segue reference="RgO-ZE-jDB"/>
+        <segue reference="vfh-8D-Jhg"/>
     </inferredMetricsTieBreakers>
 </document>
