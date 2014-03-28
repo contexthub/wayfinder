@@ -13,6 +13,9 @@
 @interface CHBeaconMetadataViewController : UIViewController
 @property (nonatomic,strong) CHBeaconMetadata *currentBeaconMetadata;
 @property (weak, nonatomic) IBOutlet UIButton *nextActionButton;
+@property (weak, nonatomic) IBOutlet UILabel *currentBeaconDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextView *metadataTextView;
+
 - (IBAction)nextActionButtonTapped:(id)sender;
 
 @end

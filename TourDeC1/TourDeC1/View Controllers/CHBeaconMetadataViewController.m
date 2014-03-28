@@ -27,6 +27,18 @@
 
 - (void)layoutMetada {
     NSLog(@"layout info string, and setup buttons");
+  if([self.currentBeaconMetadata.name isEqualToString:BeaconB1]){
+    [self.currentBeaconDescriptionLabel setText:@"YOU'RE AT THE LOBBY"];
+    [self.metadataTextView setText:@"ChaiOne is an Enterprise Mobility Agency focused on creating innovative, beautiful mobile solutions that solve complex business problems of large enterprises, with a specific focus on the energy industry."];
+  }
+  else if([self.currentBeaconMetadata.name isEqualToString:BeaconB2]){
+    [self.currentBeaconDescriptionLabel setText:@"YOU'RE AT THE IDEA WALL"];
+    [self.metadataTextView setText:@"ChaiOne will open its headquartes in mid 2014. Take a look at the building’s renderings and explore some of our awesome ideas. We’re planning on having an awesome rooftop, a indoor pool, a zoo, and free beer 24/7."];
+  }
+  else if([self.currentBeaconMetadata.name isEqualToString:BeaconB3]) {
+    [self.currentBeaconDescriptionLabel setText:@"YOU'RE AT THE EXXON ROOM"];
+    [self.metadataTextView setText:@"Exxon is one of our biggest clients. Our design and dev team spend their time happily working on this project. By 2015 the Exxon team will have produced 200 iOS and Android apps. Make sure to download them all!"];
+  }
 }
 
 #pragma mark - Navigation
