@@ -152,6 +152,28 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kr-vl-f6l">
                                 <rect key="frame" x="55" y="382" width="218" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-filled.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nyc-LQ-9GU">
+                                        <rect key="frame" x="6" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZAM-wp-MPx">
+                                        <rect key="frame" x="49" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-3P-7Vy">
+                                        <rect key="frame" x="95" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="bEk-cK-J8a">
+                                        <rect key="frame" x="177" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-qA-djc">
+                                        <rect key="frame" x="136" y="8" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -179,12 +201,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tour-c1-logo-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="KDL-vN-95z">
-                                <rect key="frame" x="60" y="36" width="200" height="52"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tour-c1-logo-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="KDL-vN-95z">
+                                <rect key="frame" x="77" y="45" width="166" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnd-zS-MjM">
-                                <rect key="frame" x="67" y="446" width="174" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnd-zS-MjM">
+                                <rect key="frame" x="88" y="501" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next stop/Finish tour">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,22 +215,41 @@
                                     <action selector="nextActionButtonTapped:" destination="8aF-Bt-pFR" eventType="touchUpInside" id="sfS-8R-Car"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="m4F-vH-5qm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="m4F-vH-5qm">
                                 <rect key="frame" x="129" y="96" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU'RE AT THE IDEA WALL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-bY-gDp">
-                                <rect key="frame" x="32" y="154" width="260" height="24"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="YOU'RE AT THE IDEA WALL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-bY-gDp">
+                                <rect key="frame" x="32" y="154" width="256" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ql1-6S-jSe">
+                                <rect key="frame" x="42" y="210" width="240" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">ChaiOne is an Enterprise Mobility Agency focused on creating innovative, beautiful mobile solutions that solve complex business problems of large enterprises, with a specific focus on the energy industry.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GCd-bY-gDp" firstAttribute="top" secondItem="m4F-vH-5qm" secondAttribute="bottom" constant="8" id="1Sa-F7-LJc"/>
+                            <constraint firstItem="9tt-Xv-WeE" firstAttribute="top" secondItem="tnd-zS-MjM" secondAttribute="bottom" constant="37" id="EIc-a2-gIB"/>
+                            <constraint firstItem="m4F-vH-5qm" firstAttribute="top" secondItem="KDL-vN-95z" secondAttribute="bottom" constant="7" id="o9s-2d-QE9"/>
+                            <constraint firstAttribute="centerX" secondItem="KDL-vN-95z" secondAttribute="centerX" id="pFG-9x-frO"/>
+                            <constraint firstItem="KDL-vN-95z" firstAttribute="top" secondItem="Ic3-ag-OpQ" secondAttribute="bottom" constant="25" id="vfX-cy-Vun"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zy9-Qa-9Ui"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="currentBeaconDescriptionLabel" destination="GCd-bY-gDp" id="b2q-Vd-Ghx"/>
+                        <outlet property="metadataTextView" destination="ql1-6S-jSe" id="5UG-Vg-Uu7"/>
                         <outlet property="nextActionButton" destination="tnd-zS-MjM" id="XFZ-EQ-WxF"/>
                         <segue destination="1By-35-EY9" kind="modal" id="UIC-Ts-idA"/>
                         <segue destination="YrA-QD-PcO" kind="push" identifier="showEnRoute" id="KhQ-lh-ha6"/>
@@ -360,6 +401,8 @@
     <resources>
         <image name="Default.png" width="320" height="480"/>
         <image name="location-icon.png" width="50" height="50"/>
+        <image name="prize-marker-empty.png" width="28" height="28"/>
+        <image name="prize-marker-filled.png" width="28" height="28"/>
         <image name="start-tour-btn-selected.png" width="270" height="60"/>
         <image name="straight-left-arrow.png" width="114" height="116"/>
         <image name="tour-c1-logo-large.png" width="258" height="64"/>
