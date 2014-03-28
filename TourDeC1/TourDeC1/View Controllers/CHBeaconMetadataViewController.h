@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CHPointOfInterestViewController : UIViewController
-
+@interface CHBeaconMetadataViewController : UIViewController
+@property (nonatomic,strong) CHBeaconMetadata *currentBeaconMetadata;
 @end

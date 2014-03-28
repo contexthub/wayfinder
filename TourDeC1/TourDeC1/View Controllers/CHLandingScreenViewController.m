@@ -38,7 +38,7 @@
       && [udid isEqualToString:BeaconUdid]
       && [beaconName isEqualToString:BeaconB1]
       && [state isEqualToString:@"near_state"]){
-    [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
+    [self performSegueWithIdentifier:@"welcomeStartTour" sender:nil];
   }
 }
 /*

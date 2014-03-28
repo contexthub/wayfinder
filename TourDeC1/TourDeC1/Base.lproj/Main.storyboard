@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" id="Do2-Zf-LN1"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="uQe-az-ewy" kind="push" identifier="showWelcomeScreen" id="COC-TI-chp"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="welcomeStartTour" id="amm-ro-iTK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLW-ii-mih" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,40 +54,9 @@
             <point key="canvasLocation" x="-1571" y="-197"/>
         </scene>
         <!--Welcome View Controller-->
-        <scene sceneID="t3f-I1-9h7">
-            <objects>
-                <viewController id="uQe-az-ewy" customClass="CHWelcomeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gIh-md-o1b"/>
-                        <viewControllerLayoutGuide type="bottom" id="515-4A-xua"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gEt-Ye-Pdw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are near ChaiONE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMo-Mv-g75">
-                                <rect key="frame" x="74" y="208" width="172" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4pI-Og-vSd"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="push" identifier="showStartTourScreen" id="66n-VS-FGl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cws-0W-8nG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1113" y="-197"/>
-        </scene>
-        <!--Start Tour View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="CHStartTourViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="CHWelcomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -130,7 +99,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YrA-QD-PcO" kind="push" identifier="startTour" id="vfh-8D-Jhg"/>
+                                    <segue destination="YrA-QD-PcO" kind="push" identifier="startedTour" id="vfh-8D-Jhg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -140,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-679" y="-197"/>
+            <point key="canvasLocation" x="-1043" y="-197"/>
         </scene>
         <!--Cancel Tour View Controller-->
         <scene sceneID="WlU-w4-7qJ">
@@ -166,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NV-js-lTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="173" y="686"/>
+            <point key="canvasLocation" x="-321" y="518"/>
         </scene>
         <!--Off Route View Controller-->
         <scene sceneID="rev-BP-k9u">
@@ -186,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="1031" y="227"/>
         </scene>
-        <!--Point Of Interest View Controller-->
+        <!--Beacon Metadata View Controller-->
         <scene sceneID="d7F-mf-0NM">
             <objects>
-                <viewController id="8aF-Bt-pFR" customClass="CHPointOfInterestViewController" sceneMemberID="viewController">
+                <viewController id="8aF-Bt-pFR" customClass="CHBeaconMetadataViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ic3-ag-OpQ"/>
                         <viewControllerLayoutGuide type="bottom" id="9tt-Xv-WeE"/>
@@ -222,7 +191,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YrA-QD-PcO" kind="push" id="k1k-5U-fsu"/>
+                                    <segue destination="YrA-QD-PcO" kind="push" identifier="showEnRoute" id="k1k-5U-fsu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uz-E8-6az">
@@ -284,12 +253,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="eRZ-ie-Dp5" id="UtR-DP-TnW"/>
-                        <segue destination="8aF-Bt-pFR" kind="push" identifier="reachedPoI" id="Cg2-8Q-8bc"/>
+                        <segue destination="8aF-Bt-pFR" kind="push" identifier="showMetadata" id="Cg2-8Q-8bc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPv-bL-n5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136" y="-197"/>
+            <point key="canvasLocation" x="-300" y="-207"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -298,7 +267,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RgO-ZE-jDB"/>
         <segue reference="vfh-8D-Jhg"/>
+        <segue reference="bYa-K2-GHT"/>
     </inferredMetricsTieBreakers>
 </document>
