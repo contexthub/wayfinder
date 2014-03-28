@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CHEnRouteViewController : UIViewController
+@property (nonatomic, strong) NSString *userAtBeaconName;
+@property (weak, nonatomic) IBOutlet UIImageView *mapView;
 
 @end

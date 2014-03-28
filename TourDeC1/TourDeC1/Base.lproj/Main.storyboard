@@ -264,7 +264,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here's how you can continue the tour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftk-lZ-ydu">
-                                <rect key="frame" x="25" y="318" width="288" height="21"/>
+                                <rect key="frame" x="20" y="289" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -283,6 +283,7 @@
                     <navigationItem key="navigationItem" id="jEn-ZR-2YN"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="mapView" destination="eRZ-ie-Dp5" id="UtR-DP-TnW"/>
                         <segue destination="8aF-Bt-pFR" kind="push" identifier="reachedPoI" id="Cg2-8Q-8bc"/>
                     </connections>
                 </viewController>
@@ -297,7 +298,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="k1k-5U-fsu"/>
-        <segue reference="bYa-K2-GHT"/>
+        <segue reference="RgO-ZE-jDB"/>
+        <segue reference="vfh-8D-Jhg"/>
     </inferredMetricsTieBreakers>
 </document>

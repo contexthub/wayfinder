@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CHAppDelegate : UIResponder <UIApplicationDelegate>
-
++ (CHAppDelegate *) sharedAppDelegate;
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) NSArray *beaconsMetadata;
 @end
