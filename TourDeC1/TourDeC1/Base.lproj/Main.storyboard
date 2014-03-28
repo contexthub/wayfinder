@@ -12,12 +12,44 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Q0w-eK-VrT"/>
+                        <segue destination="a89-8t-Jol" kind="relationship" relationship="rootViewController" id="aNA-XO-jkB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yug-14-L5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1716" y="-117"/>
+            <point key="canvasLocation" x="-2084" y="-197"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2dY-0y-Pl6">
+            <objects>
+                <viewController id="a89-8t-Jol" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N6e-Al-1s9"/>
+                        <viewControllerLayoutGuide type="bottom" id="AWg-Lb-wFb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPE-8c-h27">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tour De ChaiONE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1X-5N-nhp">
+                                <rect key="frame" x="79" y="232" width="163" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Do2-Zf-LN1"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="push" id="tDE-42-3NN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LLW-ii-mih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1571" y="-197"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="ufC-wZ-h7g">
