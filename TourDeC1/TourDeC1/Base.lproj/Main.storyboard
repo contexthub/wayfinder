@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLW-ii-mih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1571" y="-197"/>
+            <point key="canvasLocation" x="-1659" y="-209"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -98,18 +98,18 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="YrA-QD-PcO" kind="push" identifier="startedTour" id="vfh-8D-Jhg"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="OP5-T7-N7p"/>
+                    <connections>
+                        <segue destination="M4X-HY-yfg" kind="push" identifier="startTour" id="MFN-2F-Qpw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1043" y="-197"/>
+            <point key="canvasLocation" x="-1143" y="-209"/>
         </scene>
         <!--Cancel Tour View Controller-->
         <scene sceneID="WlU-w4-7qJ">
@@ -185,24 +185,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnd-zS-MjM">
-                                <rect key="frame" x="67" y="446" width="46" height="30"/>
+                                <rect key="frame" x="67" y="446" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sure">
+                                <state key="normal" title="Next stop/Finish tour">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="YrA-QD-PcO" kind="push" identifier="showEnRoute" id="k1k-5U-fsu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uz-E8-6az">
-                                <rect key="frame" x="137" y="446" width="142" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Nah I ve had enough">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="n7T-zn-9XI" kind="modal" identifier="cancelTour" id="bYa-K2-GHT"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -210,11 +197,43 @@
                     <navigationItem key="navigationItem" id="zy9-Qa-9Ui"/>
                     <connections>
                         <segue destination="1By-35-EY9" kind="modal" id="UIC-Ts-idA"/>
+                        <segue destination="YrA-QD-PcO" kind="push" identifier="showEnRoute" id="KhQ-lh-ha6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALM-Vs-Q7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="409" y="-226"/>
+            <point key="canvasLocation" x="649" y="-243"/>
+        </scene>
+        <!--Start Tour View Controller-->
+        <scene sceneID="kZW-UZ-WnJ">
+            <objects>
+                <viewController id="M4X-HY-yfg" customClass="CHStartTourViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mz0-o6-s0e"/>
+                        <viewControllerLayoutGuide type="bottom" id="dkf-81-cjm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vKA-k9-9ax">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE1-ua-Euj">
+                                <rect key="frame" x="104" y="347" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Tour">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BF7-Pg-iIR"/>
+                    <connections>
+                        <segue destination="YrA-QD-PcO" kind="push" identifier="startEnRoute" id="4wV-GX-Bnu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Naj-8A-wSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="-350"/>
         </scene>
         <!--En Route View Controller-->
         <scene sceneID="ODi-N2-gEJ">
@@ -258,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPv-bL-n5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="-207"/>
+            <point key="canvasLocation" x="-16" y="-243"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -267,7 +286,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vfh-8D-Jhg"/>
-        <segue reference="bYa-K2-GHT"/>
+        <segue reference="KhQ-lh-ha6"/>
     </inferredMetricsTieBreakers>
 </document>
