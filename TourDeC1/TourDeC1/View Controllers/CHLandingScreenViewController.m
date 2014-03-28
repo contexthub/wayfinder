@@ -27,19 +27,20 @@
 }
 
 - (void)handleEvent:(NSNotification *)notification {
-  NSDictionary *event = notification.userInfo;
-  NSString *eventName = [event valueForKeyPath:@"name"];
-  NSDictionary *beacon = [event valueForKeyPath:@"beacon"];
-  NSString *beaconName = [beacon valueForKeyPath:@"name"];
-  NSString *udid = [beacon valueForKeyPath:@"udid"];
-  NSString *state = [beacon valueForKeyPath:@"state"];
-  
-  if([eventName isEqualToString:CHBeaconInEventName]
-      && [udid isEqualToString:BeaconUdid]
-      && [beaconName isEqualToString:BeaconB1]
-      && [state isEqualToString:@"near_state"]){
-    [self performSegueWithIdentifier:@"welcomeStartTour" sender:nil];
-  }
+
+    if (self.navigationController.topViewController == self) {        
+      NSDictionary *event = notification.object;
+      NSString *eventName = [event valueForKeyPath:@"event.name"];
+      NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
+      NSString *beaconName = [beacon valueForKey:@"name"];
+      NSString *udid = [beacon valueForKey:@"uuid"];
+      
+      if([eventName isEqualToString:CHBeaconInEventName]
+          && [udid isEqualToString:BeaconUdid]
+          && [beaconName isEqualToString:BeaconB1]) {
+        [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
+      }
+    }
 }
 /*
 #pragma mark - Navigation
