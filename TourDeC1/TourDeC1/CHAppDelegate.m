@@ -8,6 +8,7 @@
 
 #import "CHAppDelegate.h"
 #import "ContextHub.h"
+#import "CCHNotificationService.h"
 #import "CHBeaconsRouteService.h"
 
 @implementation CHAppDelegate
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
+    
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
   
     [[CHBeaconsRouteService sharedService]getAllBeaconsMetadata:^(NSArray *beacons) {
       NSLog(@"%@",beacons);
@@ -26,7 +29,24 @@
     }];
     return YES;
 }
-							
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"Did fail to register %@", error);
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    CCHNotificationService *sharedService = [CCHNotificationService sharedService];
+    
+    [sharedService registerDeviceToken:deviceToken withCompletion:^(NSError *error) {
+        if(error) {
+            NSLog(@"%@", error);
+        } else {
+            NSLog(@"Success :)");
+        }
+    }];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
