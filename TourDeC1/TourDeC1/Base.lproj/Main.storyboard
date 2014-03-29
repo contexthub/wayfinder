@@ -251,7 +251,7 @@
                         <outlet property="currentBeaconDescriptionLabel" destination="GCd-bY-gDp" id="b2q-Vd-Ghx"/>
                         <outlet property="metadataTextView" destination="ql1-6S-jSe" id="5UG-Vg-Uu7"/>
                         <outlet property="nextActionButton" destination="tnd-zS-MjM" id="XFZ-EQ-WxF"/>
-                        <segue destination="1By-35-EY9" kind="modal" id="UIC-Ts-idA"/>
+                        <segue destination="1By-35-EY9" kind="modal" identifier="showThanks" id="UIC-Ts-idA"/>
                         <segue destination="YrA-QD-PcO" kind="push" identifier="showEnRoute" id="KhQ-lh-ha6"/>
                     </connections>
                 </viewController>
