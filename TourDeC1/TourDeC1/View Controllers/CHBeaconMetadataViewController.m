@@ -57,6 +57,7 @@
 
 
 - (IBAction)nextActionButtonTapped:(id)sender {
+
   if([self.currentBeaconMetadata.name isEqualToString:BeaconB1] || [self.currentBeaconMetadata.name isEqualToString:BeaconB2]){
     [self performSegueWithIdentifier:@"showEnRoute" sender:nil];
   }

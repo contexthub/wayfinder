@@ -35,6 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"startEnRoute"]){
+        CHEnRouteViewController *destinationVC = segue.destinationViewController;
+        destinationVC.currentBeaconMetadata = self.currentBeaconMetadata;
+        [destinationVC setUserAtBeaconName:BeaconB1];
+    }
+}
+
 /*
 #pragma mark - Navigation
 

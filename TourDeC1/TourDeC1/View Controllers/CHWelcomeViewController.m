@@ -55,10 +55,9 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-  if([segue.identifier isEqualToString:@"startedTour"]){
-    CHEnRouteViewController *destinationVC = segue.destinationViewController;
+  if([segue.identifier isEqualToString:@"startTour"]){
+    CHStartTourViewController *destinationVC = segue.destinationViewController;
       destinationVC.currentBeaconMetadata = self.currentBeaconMetadata;
-    [destinationVC setUserAtBeaconName:BeaconB1];
   }
 }
 
