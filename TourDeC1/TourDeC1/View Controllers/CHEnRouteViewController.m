@@ -36,7 +36,7 @@
 - (void)layoutMetadata {
   self.userAtBeaconName = self.currentBeaconMetadata.name;
   NSMutableAttributedString *directionsText;
-  [self.mapView setImageWithURL:[NSURL URLWithString:self.currentBeaconMetadata.nextSegment]];
+  //[self.mapView setImageWithURL:[NSURL URLWithString:self.currentBeaconMetadata.nextSegment]];
     
   if([self.currentBeaconMetadata.name isEqualToString:BeaconB1]){
     [self.navigationDirectionsImageView setImage:[UIImage imageNamed:@"straight-left-arrow"]];

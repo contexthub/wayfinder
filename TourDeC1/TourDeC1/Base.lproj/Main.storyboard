@@ -371,8 +371,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omm-MB-aLQ">
-                                <rect key="frame" x="31" y="286" width="259" height="230"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lobby-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="omm-MB-aLQ">
+                                <rect key="frame" x="20" y="254" width="280" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -401,6 +401,7 @@
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
+        <image name="lobby-map.png" width="280" height="300"/>
         <image name="location-icon.png" width="50" height="50"/>
         <image name="prize-marker-empty.png" width="28" height="28"/>
         <image name="prize-marker-filled.png" width="28" height="28"/>
