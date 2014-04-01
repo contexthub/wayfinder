@@ -44,7 +44,7 @@
     if([eventName isEqualToString:CHBeaconChangedEventName]) {
          if ([udid isEqualToString:self.currentBeaconMetadata.udid]
              && [state isEqualToString:@"immediate_state"]) {
-             [self performSegueWithIdentifier:@"startTour" sender:nil];
+             [self performSegueWithIdentifier:@"showBeacon1" sender:nil];
          }
     }
 }
