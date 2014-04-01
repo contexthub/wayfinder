@@ -18,15 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
-    
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
-  
-    [[CHBeaconsRouteService sharedService]getAllBeaconsMetadata:^(NSArray *beacons) {
-      NSLog(@"%@",beacons);
-      self.beaconsMetadata = beacons;
-    } andFailure:^(NSError *error) {
-      NSLog(@"%@",error.description);
-    }];
     return YES;
 }
 

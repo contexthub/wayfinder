@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-      [self loadCurrentBeaconMetadata];
+  [self loadCurrentBeaconMetadata];
     
   [[NSNotificationCenter defaultCenter]addObserver:self
                                           selector:@selector(handleEvent:)
@@ -27,11 +27,7 @@
 }
 
 - (void)loadCurrentBeaconMetadata {
-    NSArray *beaconsMetadata = [[CHAppDelegate sharedAppDelegate]beaconsMetadata];
-    NSString *name = @"B1";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.name like %@", name];
-    NSArray *filteredData = [beaconsMetadata filteredArrayUsingPredicate:predicate];
-    self.currentBeaconMetadata = filteredData[0];
+  self.currentBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:BeaconB1];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

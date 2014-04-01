@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Beacons</key>
+	<array>
+		<dict>
+			<key>major</key>
+			<string>32872</string>
+			<key>minor</key>
+			<string>7821</string>
+			<key>name</key>
+			<string>B1</string>
+			<key>uuid</key>
+			<string>E2C56DB5-DFFB-48D2-B060-8876223462A3</string>
+			<key>nextBeaconName</key>
+			<string>B2</string>
+			<key>locationOnMapImageName</key>
+			<string>lobby-map</string>
+		</dict>
+		<dict>
+			<key>major</key>
+			<string>13152</string>
+			<key>minor</key>
+			<string> 41710</string>
+			<key>name</key>
+			<string>B2</string>
+			<key>uuid</key>
+			<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+			<key>nextBeaconName</key>
+			<string>B3</string>
+			<key>locationOnMapImageName</key>
+			<string>idea-wall-map</string>
+		</dict>
+		<dict>
+			<key>major</key>
+			<string>1</string>
+			<key>minor</key>
+			<string>1</string>
+			<key>name</key>
+			<string>B3</string>
+			<key>uuid</key>
+			<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+			<key>nextBeaconName</key>
+			<string></string>
+			<key>locationOnMapImageName</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>
