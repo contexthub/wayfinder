@@ -23,8 +23,6 @@
 		59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */; };
 		59FC2BAA18E5D20F00887C2A /* CHBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BA918E5D20F00887C2A /* CHBeaconMetadataViewController.m */; };
 		59FC2BAD18E5D3D300887C2A /* CHEnRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */; };
-		59FC2BB018E5D59E00887C2A /* CHCancelTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BAF18E5D59E00887C2A /* CHCancelTourViewController.m */; };
-		59FC2BB318E5D76900887C2A /* CHOffRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BB218E5D76900887C2A /* CHOffRouteViewController.m */; };
 		59FC2BB718E5D81C00887C2A /* CHBeaconsRouteService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */; };
 		59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */; };
 		59FC2BBF18E5F2E800887C2A /* CHLandingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BBE18E5F2E800887C2A /* CHLandingScreenViewController.m */; };
@@ -122,10 +120,6 @@
 		59FC2BA918E5D20F00887C2A /* CHBeaconMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconMetadataViewController.m; sourceTree = "<group>"; };
 		59FC2BAB18E5D3D300887C2A /* CHEnRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHEnRouteViewController.h; sourceTree = "<group>"; };
 		59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEnRouteViewController.m; sourceTree = "<group>"; };
-		59FC2BAE18E5D59E00887C2A /* CHCancelTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCancelTourViewController.h; sourceTree = "<group>"; };
-		59FC2BAF18E5D59E00887C2A /* CHCancelTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCancelTourViewController.m; sourceTree = "<group>"; };
-		59FC2BB118E5D76900887C2A /* CHOffRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOffRouteViewController.h; sourceTree = "<group>"; };
-		59FC2BB218E5D76900887C2A /* CHOffRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOffRouteViewController.m; sourceTree = "<group>"; };
 		59FC2BB518E5D81C00887C2A /* CHBeaconsRouteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconsRouteService.h; sourceTree = "<group>"; };
 		59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconsRouteService.m; sourceTree = "<group>"; };
 		59FC2BB818E5D97800887C2A /* CGGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGlobals.h; sourceTree = "<group>"; };
@@ -310,10 +304,6 @@
 				59FC2BA918E5D20F00887C2A /* CHBeaconMetadataViewController.m */,
 				59FC2BAB18E5D3D300887C2A /* CHEnRouteViewController.h */,
 				59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */,
-				59FC2BAE18E5D59E00887C2A /* CHCancelTourViewController.h */,
-				59FC2BAF18E5D59E00887C2A /* CHCancelTourViewController.m */,
-				59FC2BB118E5D76900887C2A /* CHOffRouteViewController.h */,
-				59FC2BB218E5D76900887C2A /* CHOffRouteViewController.m */,
 				59FC2BBD18E5F2E800887C2A /* CHLandingScreenViewController.h */,
 				59FC2BBE18E5F2E800887C2A /* CHLandingScreenViewController.m */,
 				59FC2BF918E6241100887C2A /* CHStartTourViewController.h */,
@@ -600,10 +590,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */,
-				59FC2BB318E5D76900887C2A /* CHOffRouteViewController.m in Sources */,
 				59FC2BFB18E6241100887C2A /* CHStartTourViewController.m in Sources */,
 				59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */,
-				59FC2BB018E5D59E00887C2A /* CHCancelTourViewController.m in Sources */,
 				59FC2BAA18E5D20F00887C2A /* CHBeaconMetadataViewController.m in Sources */,
 				59FC2C9C18EB311A00887C2A /* CHPathHelper.m in Sources */,
 				59FC2B7C18E5CEF600887C2A /* main.m in Sources */,
@@ -740,7 +728,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6DA99CB3-44CC-43EE-8739-30F02DBC5DCC";
 				WRAPPER_EXTENSION = app;
@@ -755,7 +743,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6DA99CB3-44CC-43EE-8739-30F02DBC5DCC";
 				WRAPPER_EXTENSION = app;

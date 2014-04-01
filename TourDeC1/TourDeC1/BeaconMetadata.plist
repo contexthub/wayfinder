@@ -6,9 +6,9 @@
 	<array>
 		<dict>
 			<key>major</key>
-			<string>32872</string>
+			<string>100</string>
 			<key>minor</key>
-			<string>7821</string>
+			<string>1</string>
 			<key>name</key>
 			<string>B1</string>
 			<key>uuid</key>
@@ -40,7 +40,7 @@
 			<key>name</key>
 			<string>B3</string>
 			<key>uuid</key>
-			<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+			<string></string>
 			<key>nextBeaconName</key>
 			<string></string>
 			<key>locationOnMapImageName</key>

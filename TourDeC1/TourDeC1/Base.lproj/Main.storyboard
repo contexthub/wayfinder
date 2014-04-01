@@ -60,7 +60,7 @@
                     <navigationItem key="navigationItem" id="Do2-Zf-LN1"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="push" identifier="welcomeStartTour" id="amm-ro-iTK"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="showWelcomeScreen" id="amm-ro-iTK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLW-ii-mih" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,7 +105,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OP5-T7-N7p"/>
                     <connections>
-                        <segue destination="M4X-HY-yfg" kind="push" identifier="startTour" id="MFN-2F-Qpw"/>
+                        <segue destination="8aF-Bt-pFR" kind="push" identifier="showBeacon1" id="zdl-cC-NRM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oR-7G-wIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1115" y="-209"/>
+            <point key="canvasLocation" x="483" y="-217"/>
         </scene>
         <!--Beacon Metadata View Controller-->
         <scene sceneID="d7F-mf-0NM">
@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALM-Vs-Q7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="-215"/>
+            <point key="canvasLocation" x="-605" y="-209"/>
         </scene>
         <!--Start Tour View Controller-->
         <scene sceneID="kZW-UZ-WnJ">
@@ -285,9 +285,6 @@
                                 <state key="normal" image="start-tour-btn-selected.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="YrA-QD-PcO" kind="push" identifier="startEnRoute" id="AlZ-fa-SRO"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-OP-fNT">
                                 <rect key="frame" x="137" y="90" width="50" height="50"/>
@@ -328,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Naj-8A-wSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-603" y="-222"/>
+            <point key="canvasLocation" x="-619" y="-912"/>
         </scene>
         <!--En Route View Controller-->
         <scene sceneID="ODi-N2-gEJ">
@@ -416,6 +413,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="AlZ-fa-SRO"/>
+        <segue reference="zdl-cC-NRM"/>
     </inferredMetricsTieBreakers>
 </document>

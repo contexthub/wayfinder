@@ -7,7 +7,7 @@
 //
 
 #import "CHWelcomeViewController.h"
-#import "CHEnRouteViewController.h"
+#import "CHBeaconMetadataViewController.h"
 
 @interface CHWelcomeViewController ()
 
@@ -51,9 +51,9 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-  if([segue.identifier isEqualToString:@"startTour"]){
-    CHStartTourViewController *destinationVC = segue.destinationViewController;
-      destinationVC.currentBeaconMetadata = self.currentBeaconMetadata;
+  if([segue.identifier isEqualToString:@"showBeacon1"]){
+    CHBeaconMetadataViewController *destinationVC = segue.destinationViewController;
+    destinationVC.currentBeaconMetadata = self.currentBeaconMetadata;
   }
 }
 

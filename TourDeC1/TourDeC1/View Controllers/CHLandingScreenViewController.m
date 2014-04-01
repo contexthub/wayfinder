@@ -33,12 +33,12 @@
       NSString *eventName = [event valueForKeyPath:@"event.name"];
       NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
       NSString *beaconName = [beacon valueForKey:@"name"];
-      NSString *udid = [beacon valueForKey:@"uuid"];
+      NSString *uuid = [beacon valueForKey:@"uuid"];
       
       if([eventName isEqualToString:CHBeaconInEventName]
-          && [udid isEqualToString:BeaconUdid]
+          && [uuid isEqualToString:BeaconUdid]
           && [beaconName isEqualToString:BeaconB1]) {
-        [self performSegueWithIdentifier:@"welcomeStartTour" sender:nil];
+        [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
       }
     }
 }
