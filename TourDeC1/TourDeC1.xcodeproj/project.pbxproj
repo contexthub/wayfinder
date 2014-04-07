@@ -97,7 +97,7 @@
 
 /* Begin PBXFileReference section */
 		59A7711E53B14165A0A33716 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		59FC2B6C18E5CEF600887C2A /* TourDeC1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourDeC1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59FC2B6C18E5CEF600887C2A /* WayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FC2B6F18E5CEF600887C2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		59FC2B7318E5CEF600887C2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -229,7 +229,7 @@
 		59FC2B6D18E5CEF600887C2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59FC2B6C18E5CEF600887C2A /* TourDeC1.app */,
+				59FC2B6C18E5CEF600887C2A /* WayFinder.app */,
 				59FC2B8D18E5CEF700887C2A /* TourDeC1Tests.xctest */,
 			);
 			name = Products;
@@ -420,7 +420,7 @@
 			);
 			name = TourDeC1;
 			productName = TourDeC1;
-			productReference = 59FC2B6C18E5CEF600887C2A /* TourDeC1.app */;
+			productReference = 59FC2B6C18E5CEF600887C2A /* WayFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
 		59FC2B8C18E5CEF700887C2A /* TourDeC1Tests */ = {
@@ -650,6 +650,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		59AE77D718EF554E0019DC0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		59AE77D818EF554E0019DC0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CHAIONE, INC.";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
+				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = WayFinder;
+				PROVISIONING_PROFILE = "4EB569E1-8793-4D14-A312-2FE103A834CD";
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHoc;
+		};
+		59AE77D918EF554E0019DC0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TourDeC1.app/TourDeC1";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
+				INFOPLIST_FILE = "TourDeC1Tests/TourDeC1Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = AdHoc;
+		};
 		59FC2B9C18E5CEF700887C2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -729,7 +794,7 @@
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WayFinder;
 				PROVISIONING_PROFILE = "6DA99CB3-44CC-43EE-8739-30F02DBC5DCC";
 				WRAPPER_EXTENSION = app;
 			};
@@ -744,7 +809,7 @@
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WayFinder;
 				PROVISIONING_PROFILE = "6DA99CB3-44CC-43EE-8739-30F02DBC5DCC";
 				WRAPPER_EXTENSION = app;
 			};
@@ -798,6 +863,7 @@
 			buildConfigurations = (
 				59FC2B9C18E5CEF700887C2A /* Debug */,
 				59FC2B9D18E5CEF700887C2A /* Release */,
+				59AE77D718EF554E0019DC0F /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -807,6 +873,7 @@
 			buildConfigurations = (
 				59FC2B9F18E5CEF700887C2A /* Debug */,
 				59FC2BA018E5CEF700887C2A /* Release */,
+				59AE77D818EF554E0019DC0F /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -816,6 +883,7 @@
 			buildConfigurations = (
 				59FC2BA218E5CEF700887C2A /* Debug */,
 				59FC2BA318E5CEF700887C2A /* Release */,
+				59AE77D918EF554E0019DC0F /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

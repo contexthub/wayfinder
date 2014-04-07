@@ -27,7 +27,7 @@
 }
 
 - (void)loadCurrentBeaconMetadata {
-  self.currentBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:BeaconB1];
+  self.currentBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:@"B1"];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

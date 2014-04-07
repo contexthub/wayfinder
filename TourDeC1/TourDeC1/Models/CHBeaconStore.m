@@ -25,7 +25,8 @@ static CHBeaconStore *__instance = nil;
 - (id)init  {
 	if ((self = [super init])) {
     NSString *beaconsPath = [[NSBundle mainBundle] pathForResource: @"BeaconMetadata" ofType: @"plist"];
-    self.beacons = [NSArray arrayWithContentsOfFile:beaconsPath];
+    NSDictionary *beaconsInfo = [NSDictionary dictionaryWithContentsOfFile:beaconsPath];
+    self.beacons = beaconsInfo[@"Beacons"];
 	}
 	return self;
 }
@@ -40,7 +41,7 @@ static CHBeaconStore *__instance = nil;
 }
 
 - (CHBeaconMetadata *)metadataForBeaconWithName:(NSString *)beaconName {
-  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name LIKE %@[cd]",beaconName];
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name LIKE %@",beaconName];
   NSArray *filteredBeacons = [self.beacons filteredArrayUsingPredicate:predicate];
   if([filteredBeacons count] > 0){
     CHBeaconMetadata *beaconMetadata = [[CHBeaconMetadata alloc]initWithData:filteredBeacons[0]];
