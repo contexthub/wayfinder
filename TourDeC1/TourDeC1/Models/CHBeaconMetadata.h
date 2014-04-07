@@ -14,8 +14,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *udid;
 @property (nonatomic, strong) NSString *nextBeaconName;
-@property (nonatomic, strong) NSString *nextSegment;
-@property (nonatomic, strong) NSString *nextBeaconUDID;
+@property (nonatomic, strong) NSString *locationOnMapImageName;
 
 - (instancetype)initWithData:(NSDictionary *)data;
 @end
