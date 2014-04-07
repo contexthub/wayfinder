@@ -7,6 +7,8 @@
 //
 
 #import "CHLandingScreenViewController.h"
+#import "CHBeaconMetadataViewController.h"
+#import "CHBeaconStore.h"
 
 @interface CHLandingScreenViewController ()
 
@@ -27,20 +29,30 @@
 }
 
 - (void)handleEvent:(NSNotification *)notification {
-
-    if (self.navigationController.topViewController == self) {        
-      NSDictionary *event = notification.object;
-      NSString *eventName = [event valueForKeyPath:@"event.name"];
-      NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
-      NSString *beaconName = [beacon valueForKey:@"name"];
-      NSString *uuid = [beacon valueForKey:@"uuid"];
-      
-      if([eventName isEqualToString:CHBeaconInEventName]
-          && [uuid isEqualToString:BeaconUdid]
-          && [beaconName isEqualToString:BeaconB1]) {
-        [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
-      }
+  if (self.navigationController.topViewController == self) {
+    NSDictionary *event = notification.object;
+    NSString *eventName = [event valueForKeyPath:@"event.name"];
+    NSString *state = [event valueForKeyPath:@"event.data.state"];
+    NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
+    NSString *uuid = [beacon valueForKey:@"uuid"];
+    
+    if([uuid isEqualToString:BeaconUdid] && [self isBeaconIn:eventName]) {
+      [[NSNotificationCenter defaultCenter]removeObserver:self];
+      [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
     }
+    else if([uuid isEqualToString:BeaconUdid] && [self isNearOrImmediateBeacon:eventName state:state]){
+      [[NSNotificationCenter defaultCenter]removeObserver:self];
+      [self performSegueWithIdentifier:@"atTheLobby" sender:nil];
+    }
+  }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if([segue.identifier isEqualToString:@"atTheLobby"]){
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    CHBeaconMetadataViewController *beaconMetadataVC = segue.destinationViewController;
+    beaconMetadataVC.currentBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:BeaconB1];
+  }
 }
 
 @end

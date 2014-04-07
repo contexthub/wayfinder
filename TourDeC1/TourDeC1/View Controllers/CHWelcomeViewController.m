@@ -37,16 +37,15 @@
 - (void)handleEvent:(NSNotification *)notification {
   NSDictionary *event = notification.object;
   NSString *eventName = [event valueForKeyPath:@"event.name"];
+  NSString *state = [event valueForKeyPath:@"event.data.state"];
   NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
-  NSString *udid = [beacon valueForKeyPath:@"uuid"];
-  NSString *state = [beacon valueForKeyPath:@"proximity"];
+  NSString *uuid = [beacon valueForKeyPath:@"uuid"];
   
-    if([eventName isEqualToString:CHBeaconChangedEventName]) {
-         if ([udid isEqualToString:self.currentBeaconMetadata.udid]
-             && [state isEqualToString:@"immediate_state"]) {
-             [self performSegueWithIdentifier:@"showBeacon1" sender:nil];
-         }
-    }
+  if([uuid isEqualToString:self.currentBeaconMetadata.uuid] &&
+      [self isNearOrImmediateBeacon:eventName state:state]) {
+       [[NSNotificationCenter defaultCenter]removeObserver:self];
+       [self performSegueWithIdentifier:@"showBeacon1" sender:nil];
+  }
 }
 
 #pragma mark - Navigation

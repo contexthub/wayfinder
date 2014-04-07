@@ -12,7 +12,7 @@
 @property (nonatomic, strong) NSString *major;
 @property (nonatomic, strong) NSString *minor;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *udid;
+@property (nonatomic, strong) NSString *uuid;
 @property (nonatomic, strong) NSString *nextBeaconName;
 @property (nonatomic, strong) NSString *locationOnMapImageName;
 

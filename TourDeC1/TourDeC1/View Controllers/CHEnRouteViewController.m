@@ -81,7 +81,7 @@
 
   
     if([eventName isEqualToString:CHBeaconInEventName]) {
-        if ([udid isEqualToString:self.destinationBeaconMetadata.udid]
+        if ([udid isEqualToString:self.destinationBeaconMetadata.uuid]
             && [state isEqualToString:@"near_state"]) {
             [self performSegueWithIdentifier:@"showMetadata" sender:nil];
         }

@@ -61,6 +61,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="showWelcomeScreen" id="amm-ro-iTK"/>
+                        <segue destination="8aF-Bt-pFR" kind="push" identifier="atTheLobby" id="9ue-5m-MAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLW-ii-mih" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1143" y="-209"/>
+            <point key="canvasLocation" x="-1159" y="-339"/>
         </scene>
         <!--Finished Tour View Controller-->
         <scene sceneID="rev-BP-k9u">
@@ -414,6 +415,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zdl-cC-NRM"/>
+        <segue reference="9ue-5m-MAw"/>
     </inferredMetricsTieBreakers>
 </document>

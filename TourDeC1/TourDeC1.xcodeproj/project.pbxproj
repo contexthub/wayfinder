@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* CHViewController.m */; };
 		59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
 		59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */; };
 		59FC2B7418E5CEF600887C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7318E5CEF600887C2A /* UIKit.framework */; };
@@ -96,6 +97,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		598729BE18F32F7500D3A1D4 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
+		598729BF18F32F7500D3A1D4 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
 		59A7711E53B14165A0A33716 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		59FC2B6C18E5CEF600887C2A /* WayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FC2B6F18E5CEF600887C2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -310,6 +313,8 @@
 				59FC2BFA18E6241100887C2A /* CHStartTourViewController.m */,
 				59FC2C2C18E638C500887C2A /* CHFinishedTourViewController.h */,
 				59FC2C2D18E638C500887C2A /* CHFinishedTourViewController.m */,
+				598729BE18F32F7500D3A1D4 /* CHViewController.h */,
+				598729BF18F32F7500D3A1D4 /* CHViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -596,6 +601,7 @@
 				59FC2C9C18EB311A00887C2A /* CHPathHelper.m in Sources */,
 				59FC2B7C18E5CEF600887C2A /* main.m in Sources */,
 				59FC2C9F18EB38DA00887C2A /* CHBeaconStore.m in Sources */,
+				598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */,
 				59FC2C2E18E638C500887C2A /* CHFinishedTourViewController.m in Sources */,
 				59FC2B8018E5CEF600887C2A /* CHAppDelegate.m in Sources */,
 				59FC2BBF18E5F2E800887C2A /* CHLandingScreenViewController.m in Sources */,

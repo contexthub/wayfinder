@@ -15,7 +15,7 @@
     self.major = data[@"major"];
     self.minor = data[@"minor"];
     self.name = data[@"name"];
-    self.udid = data[@"uuid"];
+    self.uuid = data[@"uuid"];
     self.nextBeaconName = data[@"nextBeaconName"];
     self.locationOnMapImageName = data[@"locationOnMapImageName"];
   }
