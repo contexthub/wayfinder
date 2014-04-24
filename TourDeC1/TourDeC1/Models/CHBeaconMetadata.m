@@ -11,15 +11,13 @@
 @implementation CHBeaconMetadata
 - (instancetype)initWithData:(NSDictionary *)data {
   self = [super init];
-  NSDictionary *metadata = data[@"metadata"];
   if(self) {
-    self.major = metadata[@"major"];
-    self.minor = metadata[@"minor"];
-    self.name = metadata[@"name"];
-    self.udid = metadata[@"udid"];
-    self.nextBeaconName = data[@"next_beacon"];
-    self.nextSegment = data[@"next_segment"];
-    self.nextBeaconUDID = data[@"udid"];
+    self.major = data[@"major"];
+    self.minor = data[@"minor"];
+    self.name = data[@"name"];
+    self.uuid = data[@"uuid"];
+    self.nextBeaconName = data[@"nextBeaconName"];
+    self.locationOnMapImageName = data[@"locationOnMapImageName"];
   }
   return self;
 }

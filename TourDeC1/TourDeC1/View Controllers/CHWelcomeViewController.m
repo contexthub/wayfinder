@@ -7,7 +7,7 @@
 //
 
 #import "CHWelcomeViewController.h"
-#import "CHEnRouteViewController.h"
+#import "CHBeaconMetadataViewController.h"
 
 @interface CHWelcomeViewController ()
 
@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-      [self loadCurrentBeaconMetadata];
+  [self loadCurrentBeaconMetadata];
     
   [[NSNotificationCenter defaultCenter]addObserver:self
                                           selector:@selector(handleEvent:)
@@ -27,11 +27,7 @@
 }
 
 - (void)loadCurrentBeaconMetadata {
-    NSArray *beaconsMetadata = [[CHAppDelegate sharedAppDelegate]beaconsMetadata];
-    NSString *name = @"B1";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.name like %@", name];
-    NSArray *filteredData = [beaconsMetadata filteredArrayUsingPredicate:predicate];
-    self.currentBeaconMetadata = filteredData[0];
+  self.currentBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:@"B1"];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -41,23 +37,22 @@
 - (void)handleEvent:(NSNotification *)notification {
   NSDictionary *event = notification.object;
   NSString *eventName = [event valueForKeyPath:@"event.name"];
+  NSString *state = [event valueForKeyPath:@"event.data.state"];
   NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
-  NSString *udid = [beacon valueForKeyPath:@"uuid"];
-  NSString *state = [beacon valueForKeyPath:@"proximity"];
+  NSString *uuid = [beacon valueForKeyPath:@"uuid"];
   
-    if([eventName isEqualToString:CHBeaconChangedEventName]) {
-         if ([udid isEqualToString:self.currentBeaconMetadata.udid]
-             && [state isEqualToString:@"immediate_state"]) {
-             [self performSegueWithIdentifier:@"startTour" sender:nil];
-         }
-    }
+  if([uuid isEqualToString:self.currentBeaconMetadata.uuid] &&
+      [self isNearOrImmediateBeacon:eventName state:state]) {
+       [[NSNotificationCenter defaultCenter]removeObserver:self];
+       [self performSegueWithIdentifier:@"showBeacon1" sender:nil];
+  }
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-  if([segue.identifier isEqualToString:@"startTour"]){
-    CHStartTourViewController *destinationVC = segue.destinationViewController;
-      destinationVC.currentBeaconMetadata = self.currentBeaconMetadata;
+  if([segue.identifier isEqualToString:@"showBeacon1"]){
+    CHBeaconMetadataViewController *destinationVC = segue.destinationViewController;
+    destinationVC.currentBeaconMetadata = self.currentBeaconMetadata;
   }
 }
 

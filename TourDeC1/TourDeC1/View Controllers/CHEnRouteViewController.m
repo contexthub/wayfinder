@@ -62,19 +62,14 @@
 }
 
 - (void)loadNextBeaconMetadata {
-    
-   NSArray *beaconsMetadata = [[CHAppDelegate sharedAppDelegate]beaconsMetadata];
     NSString *nextBeaconName =@"";
     
-    if ([self.userAtBeaconName isEqual:@"B1"]) {
-        nextBeaconName = @"B2";
+    if ([self.userAtBeaconName isEqual:BeaconB1]) {
+        nextBeaconName = BeaconB2 ;
     } else {
-        nextBeaconName = @"B3";
+        nextBeaconName = BeaconB3 ;
     }
-    
-   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.name like %@", nextBeaconName];
-   NSArray *filteredData = [beaconsMetadata filteredArrayUsingPredicate:predicate];
-   self.destinationBeaconMetadata = filteredData[0];
+   self.destinationBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:nextBeaconName];
 }
 
 - (void)handleEvent:(NSNotification *)notification {
@@ -86,7 +81,7 @@
 
   
     if([eventName isEqualToString:CHBeaconInEventName]) {
-        if ([udid isEqualToString:self.destinationBeaconMetadata.udid]
+        if ([udid isEqualToString:self.destinationBeaconMetadata.uuid]
             && [state isEqualToString:@"near_state"]) {
             [self performSegueWithIdentifier:@"showMetadata" sender:nil];
         }

@@ -18,33 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
-    
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
-  
-    [[CHBeaconsRouteService sharedService]getAllBeaconsMetadata:^(NSArray *beacons) {
-      NSLog(@"%@",beacons);
-      self.beaconsMetadata = beacons;
-    } andFailure:^(NSError *error) {
-      NSLog(@"%@",error.description);
-    }];
     return YES;
 }
 
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    NSLog(@"Did fail to register %@", error);
-}
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    
-    CCHNotificationService *sharedService = [CCHNotificationService sharedService];
-    
-    [sharedService registerDeviceToken:deviceToken withCompletion:^(NSError *error) {
-        if(error) {
-            NSLog(@"%@", error);
-        } else {
-            NSLog(@"Success :)");
-        }
-    }];
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    //This turns on background updates.
+    [ContextHub application:application didReceiveRemoteNotification:userInfo completion:completionHandler];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -72,6 +52,20 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - push notifications
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"Did fail to register for push %@", error);
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    CCHNotificationService *sharedService = [CCHNotificationService sharedService];
+    
+    [sharedService registerDeviceToken:deviceToken withCompletion:^(NSError *error) {
+    }];
 }
 
 @end

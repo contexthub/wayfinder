@@ -7,6 +7,8 @@
 //
 
 #import "CHLandingScreenViewController.h"
+#import "CHBeaconMetadataViewController.h"
+#import "CHBeaconStore.h"
 
 @interface CHLandingScreenViewController ()
 
@@ -27,34 +29,30 @@
 }
 
 - (void)handleEvent:(NSNotification *)notification {
-
-    if (self.navigationController.topViewController == self) {        
-      NSDictionary *event = notification.object;
-      NSString *eventName = [event valueForKeyPath:@"event.name"];
-      NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
-      NSString *beaconName = [beacon valueForKey:@"name"];
-      NSString *udid = [beacon valueForKey:@"uuid"];
-      
-      if([eventName isEqualToString:CHBeaconInEventName]
-          && [udid isEqualToString:BeaconUdid]
-          && [beaconName isEqualToString:BeaconB1]) {
-        [self performSegueWithIdentifier:@"welcomeStartTour" sender:nil];
-      }
+  if (self.navigationController.topViewController == self) {
+    NSDictionary *event = notification.object;
+    NSString *eventName = [event valueForKeyPath:@"event.name"];
+    NSString *state = [event valueForKeyPath:@"event.data.state"];
+    NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
+    NSString *uuid = [beacon valueForKey:@"uuid"];
+    
+    if([uuid isEqualToString:BeaconUdid] && [self isBeaconIn:eventName]) {
+      [[NSNotificationCenter defaultCenter]removeObserver:self];
+      [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
     }
+    else if([uuid isEqualToString:BeaconUdid] && [self isNearOrImmediateBeacon:eventName state:state]){
+      [[NSNotificationCenter defaultCenter]removeObserver:self];
+      [self performSegueWithIdentifier:@"atTheLobby" sender:nil];
+    }
+  }
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if([segue.identifier isEqualToString:@"atTheLobby"]){
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    CHBeaconMetadataViewController *beaconMetadataVC = segue.destinationViewController;
+    beaconMetadataVC.currentBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:BeaconB1];
+  }
 }
-*/
-
-
-
-
 
 @end

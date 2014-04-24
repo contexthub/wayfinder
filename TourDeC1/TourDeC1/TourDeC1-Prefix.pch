@@ -15,4 +15,6 @@
   #import <Foundation/Foundation.h>
   #import "ContextHub.h"
   #import "CGGlobals.h"
+  #import "CHBeaconStore.h"
+  #import "CHViewController.h"
 #endif

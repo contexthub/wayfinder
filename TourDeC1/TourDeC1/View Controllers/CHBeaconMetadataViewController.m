@@ -22,16 +22,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self layoutMetada];
+    [self layoutMetadata];
 }
 
-- (void)layoutMetada {
+- (void)layoutMetadata {
     NSLog(@"layout info string, and setup buttons");
   if([self.currentBeaconMetadata.name isEqualToString:BeaconB1]){
     [self.currentBeaconDescriptionLabel setText:@"YOU'RE AT THE LOBBY"];
     [self.metadataTextView setText:@"ChaiOne is an Enterprise Mobility Agency focused on creating innovative, beautiful mobile solutions that solve complex business problems of large enterprises, with a specific focus on the energy industry."];
-    [self.nextActionButton setImage:[UIImage imageNamed:@"next-stop-btn"] forState:UIControlStateNormal];
-    [self.nextActionButton setImage:[UIImage imageNamed:@"next-stop-btn-selected"] forState:UIControlStateSelected];
+    [self.nextActionButton setImage:[UIImage imageNamed:@"start-tour-btn"] forState:UIControlStateNormal];
+    [self.nextActionButton setImage:[UIImage imageNamed:@"start-tour-btn-selected"] forState:UIControlStateSelected];
   }
   else if([self.currentBeaconMetadata.name isEqualToString:BeaconB2]){
     [self.currentBeaconDescriptionLabel setText:@"YOU'RE AT THE IDEA WALL"];

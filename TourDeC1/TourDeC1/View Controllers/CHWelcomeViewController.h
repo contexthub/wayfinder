@@ -11,6 +11,6 @@
 #import "CHBeaconMetadata.h"
 #import "CHStartTourViewController.h"
 
-@interface CHWelcomeViewController : UIViewController
+@interface CHWelcomeViewController : CHViewController
 @property (nonatomic, strong) CHBeaconMetadata *currentBeaconMetadata;
 @end
