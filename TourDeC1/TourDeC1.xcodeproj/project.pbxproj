@@ -10,7 +10,10 @@
 		1F0DDB94192D453A000E9303 /* CHProductRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DDB93192D453A000E9303 /* CHProductRoomViewController.m */; };
 		1F0DDB97192D46B5000E9303 /* CHDeliRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DDB96192D46B5000E9303 /* CHDeliRoomViewController.m */; };
 		1F0DDB9A192D4711000E9303 /* CHCEORoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DDB99192D4711000E9303 /* CHCEORoomViewController.m */; };
-		1F3AAD70192AF48C00C1631A /* CHIdeaWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AAD6F192AF48C00C1631A /* CHIdeaWallViewController.m */; };
+		1F0DDB9D192D54A1000E9303 /* straight-right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */; };
+		1F0DDB9E192D54A1000E9303 /* straight-right-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */; };
+		1F0DDBA1192D55D8000E9303 /* straight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9F192D55D8000E9303 /* straight.png */; };
+		1F0DDBA2192D55D8000E9303 /* straight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDBA0192D55D8000E9303 /* straight@2x.png */; };
 		1F3AAD73192AF6AE00C1631A /* CHExxonRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AAD72192AF6AE00C1631A /* CHExxonRoomViewController.m */; };
 		598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* CHViewController.m */; };
 		59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
@@ -27,7 +30,6 @@
 		59FC2B9918E5CEF700887C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2B9718E5CEF700887C2A /* InfoPlist.strings */; };
 		59FC2B9B18E5CEF700887C2A /* TourDeC1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2B9A18E5CEF700887C2A /* TourDeC1Tests.m */; };
 		59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */; };
-		59FC2BAA18E5D20F00887C2A /* CHBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BA918E5D20F00887C2A /* CHBeaconMetadataViewController.m */; };
 		59FC2BAD18E5D3D300887C2A /* CHEnRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */; };
 		59FC2BB718E5D81C00887C2A /* CHBeaconsRouteService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */; };
 		59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */; };
@@ -108,8 +110,10 @@
 		1F0DDB96192D46B5000E9303 /* CHDeliRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDeliRoomViewController.m; sourceTree = "<group>"; };
 		1F0DDB98192D4711000E9303 /* CHCEORoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCEORoomViewController.h; sourceTree = "<group>"; };
 		1F0DDB99192D4711000E9303 /* CHCEORoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCEORoomViewController.m; sourceTree = "<group>"; };
-		1F3AAD6E192AF48C00C1631A /* CHIdeaWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHIdeaWallViewController.h; sourceTree = "<group>"; };
-		1F3AAD6F192AF48C00C1631A /* CHIdeaWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHIdeaWallViewController.m; sourceTree = "<group>"; };
+		1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-right-arrow.png"; sourceTree = "<group>"; };
+		1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-right-arrow@2x.png"; sourceTree = "<group>"; };
+		1F0DDB9F192D55D8000E9303 /* straight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = straight.png; sourceTree = "<group>"; };
+		1F0DDBA0192D55D8000E9303 /* straight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight@2x.png"; sourceTree = "<group>"; };
 		1F3AAD71192AF6AE00C1631A /* CHExxonRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHExxonRoomViewController.h; sourceTree = "<group>"; };
 		1F3AAD72192AF6AE00C1631A /* CHExxonRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHExxonRoomViewController.m; sourceTree = "<group>"; };
 		598729BE18F32F7500D3A1D4 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
@@ -134,8 +138,6 @@
 		59FC2B9A18E5CEF700887C2A /* TourDeC1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TourDeC1Tests.m; sourceTree = "<group>"; };
 		59FC2BA518E5D10E00887C2A /* CHWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHWelcomeViewController.h; sourceTree = "<group>"; };
 		59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHWelcomeViewController.m; sourceTree = "<group>"; };
-		59FC2BA818E5D20F00887C2A /* CHBeaconMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconMetadataViewController.h; sourceTree = "<group>"; };
-		59FC2BA918E5D20F00887C2A /* CHBeaconMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconMetadataViewController.m; sourceTree = "<group>"; };
 		59FC2BAB18E5D3D300887C2A /* CHEnRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHEnRouteViewController.h; sourceTree = "<group>"; };
 		59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEnRouteViewController.m; sourceTree = "<group>"; };
 		59FC2BB518E5D81C00887C2A /* CHBeaconsRouteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconsRouteService.h; sourceTree = "<group>"; };
@@ -336,10 +338,6 @@
 				59FC2C2D18E638C500887C2A /* CHFinishedTourViewController.m */,
 				598729BE18F32F7500D3A1D4 /* CHViewController.h */,
 				598729BF18F32F7500D3A1D4 /* CHViewController.m */,
-				1F3AAD6E192AF48C00C1631A /* CHIdeaWallViewController.h */,
-				1F3AAD6F192AF48C00C1631A /* CHIdeaWallViewController.m */,
-				59FC2BA818E5D20F00887C2A /* CHBeaconMetadataViewController.h */,
-				59FC2BA918E5D20F00887C2A /* CHBeaconMetadataViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -414,6 +412,10 @@
 				59FC2C5C18EB2E4E00887C2A /* start-tour-btn@2x.png */,
 				59FC2C5D18EB2E4E00887C2A /* straight-left-arrow.png */,
 				59FC2C5E18EB2E4E00887C2A /* straight-left-arrow@2x.png */,
+				1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */,
+				1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */,
+				1F0DDB9F192D55D8000E9303 /* straight.png */,
+				1F0DDBA0192D55D8000E9303 /* straight@2x.png */,
 				59FC2C5F18EB2E4E00887C2A /* tour-c1-logo-large.png */,
 				59FC2C6018EB2E4E00887C2A /* tour-c1-logo-large@2x.png */,
 				59FC2C6118EB2E4E00887C2A /* tour-c1-logo-small.png */,
@@ -521,10 +523,13 @@
 				59FC2C8A18EB2E4E00887C2A /* prize-marker-filled.png in Resources */,
 				59FC2C6718EB2E4E00887C2A /* Default@2x.png in Resources */,
 				59FC2C8F18EB2E4E00887C2A /* start-tour-btn@2x.png in Resources */,
+				1F0DDBA1192D55D8000E9303 /* straight.png in Resources */,
 				59FC2C7A18EB2E4E00887C2A /* idea-wall-map.png in Resources */,
+				1F0DDB9D192D54A1000E9303 /* straight-right-arrow.png in Resources */,
 				59FC2C7E18EB2E4E00887C2A /* left-arrow.png in Resources */,
 				59FC2C6B18EB2E4E00887C2A /* finish-tour-btn@2x.png in Resources */,
 				59FC2C7118EB2E4E00887C2A /* Icon-72@2x.png in Resources */,
+				1F0DDB9E192D54A1000E9303 /* straight-right-arrow@2x.png in Resources */,
 				59FC2C9518EB2E4E00887C2A /* tour-c1-logo-small@2x.png in Resources */,
 				59FC2C6D18EB2E4E00887C2A /* Icon-40@2x.png in Resources */,
 				59FC2C8418EB2E4E00887C2A /* next-stop-btn-selected.png in Resources */,
@@ -550,6 +555,7 @@
 				59FC2C6618EB2E4E00887C2A /* Default.png in Resources */,
 				59FC2C8618EB2E4E00887C2A /* next-stop-btn.png in Resources */,
 				59FC2C8018EB2E4E00887C2A /* lobby-map.png in Resources */,
+				1F0DDBA2192D55D8000E9303 /* straight@2x.png in Resources */,
 				59FC2C8C18EB2E4E00887C2A /* start-tour-btn-selected.png in Resources */,
 				59FC2C7D18EB2E4E00887C2A /* iTunesArtwork@2x.png in Resources */,
 				59FC2C6418EB2E4E00887C2A /* claim-prize-btn@2x.png in Resources */,
@@ -629,11 +635,9 @@
 				59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */,
 				59FC2BFB18E6241100887C2A /* CHStartTourViewController.m in Sources */,
 				59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */,
-				59FC2BAA18E5D20F00887C2A /* CHBeaconMetadataViewController.m in Sources */,
 				1F0DDB9A192D4711000E9303 /* CHCEORoomViewController.m in Sources */,
 				59FC2C9C18EB311A00887C2A /* CHPathHelper.m in Sources */,
 				59FC2B7C18E5CEF600887C2A /* main.m in Sources */,
-				1F3AAD70192AF48C00C1631A /* CHIdeaWallViewController.m in Sources */,
 				59FC2C9F18EB38DA00887C2A /* CHBeaconStore.m in Sources */,
 				1F3AAD73192AF6AE00C1631A /* CHExxonRoomViewController.m in Sources */,
 				598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */,

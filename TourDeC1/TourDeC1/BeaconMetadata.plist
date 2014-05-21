@@ -21,6 +21,11 @@
 			<string>PRODUCT</string>
 			<key>nextBeaconDirection</key>
 			<string>Go STRAIGHT and turn RIGHT</string>
+			<key>nextBeaconDirectionBoldWords</key>
+			<array>
+				<string>STRAIGHT</string>
+				<string>RIGHT</string>
+			</array>
 			<key>nextBeaconDirectionImageName</key>
 			<string>straight-right-arrow</string>
 			<key>nextBeaconMapImageName</key>
@@ -42,9 +47,14 @@
 			<key>nextBeaconName</key>
 			<string>DELI</string>
 			<key>nextBeaconDirection</key>
-			<string>Go STRAIGHT and turn RIGHT</string>
+			<string>Go STRAIGHT and turn LEFT</string>
+			<key>nextBeaconDirectionBoldWords</key>
+			<array>
+				<string>STRAIGHT</string>
+				<string>LEFT</string>
+			</array>
 			<key>nextBeaconDirectionImageName</key>
-			<string>straight-right-arrow</string>
+			<string>straight-left-arrow</string>
 			<key>nextBeaconMapImageName</key>
 			<string>deli-map</string>
 		</dict>
@@ -65,6 +75,11 @@
 			<string>CEO</string>
 			<key>nextBeaconDirection</key>
 			<string>Go STRAIGHT and turn RIGHT</string>
+			<key>nextBeaconDirectionBoldWords</key>
+			<array>
+				<string>STRAIGHT</string>
+				<string>RIGHT</string>
+			</array>
 			<key>nextBeaconDirectionImageName</key>
 			<string>straight-right-arrow</string>
 			<key>nextBeaconMapImageName</key>
@@ -87,6 +102,10 @@
 			<string>EXXON</string>
 			<key>nextBeaconDirection</key>
 			<string>Go STRAIGHT</string>
+			<key>nextBeaconDirectionBoldWords</key>
+			<array>
+				<string>STRAIGHT</string>
+			</array>
 			<key>nextBeaconDirectionImageName</key>
 			<string>straight-arrow</string>
 			<key>nextBeaconMapImageName</key>

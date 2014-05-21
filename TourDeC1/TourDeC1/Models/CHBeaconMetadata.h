@@ -17,8 +17,10 @@
 @property (nonatomic, strong) NSString *locationInformation;
 @property (nonatomic, strong) NSString *nextBeaconName;
 @property (nonatomic, strong) NSString *nextBeaconDirection;
+@property (nonatomic, strong) NSArray *nextBeaconDirectionBoldWords;
 @property (nonatomic, strong) NSString *nextBeaconDirectionImageName;
 @property (nonatomic, strong) NSString *nextBeaconMapImageName;
+
 
 // Designated initializer
 - (instancetype)initWithData:(NSDictionary *)data;

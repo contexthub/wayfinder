@@ -414,7 +414,7 @@
                     <navigationItem key="navigationItem" id="jEn-ZR-2YN"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="directionsLabel" destination="ftk-lZ-ydu" id="08F-Gl-spz"/>
+                        <outlet property="directionsLabel" destination="ftk-lZ-ydu" id="grA-FO-F95"/>
                         <outlet property="mapView" destination="omm-MB-aLQ" id="18N-vE-Yfv"/>
                         <outlet property="navigationDirectionsImageView" destination="eRZ-ie-Dp5" id="bOl-L2-hYZ"/>
                         <segue destination="8aF-Bt-pFR" kind="push" identifier="showBeacon2" id="Cg2-8Q-8bc"/>

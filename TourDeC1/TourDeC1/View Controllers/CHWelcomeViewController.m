@@ -56,7 +56,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showBeacon1"]){
         CHStartTourViewController *startTourController = segue.destinationViewController;
-        startTourController.currentBeaconMetadata = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.nextBeaconName];
+        startTourController.currentBeaconMetadata = self.destinationBeaconMetadata;
     }
 }
 

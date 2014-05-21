@@ -41,31 +41,13 @@
     NSMutableAttributedString *directionsText;
     self.mapView.image = [UIImage imageNamed:self.currentBeaconMetadata.nextBeaconMapImageName];
     self.navigationDirectionsImageView.image = [UIImage imageNamed:self.currentBeaconMetadata.nextBeaconDirectionImageName];
-    self.directionsLabel.text = self.currentBeaconMetadata.nextBeaconDirection;
     
-    /*
-    if([self.currentBeaconMetadata.name isEqualToString:BeaconB1]){
-        [self.navigationDirectionsImageView setImage:[UIImage imageNamed:@"straight-left-arrow"]];
-        directionsText = [[NSMutableAttributedString alloc]initWithString:@"Go STRAIGHT and turn LEFT"];
-        [directionsText addAttribute:NSFontAttributeName
-                               value:[UIFont fontWithName:@"AvenirNext-Bold"
-                                                 size:20.0]
-                               range:NSRangeFromString(@"STRAIGHT")];
+    directionsText = [[NSMutableAttributedString alloc] initWithString:self.currentBeaconMetadata.nextBeaconDirection];
     
-        [directionsText addAttribute:NSFontAttributeName
-                               value:[UIFont fontWithName:@"AvenirNext-Bold"
-                                                 size:20.0]
-                               range:NSRangeFromString(@"LEFT")];
-        [self.directionsLabel setAttributedText:directionsText];
-    } else if([self.currentBeaconMetadata.name isEqualToString:BeaconB2]){
-        [self.navigationDirectionsImageView setImage:[UIImage imageNamed:@"left-arrow.png"]];
-        directionsText = [[NSMutableAttributedString alloc]initWithString:@"Turn LEFT"];
-        [directionsText addAttribute:NSFontAttributeName
-                               value:[UIFont fontWithName:@"AvenirNext-Bold"
-                                size:20.0]
-                               range:NSRangeFromString(@"LEFT")];
-        [self.directionsLabel setAttributedText:directionsText];
-    }*/
+    for (NSString *boldWord in self.currentBeaconMetadata.nextBeaconDirectionBoldWords) {
+        [directionsText addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"AvenirNext-Bold" size:20.0] range:NSRangeFromString(boldWord)];
+    }
+    [self.directionsLabel setAttributedText:directionsText];
 }
 
 - (void)loadNextBeaconMetadata {
@@ -74,7 +56,7 @@
 
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the next beacon
-    CHBeaconMetadata *nextBeacon = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.name];
+    CHBeaconMetadata *nextBeacon = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
     
     // Detect the next beacon for the lobby to show the "Start Tour" button
     if ([nextBeacon isNearOrImmediateBeaconWithNotification:notification]) {

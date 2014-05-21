@@ -20,6 +20,7 @@
         self.locationInformation = data[@"locationInformation"];
         self.nextBeaconName = data[@"nextBeaconName"];
         self.nextBeaconDirection = data[@"nextBeaconDirection"];
+        self.nextBeaconDirectionBoldWords = data[@"nextBeaconDirectionBoldWords"];
         self.nextBeaconDirectionImageName = data[@"nextBeaconDirectionImageName"];
         self.nextBeaconMapImageName = data[@"nextBeaconMapImageName"];
     }
