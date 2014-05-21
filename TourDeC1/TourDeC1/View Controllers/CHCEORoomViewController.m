@@ -25,7 +25,6 @@
 }
 
 - (void)layoutMetadata {
-    
     self.currentBeaconDescriptionLabel.text = self.currentBeaconMetadata.locationDescription;
     self.metadataTextView.text = self.currentBeaconMetadata.locationInformation;
 }

@@ -34,8 +34,6 @@
     NSString *uuid = [event valueForKeyPath:@"event.data.beacon.uuid"];
     NSString *major = [event valueForKeyPath:@"event.data.beacon.major"];
     NSString *minor = [event valueForKeyPath:@"event.data.beacon.minor"];
-    NSString *eventName = [event valueForKeyPath:@"event.name"];
-    NSString *state = [event valueForKeyPath:@"event.data.state"];
     
     // Create a CHBeaconMedata object from the data in the notification
     NSDictionary *data = @{@"uuid":uuid, @"major": major, @"minor": minor, @"name": @"", @"nextBeaconName": @"", @"nextBeaconDirectionName": @"", @"nextBeaconDirectionImageName": @"", @"nextBeaconMapImageName": @""};

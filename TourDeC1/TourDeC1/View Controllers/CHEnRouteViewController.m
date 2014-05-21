@@ -32,11 +32,6 @@
                                                     name:CCHContextEventManagerDidPostEvent object:nil];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
-
 - (void)layoutMetadata {
     NSMutableAttributedString *directionsText;
     self.mapView.image = [UIImage imageNamed:self.currentBeaconMetadata.nextBeaconMapImageName];
@@ -80,19 +75,8 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showBeacon2"]) {
-        CHProductRoomViewController *productController = segue.destinationViewController;
-        productController.currentBeaconMetadata = self.destinationBeaconMetadata;
-    } else if ([segue.identifier isEqualToString:@"showBeacon3"]) {
-        CHDeliRoomViewController *deliRoomController = segue.destinationViewController;
-        deliRoomController.currentBeaconMetadata = self.destinationBeaconMetadata;
-    } else if ([segue.identifier isEqualToString:@"showBeacon4"]) {
-        CHCEORoomViewController *ceoRoomController = segue.destinationViewController;
-        ceoRoomController.currentBeaconMetadata = self.destinationBeaconMetadata;
-    } else if ([segue.identifier isEqualToString:@"showBeacon5"]) {
-        CHExxonRoomViewController *exxonController = segue.destinationViewController;
-        exxonController.currentBeaconMetadata = self.destinationBeaconMetadata;
-    }
+    CHViewController *chViewController = segue.destinationViewController;
+    chViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
 }
 
 @end

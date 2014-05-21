@@ -12,8 +12,8 @@
 		1F0DDB9A192D4711000E9303 /* CHCEORoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DDB99192D4711000E9303 /* CHCEORoomViewController.m */; };
 		1F0DDB9D192D54A1000E9303 /* straight-right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */; };
 		1F0DDB9E192D54A1000E9303 /* straight-right-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */; };
-		1F0DDBA1192D55D8000E9303 /* straight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9F192D55D8000E9303 /* straight.png */; };
-		1F0DDBA2192D55D8000E9303 /* straight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDBA0192D55D8000E9303 /* straight@2x.png */; };
+		1F0DDBA1192D55D8000E9303 /* straight-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9F192D55D8000E9303 /* straight-arrow.png */; };
+		1F0DDBA2192D55D8000E9303 /* straight-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDBA0192D55D8000E9303 /* straight-arrow@2x.png */; };
 		1F3AAD73192AF6AE00C1631A /* CHExxonRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AAD72192AF6AE00C1631A /* CHExxonRoomViewController.m */; };
 		598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* CHViewController.m */; };
 		59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
@@ -112,8 +112,8 @@
 		1F0DDB99192D4711000E9303 /* CHCEORoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCEORoomViewController.m; sourceTree = "<group>"; };
 		1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-right-arrow.png"; sourceTree = "<group>"; };
 		1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-right-arrow@2x.png"; sourceTree = "<group>"; };
-		1F0DDB9F192D55D8000E9303 /* straight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = straight.png; sourceTree = "<group>"; };
-		1F0DDBA0192D55D8000E9303 /* straight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight@2x.png"; sourceTree = "<group>"; };
+		1F0DDB9F192D55D8000E9303 /* straight-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-arrow.png"; sourceTree = "<group>"; };
+		1F0DDBA0192D55D8000E9303 /* straight-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-arrow@2x.png"; sourceTree = "<group>"; };
 		1F3AAD71192AF6AE00C1631A /* CHExxonRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHExxonRoomViewController.h; sourceTree = "<group>"; };
 		1F3AAD72192AF6AE00C1631A /* CHExxonRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHExxonRoomViewController.m; sourceTree = "<group>"; };
 		598729BE18F32F7500D3A1D4 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
@@ -414,8 +414,8 @@
 				59FC2C5E18EB2E4E00887C2A /* straight-left-arrow@2x.png */,
 				1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */,
 				1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */,
-				1F0DDB9F192D55D8000E9303 /* straight.png */,
-				1F0DDBA0192D55D8000E9303 /* straight@2x.png */,
+				1F0DDB9F192D55D8000E9303 /* straight-arrow.png */,
+				1F0DDBA0192D55D8000E9303 /* straight-arrow@2x.png */,
 				59FC2C5F18EB2E4E00887C2A /* tour-c1-logo-large.png */,
 				59FC2C6018EB2E4E00887C2A /* tour-c1-logo-large@2x.png */,
 				59FC2C6118EB2E4E00887C2A /* tour-c1-logo-small.png */,
@@ -523,7 +523,7 @@
 				59FC2C8A18EB2E4E00887C2A /* prize-marker-filled.png in Resources */,
 				59FC2C6718EB2E4E00887C2A /* Default@2x.png in Resources */,
 				59FC2C8F18EB2E4E00887C2A /* start-tour-btn@2x.png in Resources */,
-				1F0DDBA1192D55D8000E9303 /* straight.png in Resources */,
+				1F0DDBA1192D55D8000E9303 /* straight-arrow.png in Resources */,
 				59FC2C7A18EB2E4E00887C2A /* idea-wall-map.png in Resources */,
 				1F0DDB9D192D54A1000E9303 /* straight-right-arrow.png in Resources */,
 				59FC2C7E18EB2E4E00887C2A /* left-arrow.png in Resources */,
@@ -555,7 +555,7 @@
 				59FC2C6618EB2E4E00887C2A /* Default.png in Resources */,
 				59FC2C8618EB2E4E00887C2A /* next-stop-btn.png in Resources */,
 				59FC2C8018EB2E4E00887C2A /* lobby-map.png in Resources */,
-				1F0DDBA2192D55D8000E9303 /* straight@2x.png in Resources */,
+				1F0DDBA2192D55D8000E9303 /* straight-arrow@2x.png in Resources */,
 				59FC2C8C18EB2E4E00887C2A /* start-tour-btn-selected.png in Resources */,
 				59FC2C7D18EB2E4E00887C2A /* iTunesArtwork@2x.png in Resources */,
 				59FC2C6418EB2E4E00887C2A /* claim-prize-btn@2x.png in Resources */,

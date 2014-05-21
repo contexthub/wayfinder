@@ -34,10 +34,6 @@
     //self.destinationBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:BeaconB1];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
-
 - (void)handleEvent:(NSNotification *)notification {
     // Grab beacon 1
     CHBeaconMetadata *beacon1 = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
@@ -54,11 +50,8 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"showBeacon1"]){
-        CHStartTourViewController *startTourController = segue.destinationViewController;
-        startTourController.currentBeaconMetadata = self.destinationBeaconMetadata;
-    }
+    CHViewController *chViewController = segue.destinationViewController;
+    chViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
 }
-
 
 @end
