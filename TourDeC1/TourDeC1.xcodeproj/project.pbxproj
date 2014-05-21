@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0DDB94192D453A000E9303 /* CHProductRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DDB93192D453A000E9303 /* CHProductRoomViewController.m */; };
+		1F0DDB97192D46B5000E9303 /* CHDeliRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DDB96192D46B5000E9303 /* CHDeliRoomViewController.m */; };
+		1F0DDB9A192D4711000E9303 /* CHCEORoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DDB99192D4711000E9303 /* CHCEORoomViewController.m */; };
+		1F3AAD70192AF48C00C1631A /* CHIdeaWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AAD6F192AF48C00C1631A /* CHIdeaWallViewController.m */; };
+		1F3AAD73192AF6AE00C1631A /* CHExxonRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AAD72192AF6AE00C1631A /* CHExxonRoomViewController.m */; };
 		598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* CHViewController.m */; };
 		59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
 		59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */; };
@@ -97,6 +102,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F0DDB92192D453A000E9303 /* CHProductRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHProductRoomViewController.h; sourceTree = "<group>"; };
+		1F0DDB93192D453A000E9303 /* CHProductRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHProductRoomViewController.m; sourceTree = "<group>"; };
+		1F0DDB95192D46B5000E9303 /* CHDeliRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDeliRoomViewController.h; sourceTree = "<group>"; };
+		1F0DDB96192D46B5000E9303 /* CHDeliRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDeliRoomViewController.m; sourceTree = "<group>"; };
+		1F0DDB98192D4711000E9303 /* CHCEORoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCEORoomViewController.h; sourceTree = "<group>"; };
+		1F0DDB99192D4711000E9303 /* CHCEORoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCEORoomViewController.m; sourceTree = "<group>"; };
+		1F3AAD6E192AF48C00C1631A /* CHIdeaWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHIdeaWallViewController.h; sourceTree = "<group>"; };
+		1F3AAD6F192AF48C00C1631A /* CHIdeaWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHIdeaWallViewController.m; sourceTree = "<group>"; };
+		1F3AAD71192AF6AE00C1631A /* CHExxonRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHExxonRoomViewController.h; sourceTree = "<group>"; };
+		1F3AAD72192AF6AE00C1631A /* CHExxonRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHExxonRoomViewController.m; sourceTree = "<group>"; };
 		598729BE18F32F7500D3A1D4 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
 		598729BF18F32F7500D3A1D4 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
 		59A7711E53B14165A0A33716 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -301,20 +316,30 @@
 		59FC2BA418E5CFC800887C2A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				59FC2BA518E5D10E00887C2A /* CHWelcomeViewController.h */,
-				59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */,
-				59FC2BA818E5D20F00887C2A /* CHBeaconMetadataViewController.h */,
-				59FC2BA918E5D20F00887C2A /* CHBeaconMetadataViewController.m */,
-				59FC2BAB18E5D3D300887C2A /* CHEnRouteViewController.h */,
-				59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */,
 				59FC2BBD18E5F2E800887C2A /* CHLandingScreenViewController.h */,
 				59FC2BBE18E5F2E800887C2A /* CHLandingScreenViewController.m */,
+				59FC2BA518E5D10E00887C2A /* CHWelcomeViewController.h */,
+				59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */,
+				59FC2BAB18E5D3D300887C2A /* CHEnRouteViewController.h */,
+				59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */,
 				59FC2BF918E6241100887C2A /* CHStartTourViewController.h */,
 				59FC2BFA18E6241100887C2A /* CHStartTourViewController.m */,
+				1F0DDB92192D453A000E9303 /* CHProductRoomViewController.h */,
+				1F0DDB93192D453A000E9303 /* CHProductRoomViewController.m */,
+				1F0DDB95192D46B5000E9303 /* CHDeliRoomViewController.h */,
+				1F0DDB96192D46B5000E9303 /* CHDeliRoomViewController.m */,
+				1F0DDB98192D4711000E9303 /* CHCEORoomViewController.h */,
+				1F0DDB99192D4711000E9303 /* CHCEORoomViewController.m */,
+				1F3AAD71192AF6AE00C1631A /* CHExxonRoomViewController.h */,
+				1F3AAD72192AF6AE00C1631A /* CHExxonRoomViewController.m */,
 				59FC2C2C18E638C500887C2A /* CHFinishedTourViewController.h */,
 				59FC2C2D18E638C500887C2A /* CHFinishedTourViewController.m */,
 				598729BE18F32F7500D3A1D4 /* CHViewController.h */,
 				598729BF18F32F7500D3A1D4 /* CHViewController.m */,
+				1F3AAD6E192AF48C00C1631A /* CHIdeaWallViewController.h */,
+				1F3AAD6F192AF48C00C1631A /* CHIdeaWallViewController.m */,
+				59FC2BA818E5D20F00887C2A /* CHBeaconMetadataViewController.h */,
+				59FC2BA918E5D20F00887C2A /* CHBeaconMetadataViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -457,7 +482,12 @@
 				ORGANIZATIONNAME = ChaiONE;
 				TargetAttributes = {
 					59FC2B6B18E5CEF600887C2A = {
-						DevelopmentTeam = LZN4CQ5A3A;
+						DevelopmentTeam = K83DSSAEPP;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					59FC2B8C18E5CEF700887C2A = {
 						TestTargetID = 59FC2B6B18E5CEF600887C2A;
@@ -594,13 +624,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0DDB94192D453A000E9303 /* CHProductRoomViewController.m in Sources */,
+				1F0DDB97192D46B5000E9303 /* CHDeliRoomViewController.m in Sources */,
 				59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */,
 				59FC2BFB18E6241100887C2A /* CHStartTourViewController.m in Sources */,
 				59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */,
 				59FC2BAA18E5D20F00887C2A /* CHBeaconMetadataViewController.m in Sources */,
+				1F0DDB9A192D4711000E9303 /* CHCEORoomViewController.m in Sources */,
 				59FC2C9C18EB311A00887C2A /* CHPathHelper.m in Sources */,
 				59FC2B7C18E5CEF600887C2A /* main.m in Sources */,
+				1F3AAD70192AF48C00C1631A /* CHIdeaWallViewController.m in Sources */,
 				59FC2C9F18EB38DA00887C2A /* CHBeaconStore.m in Sources */,
+				1F3AAD73192AF6AE00C1631A /* CHExxonRoomViewController.m in Sources */,
 				598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */,
 				59FC2C2E18E638C500887C2A /* CHFinishedTourViewController.m in Sources */,
 				59FC2B8018E5CEF600887C2A /* CHAppDelegate.m in Sources */,
@@ -692,13 +727,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: CHAIONE, INC.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WayFinder;
-				PROVISIONING_PROFILE = "4EB569E1-8793-4D14-A312-2FE103A834CD";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;
@@ -795,13 +831,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Anuradha  Ramprakash (9B2TB8KB4L)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WayFinder;
-				PROVISIONING_PROFILE = "6DA99CB3-44CC-43EE-8739-30F02DBC5DCC";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -811,12 +848,13 @@
 			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TourDeC1/TourDeC1-Prefix.pch";
 				INFOPLIST_FILE = "TourDeC1/TourDeC1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WayFinder;
-				PROVISIONING_PROFILE = "6DA99CB3-44CC-43EE-8739-30F02DBC5DCC";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

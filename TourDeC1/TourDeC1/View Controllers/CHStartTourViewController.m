@@ -15,10 +15,9 @@
 @implementation CHStartTourViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"startEnRoute"]){
+    if([segue.identifier isEqualToString:@"showEnRoute1"]){
         CHEnRouteViewController *destinationVC = segue.destinationViewController;
         destinationVC.currentBeaconMetadata = self.currentBeaconMetadata;
-        [destinationVC setUserAtBeaconName:BeaconB1];
     }
 }
 

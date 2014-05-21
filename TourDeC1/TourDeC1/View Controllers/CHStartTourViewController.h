@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "CHEnRouteViewController.h"
 
-@interface CHStartTourViewController : UIViewController
-@property (nonatomic, strong) CHBeaconMetadata *currentBeaconMetadata;
+@interface CHStartTourViewController : CHViewController
 @end

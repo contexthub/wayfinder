@@ -5,45 +5,113 @@
 	<key>Beacons</key>
 	<array>
 		<dict>
-			<key>major</key>
-			<string>32872</string>
-			<key>minor</key>
-			<string>7821</string>
-			<key>name</key>
-			<string>B1</string>
-			<key>uuid</key>
-			<string>AD0A19FF-72AF-4377-8C66-C93604EDAB9E</string>
-			<key>nextBeaconName</key>
-			<string>B2</string>
-			<key>locationOnMapImageName</key>
-			<string>lobby-map</string>
-		</dict>
-		<dict>
-			<key>major</key>
-			<string>13152</string>
-			<key>minor</key>
-			<string> 41710</string>
-			<key>name</key>
-			<string>B2</string>
 			<key>uuid</key>
 			<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
-			<key>nextBeaconName</key>
-			<string>B3</string>
-			<key>locationOnMapImageName</key>
-			<string>idea-wall-map</string>
-		</dict>
-		<dict>
 			<key>major</key>
-			<string>1</string>
+			<string>100</string>
 			<key>minor</key>
 			<string>1</string>
 			<key>name</key>
-			<string>B3</string>
+			<string>LOBBY</string>
+			<key>locationDescription</key>
+			<string>YOU&apos;RE AT THE LOBBY</string>
+			<key>locationInformation</key>
+			<string>ChaiOne is an Enterprise Mobility Agency focused on creating innovative, beautiful mobile solutions that solve complex business problems of large enterprises, with a specific focus on the energy industry.</string>
+			<key>nextBeaconName</key>
+			<string>PRODUCT</string>
+			<key>nextBeaconDirection</key>
+			<string>Go STRAIGHT and turn RIGHT</string>
+			<key>nextBeaconDirectionImageName</key>
+			<string>straight-right-arrow</string>
+			<key>nextBeaconMapImageName</key>
+			<string>product-map</string>
+		</dict>
+		<dict>
 			<key>uuid</key>
-			<string></string>
+			<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+			<key>major</key>
+			<string>100</string>
+			<key>minor</key>
+			<string>2</string>
+			<key>name</key>
+			<string>PRODUCT</string>
+			<key>locationDescription</key>
+			<string>YOU&apos;RE AT THE PRODUCT ROOM</string>
+			<key>locationInformation</key>
+			<string>This is the product room where we work on innovative apps showcasing the best of our developers to the public. This app, powered by ContextHub was developed in this room.</string>
+			<key>nextBeaconName</key>
+			<string>DELI</string>
+			<key>nextBeaconDirection</key>
+			<string>Go STRAIGHT and turn RIGHT</string>
+			<key>nextBeaconDirectionImageName</key>
+			<string>straight-right-arrow</string>
+			<key>nextBeaconMapImageName</key>
+			<string>deli-map</string>
+		</dict>
+		<dict>
+			<key>uuid</key>
+			<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+			<key>major</key>
+			<string>100</string>
+			<key>minor</key>
+			<string>3</string>
+			<key>name</key>
+			<string>DELI</string>
+			<key>locationDescription</key>
+			<string>YOU&apos;RE AT THE DELI ROOM</string>
+			<key>locationInformation</key>
+			<string>This is the Deli Room, where Deli Radio is developed. Deli Radio is a music discovery app designed for the connoisseur, geenrating a stream station based on local artists playing in a given location. Grab it from the App Store and Google Play today!</string>
+			<key>nextBeaconName</key>
+			<string>CEO</string>
+			<key>nextBeaconDirection</key>
+			<string>Go STRAIGHT and turn RIGHT</string>
+			<key>nextBeaconDirectionImageName</key>
+			<string>straight-right-arrow</string>
+			<key>nextBeaconMapImageName</key>
+			<string>ceo-map</string>
+		</dict>
+		<dict>
+			<key>uuid</key>
+			<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+			<key>major</key>
+			<string>100</string>
+			<key>minor</key>
+			<string>4</string>
+			<key>name</key>
+			<string>CEO</string>
+			<key>locationDescription</key>
+			<string>YOU&apos;RE AT GAURAV&apos;S OFFICE</string>
+			<key>locationInformation</key>
+			<string>This is Gaurav&apos;s office.</string>
+			<key>nextBeaconName</key>
+			<string>EXXON</string>
+			<key>nextBeaconDirection</key>
+			<string>Go STRAIGHT</string>
+			<key>nextBeaconDirectionImageName</key>
+			<string>straight-arrow</string>
+			<key>nextBeaconMapImageName</key>
+			<string>exxon-map</string>
+		</dict>
+		<dict>
+			<key>uuid</key>
+			<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+			<key>major</key>
+			<string>100</string>
+			<key>minor</key>
+			<string>5</string>
+			<key>name</key>
+			<string>EXXON</string>
+			<key>locationDescription</key>
+			<string>YOU&apos;RE AT THE EXXON ROOM</string>
+			<key>locationInformation</key>
+			<string>Exxon is one of our biggest clients. Our design and dev team spend their time happily working on this project. By 2015 the Exxon team will have produced 200 iOS and Android apps. Make sure to download them all!</string>
 			<key>nextBeaconName</key>
 			<string></string>
-			<key>locationOnMapImageName</key>
+			<key>nextBeaconDirection</key>
+			<string></string>
+			<key>nextBeaconDirectionImageName</key>
+			<string></string>
+			<key>nextBeaconMapImageName</key>
 			<string></string>
 		</dict>
 	</array>

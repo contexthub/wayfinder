@@ -10,6 +10,9 @@
 
 @interface CHViewController : UIViewController
 
+@property (nonatomic, strong) CHBeaconMetadata *currentBeaconMetadata;          // This beacon
+@property (nonatomic, strong) CHBeaconMetadata *destinationBeaconMetadata;      // The next beacon
+
 - (NSUInteger)supportedInterfaceOrientations;
 - (BOOL)shouldAutorotate;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;

@@ -7,8 +7,9 @@
 //
 
 #import "CHLandingScreenViewController.h"
-#import "CHBeaconMetadataViewController.h"
+#import "CHWelcomeViewController.h"
 #import "CHBeaconStore.h"
+#import "CGGlobals.h"
 
 @interface CHLandingScreenViewController ()
 
@@ -17,42 +18,44 @@
 @implementation CHLandingScreenViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  [[NSNotificationCenter defaultCenter]addObserver:self
-                                          selector:@selector(handleEvent:)
-                                              name:CCHContextEventManagerDidPostEvent
-                                            object:nil];
+    [super viewDidLoad];
+    
+    // Turn on notifications about beacons
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(handleEvent:)
+                                                name:CCHContextEventManagerDidPostEvent
+                                              object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+    // Definitely make sure we get no more notifications about beacons (next screen will turn them on when needed
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
+// Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
-  if (self.navigationController.topViewController == self) {
-    NSDictionary *event = notification.object;
-    NSString *eventName = [event valueForKeyPath:@"event.name"];
-    NSString *state = [event valueForKeyPath:@"event.data.state"];
-    NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
-    NSString *uuid = [beacon valueForKey:@"uuid"];
-    
-    if([uuid isEqualToString:BeaconUdid] && [self isBeaconIn:eventName]) {
-      [[NSNotificationCenter defaultCenter]removeObserver:self];
-      [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
+    if (self.navigationController.topViewController == self) {
+        CHBeaconMetadata *anyBeacon = [CHBeaconMetadata beaconFromNotification:notification];
+        
+        // At the landing screen, we only care we can detect the BeaconUUID (meaning we are somewhere near the office)
+        if([anyBeacon.uuid isEqualToString:BeaconUdid]) {
+            // Turn off notifications about beacons
+            [[NSNotificationCenter defaultCenter]removeObserver:self];
+            [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
+        }
     }
-    else if([uuid isEqualToString:BeaconUdid] && [self isNearOrImmediateBeacon:eventName state:state]){
-      [[NSNotificationCenter defaultCenter]removeObserver:self];
-      [self performSegueWithIdentifier:@"atTheLobby" sender:nil];
-    }
-  }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if([segue.identifier isEqualToString:@"atTheLobby"]){
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-    CHBeaconMetadataViewController *beaconMetadataVC = segue.destinationViewController;
-    beaconMetadataVC.currentBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:BeaconB1];
-  }
+    if([segue.identifier isEqualToString:@"showWelcomeScreen"]){
+        // Set up the beacon info the welcome screen needs to know about (Beacon1)
+        CHWelcomeViewController *welcomeVC = segue.destinationViewController;
+        
+        // Not currently at any specific beacon
+        welcomeVC.currentBeaconMetadata = nil;
+        // Destination is beacon 1
+        welcomeVC.destinationBeaconMetadata = [[CHBeaconStore sharedStore] metadataForBeaconWithName:BeaconB1];
+    }
 }
 
 @end

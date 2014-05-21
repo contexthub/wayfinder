@@ -10,8 +10,8 @@
 #import "CHAppDelegate.h"
 #import "CHBeaconMetadata.h"
 
-@interface CHBeaconMetadataViewController : UIViewController
-@property (nonatomic,strong) CHBeaconMetadata *currentBeaconMetadata;
+@interface CHBeaconMetadataViewController : CHViewController
+
 @property (weak, nonatomic) IBOutlet UIButton *nextActionButton;
 @property (weak, nonatomic) IBOutlet UILabel *currentBeaconDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UITextView *metadataTextView;

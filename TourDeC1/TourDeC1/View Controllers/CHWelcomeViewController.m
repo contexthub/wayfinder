@@ -7,9 +7,13 @@
 //
 
 #import "CHWelcomeViewController.h"
-#import "CHBeaconMetadataViewController.h"
+#import "CHStartTourViewController.h"
+#import "CGGlobals.h"
 
 @interface CHWelcomeViewController ()
+
+@property (nonatomic, weak) IBOutlet UILabel *startTourPromptLabel;
+@property (nonatomic, weak) IBOutlet UIButton *startTourButton;
 
 @end
 
@@ -17,43 +21,43 @@
 
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  [self loadCurrentBeaconMetadata];
+    [super viewDidLoad];
+    [self loadNextBeaconMetadata];
     
-  [[NSNotificationCenter defaultCenter]addObserver:self
+    [[NSNotificationCenter defaultCenter]addObserver:self
                                           selector:@selector(handleEvent:)
                                               name:CCHContextEventManagerDidPostEvent
                                             object:nil];
 }
 
-- (void)loadCurrentBeaconMetadata {
-  self.currentBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:@"B1"];
+- (void)loadNextBeaconMetadata {
+    //self.destinationBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:BeaconB1];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-  [[NSNotificationCenter defaultCenter]removeObserver:self];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 - (void)handleEvent:(NSNotification *)notification {
-  NSDictionary *event = notification.object;
-  NSString *eventName = [event valueForKeyPath:@"event.name"];
-  NSString *state = [event valueForKeyPath:@"event.data.state"];
-  NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
-  NSString *uuid = [beacon valueForKeyPath:@"uuid"];
-  
-  if([uuid isEqualToString:self.currentBeaconMetadata.uuid] &&
-      [self isNearOrImmediateBeacon:eventName state:state]) {
-       [[NSNotificationCenter defaultCenter]removeObserver:self];
-       [self performSegueWithIdentifier:@"showBeacon1" sender:nil];
-  }
+    // Grab beacon 1
+    CHBeaconMetadata *beacon1 = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
+    
+    // Detect the next beacon for the lobby to show the "Start Tour" button
+    if ([beacon1 isNearOrImmediateBeaconWithNotification:notification]) {
+        // Stop notifications
+        [[NSNotificationCenter defaultCenter]removeObserver:self];
+        
+        self.startTourPromptLabel.hidden = YES;
+        self.startTourButton.hidden = NO;
+    }
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-  if([segue.identifier isEqualToString:@"showBeacon1"]){
-    CHBeaconMetadataViewController *destinationVC = segue.destinationViewController;
-    destinationVC.currentBeaconMetadata = self.currentBeaconMetadata;
-  }
+    if([segue.identifier isEqualToString:@"showBeacon1"]){
+        CHStartTourViewController *startTourController = segue.destinationViewController;
+        startTourController.currentBeaconMetadata = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.nextBeaconName];
+    }
 }
 
 

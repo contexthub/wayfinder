@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TDv-Jz-mxE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TDv-Jz-mxE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -19,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yug-14-L5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2100" y="-209"/>
+            <point key="canvasLocation" x="-2100" y="-227"/>
         </scene>
         <!--Landing Screen View Controller-->
         <scene sceneID="2dY-0y-Pl6">
@@ -61,12 +61,11 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="showWelcomeScreen" id="amm-ro-iTK"/>
-                        <segue destination="8aF-Bt-pFR" kind="push" identifier="atTheLobby" id="9ue-5m-MAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLW-ii-mih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1659" y="-209"/>
+            <point key="canvasLocation" x="-1659" y="-227"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -84,19 +83,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgH-vF-hJi">
+                                <rect key="frame" x="25" y="469" width="270" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="start-tour-btn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="start-tour-btn-selected.png"/>
+                                <connections>
+                                    <segue destination="M4X-HY-yfg" kind="push" identifier="showBeacon1" id="Cr2-dC-Zkj"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tour-c1-logo-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZq-Ag-dwQ">
                                 <rect key="frame" x="47" y="67" width="258" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSD-ZS-qes">
-                                <rect key="frame" x="57" y="289" width="220" height="55"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSD-ZS-qes">
+                                <rect key="frame" x="50" y="289" width="220" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We're happy to have you here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY4-X4-2Jn">
-                                <rect key="frame" x="53" y="338" width="228" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We're happy to have you here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY4-X4-2Jn">
+                                <rect key="frame" x="46" y="338" width="228" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go to the lobby to start your tour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MP-ZV-exx">
+                                <rect key="frame" x="32" y="488" width="256" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -106,12 +123,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="OP5-T7-N7p"/>
                     <connections>
-                        <segue destination="8aF-Bt-pFR" kind="push" identifier="showBeacon1" id="zdl-cC-NRM"/>
+                        <outlet property="startTourButton" destination="OgH-vF-hJi" id="uX4-o5-UdE"/>
+                        <outlet property="startTourPromptLabel" destination="4MP-ZV-exx" id="Kqh-mG-9PR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1159" y="-339"/>
+            <point key="canvasLocation" x="-1179" y="-227"/>
         </scene>
         <!--Finished Tour View Controller-->
         <scene sceneID="rev-BP-k9u">
@@ -130,21 +148,21 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THANKS!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oru-TR-uqs">
-                                <rect key="frame" x="72" y="240" width="176" height="55"/>
+                                <rect key="frame" x="76" y="240" width="176" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have visited the office" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a95-xc-A7w">
-                                <rect key="frame" x="77" y="295" width="190" height="22"/>
+                                <rect key="frame" x="69" y="295" width="190" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRl-vf-HyM">
-                                <rect key="frame" x="139" y="330" width="65" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 time(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRl-vf-HyM">
+                                <rect key="frame" x="109" y="330" width="102" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,16 +198,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bIx-Jf-BPv"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="prizeMarker1" destination="Nyc-LQ-9GU" id="A5V-zk-NK7"/>
+                        <outlet property="prizeMarker2" destination="ZAM-wp-MPx" id="aT5-m9-YUi"/>
+                        <outlet property="prizeMarker3" destination="DJI-3P-7Vy" id="vjQ-kI-FKR"/>
+                        <outlet property="prizeMarker4" destination="mbb-qA-djc" id="HBt-mr-xjo"/>
+                        <outlet property="prizeMarker5" destination="bEk-cK-J8a" id="DRZ-4w-PaX"/>
+                        <outlet property="timesVisitedLabel" destination="eRl-vf-HyM" id="BEs-J3-FjI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oR-7G-wIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="-217"/>
+            <point key="canvasLocation" x="-197" y="1223"/>
         </scene>
-        <!--Beacon Metadata View Controller-->
+        <!--Product Room View Controller-->
         <scene sceneID="d7F-mf-0NM">
             <objects>
-                <viewController storyboardIdentifier="beaconMetadataVC" id="8aF-Bt-pFR" customClass="CHBeaconMetadataViewController" sceneMemberID="viewController">
+                <viewController id="8aF-Bt-pFR" customClass="CHProductRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ic3-ag-OpQ"/>
                         <viewControllerLayoutGuide type="bottom" id="9tt-Xv-WeE"/>
@@ -206,22 +233,21 @@
                                 <rect key="frame" x="77" y="45" width="166" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnd-zS-MjM">
-                                <rect key="frame" x="88" y="501" width="144" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnd-zS-MjM">
+                                <rect key="frame" x="25" y="471" width="270" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" image="next-stop-btn.png"/>
+                                <state key="highlighted" image="next-stop-btn-selected.png"/>
                                 <connections>
-                                    <action selector="nextActionButtonTapped:" destination="8aF-Bt-pFR" eventType="touchUpInside" id="sfS-8R-Car"/>
+                                    <segue destination="RXB-87-SWA" kind="push" identifier="showEnRoute2" id="tQZ-Qo-9hn"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="m4F-vH-5qm">
                                 <rect key="frame" x="129" y="96" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="YOU'RE AT THE IDEA WALL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-bY-gDp">
-                                <rect key="frame" x="32" y="154" width="256" height="28"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="YOU'RE AT THE    PRODUCT ROOM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-bY-gDp">
+                                <rect key="frame" x="32" y="154" width="256" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,7 +257,7 @@
                                 <rect key="frame" x="42" y="210" width="240" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">ChaiOne is an Enterprise Mobility Agency focused on creating innovative, beautiful mobile solutions that solve complex business problems of large enterprises, with a specific focus on the energy industry.</string>
+                                <string key="text">ChaiOne will open its headquartes in mid 2014. Take a look at the building’s renderings and explore some of our awesome ideas. We’re planning on having an awesome rooftop, a indoor pool, a zoo, and free beer 24/7.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -250,16 +276,13 @@
                     <navigationItem key="navigationItem" id="zy9-Qa-9Ui"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="currentBeaconDescriptionLabel" destination="GCd-bY-gDp" id="b2q-Vd-Ghx"/>
-                        <outlet property="metadataTextView" destination="ql1-6S-jSe" id="5UG-Vg-Uu7"/>
-                        <outlet property="nextActionButton" destination="tnd-zS-MjM" id="ax2-oW-BtF"/>
-                        <segue destination="1By-35-EY9" kind="modal" identifier="showThanks" id="UIC-Ts-idA"/>
-                        <segue destination="YrA-QD-PcO" kind="push" identifier="showEnRoute" id="KhQ-lh-ha6"/>
+                        <outlet property="currentBeaconDescriptionLabel" destination="GCd-bY-gDp" id="UeW-mx-y1L"/>
+                        <outlet property="metadataTextView" destination="ql1-6S-jSe" id="3a5-KG-P5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALM-Vs-Q7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-605" y="-209"/>
+            <point key="canvasLocation" x="-1659" y="511"/>
         </scene>
         <!--Start Tour View Controller-->
         <scene sceneID="kZW-UZ-WnJ">
@@ -284,16 +307,20 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE1-ua-Euj">
                                 <rect key="frame" x="25" y="469" width="270" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="start-tour-btn-selected.png">
+                                <state key="normal" image="next-stop-btn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="next-stop-btn-selected.png"/>
+                                <connections>
+                                    <segue destination="YrA-QD-PcO" kind="push" identifier="showEnRoute1" id="VAB-j9-bGy"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-OP-fNT">
-                                <rect key="frame" x="137" y="90" width="50" height="50"/>
+                                <rect key="frame" x="135" y="90" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU'RE AT THE LOBBY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gA-Yf-1T9">
-                                <rect key="frame" x="61" y="148" width="221" height="24"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="YOU'RE AT THE LOBBY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gA-Yf-1T9">
+                                <rect key="frame" x="27" y="148" width="273" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -327,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Naj-8A-wSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-619" y="-912"/>
+            <point key="canvasLocation" x="-675" y="-227"/>
         </scene>
         <!--En Route View Controller-->
         <scene sceneID="ODi-N2-gEJ">
@@ -390,21 +417,447 @@
                         <outlet property="directionsLabel" destination="ftk-lZ-ydu" id="08F-Gl-spz"/>
                         <outlet property="mapView" destination="omm-MB-aLQ" id="18N-vE-Yfv"/>
                         <outlet property="navigationDirectionsImageView" destination="eRZ-ie-Dp5" id="bOl-L2-hYZ"/>
-                        <segue destination="8aF-Bt-pFR" kind="push" identifier="showMetadata" id="Cg2-8Q-8bc"/>
+                        <segue destination="8aF-Bt-pFR" kind="push" identifier="showBeacon2" id="Cg2-8Q-8bc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPv-bL-n5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="-83"/>
+            <point key="canvasLocation" x="-197" y="-227"/>
+        </scene>
+        <!--En Route View Controller-->
+        <scene sceneID="rYV-fj-bmp">
+            <objects>
+                <viewController id="RXB-87-SWA" customClass="CHEnRouteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e5d-k2-1qX"/>
+                        <viewControllerLayoutGuide type="bottom" id="hyS-A1-9R8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dhe-kY-PDX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="dkH-Dn-xc1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="left-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Osm-b4-cj3">
+                                <rect key="frame" x="103" y="40" width="114" height="116"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="lHv-uG-64o">
+                                <rect key="frame" x="16" y="164" width="288" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TURN LEFT">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="20" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6D-Ag-n3A">
+                                <rect key="frame" x="146" y="524" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="idea-wall-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="pRS-Yh-OKm">
+                                <rect key="frame" x="20" y="254" width="280" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Osm-b4-cj3" secondAttribute="centerX" id="4fd-J6-P14"/>
+                            <constraint firstAttribute="trailing" secondItem="lHv-uG-64o" secondAttribute="trailing" constant="16" id="5K9-rf-OYF"/>
+                            <constraint firstItem="lHv-uG-64o" firstAttribute="top" secondItem="Osm-b4-cj3" secondAttribute="bottom" constant="8" id="BmN-d9-XbN"/>
+                            <constraint firstItem="lHv-uG-64o" firstAttribute="leading" secondItem="dhe-kY-PDX" secondAttribute="leading" constant="16" id="sAK-XB-08a"/>
+                            <constraint firstItem="Osm-b4-cj3" firstAttribute="top" secondItem="e5d-k2-1qX" secondAttribute="bottom" constant="20" id="zUD-KM-v4E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BI1-8O-emX"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="directionsLabel" destination="lHv-uG-64o" id="mwR-GP-g8y"/>
+                        <outlet property="mapView" destination="pRS-Yh-OKm" id="cX7-dG-qM8"/>
+                        <outlet property="navigationDirectionsImageView" destination="Osm-b4-cj3" id="Pl4-3I-A3q"/>
+                        <segue destination="TVl-wp-0oF" kind="push" identifier="showBeacon3" id="GZ3-N5-2CP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rX9-Q6-eYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1179" y="511"/>
+        </scene>
+        <!--Exxon Room View Controller-->
+        <scene sceneID="EkE-J7-kTt">
+            <objects>
+                <viewController id="yca-Yw-YyY" customClass="CHExxonRoomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mZH-N5-5Mz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ti5-ZQ-MgS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fxf-MZ-MeX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="yJM-nw-2ix">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tour-c1-logo-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tsj-2h-e31">
+                                <rect key="frame" x="77" y="45" width="166" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbE-Ih-hEi">
+                                <rect key="frame" x="25" y="471" width="270" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="finish-tour-btn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="finish-tour-btn-selected.png"/>
+                                <connections>
+                                    <segue destination="1By-35-EY9" kind="push" identifier="showThanks" id="xST-3v-NQq"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="lVa-68-GnF">
+                                <rect key="frame" x="129" y="96" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="YOU'RE IN THE EXXON ROOM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ep-gc-26u">
+                                <rect key="frame" x="16" y="154" width="289" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DeX-gU-gUC">
+                                <rect key="frame" x="42" y="210" width="240" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Exxon is one of our biggest clients. Our design and dev team spend their time happily working on this project. By 2015 the Exxon team will have produced 200 iOS and Android apps. Make sure to download them all!</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Ep-gc-26u" firstAttribute="top" secondItem="lVa-68-GnF" secondAttribute="bottom" constant="8" id="4Tg-qe-gFU"/>
+                            <constraint firstAttribute="centerX" secondItem="hbE-Ih-hEi" secondAttribute="centerX" id="9AJ-up-V6s"/>
+                            <constraint firstItem="ti5-ZQ-MgS" firstAttribute="top" secondItem="hbE-Ih-hEi" secondAttribute="bottom" constant="37" id="JI2-gZ-N98"/>
+                            <constraint firstItem="Tsj-2h-e31" firstAttribute="top" secondItem="mZH-N5-5Mz" secondAttribute="bottom" constant="25" id="Ojp-yf-VS6"/>
+                            <constraint firstItem="lVa-68-GnF" firstAttribute="top" secondItem="Tsj-2h-e31" secondAttribute="bottom" constant="7" id="aV3-O6-enx"/>
+                            <constraint firstAttribute="centerX" secondItem="Tsj-2h-e31" secondAttribute="centerX" id="jNu-d6-m5l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VKI-5X-60b"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="currentBeaconDescriptionLabel" destination="0Ep-gc-26u" id="4FJ-Re-n9r"/>
+                        <outlet property="metadataTextView" destination="DeX-gU-gUC" id="oUd-o4-SDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fV4-Xp-hvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="1223"/>
+        </scene>
+        <!--Deli Room View Controller-->
+        <scene sceneID="VAp-fK-iJo">
+            <objects>
+                <viewController id="TVl-wp-0oF" customClass="CHDeliRoomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5U4-wh-Utj"/>
+                        <viewControllerLayoutGuide type="bottom" id="xE4-N5-X7N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IpO-Z5-z0M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="NkM-11-mg3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tour-c1-logo-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-hr-yO1">
+                                <rect key="frame" x="77" y="45" width="166" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOq-QH-cFh">
+                                <rect key="frame" x="25" y="471" width="270" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="next-stop-btn.png"/>
+                                <state key="highlighted" image="next-stop-btn-selected.png"/>
+                                <connections>
+                                    <segue destination="El6-Qr-erp" kind="push" identifier="showEnRoute3" id="JEx-K6-AZp"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="nLz-Ol-Lw1">
+                                <rect key="frame" x="129" y="96" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="YOU'RE AT THE DELI ROOM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="dmf-fM-luL">
+                                <rect key="frame" x="32" y="154" width="256" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkk-8A-JfH">
+                                <rect key="frame" x="42" y="210" width="240" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">ChaiOne will open its headquartes in mid 2014. Take a look at the building’s renderings and explore some of our awesome ideas. We’re planning on having an awesome rooftop, a indoor pool, a zoo, and free beer 24/7.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xtx-hr-yO1" firstAttribute="top" secondItem="5U4-wh-Utj" secondAttribute="bottom" constant="25" id="0ou-It-gf3"/>
+                            <constraint firstItem="xE4-N5-X7N" firstAttribute="top" secondItem="GOq-QH-cFh" secondAttribute="bottom" constant="37" id="8dV-gh-viy"/>
+                            <constraint firstAttribute="centerX" secondItem="GOq-QH-cFh" secondAttribute="centerX" id="LmN-Nt-A3n"/>
+                            <constraint firstItem="dmf-fM-luL" firstAttribute="top" secondItem="nLz-Ol-Lw1" secondAttribute="bottom" constant="8" id="asP-uV-GCP"/>
+                            <constraint firstAttribute="centerX" secondItem="xtx-hr-yO1" secondAttribute="centerX" id="hwe-x2-bAf"/>
+                            <constraint firstItem="nLz-Ol-Lw1" firstAttribute="top" secondItem="xtx-hr-yO1" secondAttribute="bottom" constant="7" id="lxc-Mh-kwo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KqG-GD-LUV"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="currentBeaconDescriptionLabel" destination="dmf-fM-luL" id="Wbm-GE-qfK"/>
+                        <outlet property="metadataTextView" destination="wkk-8A-JfH" id="5pl-fV-un0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdX-70-Nhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="511"/>
+        </scene>
+        <!--Room View Controller-->
+        <scene sceneID="ENJ-OB-o6B">
+            <objects>
+                <viewController id="dYN-Qn-BjS" customClass="CHCEORoomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e6C-hE-IO5"/>
+                        <viewControllerLayoutGuide type="bottom" id="cBq-9z-osE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cYu-Q2-Hb3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="iIm-EM-SYo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tour-c1-logo-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="5hi-dH-Pc3">
+                                <rect key="frame" x="77" y="45" width="166" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKC-TH-bgS">
+                                <rect key="frame" x="25" y="471" width="270" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="next-stop-btn.png"/>
+                                <state key="highlighted" image="next-stop-btn-selected.png"/>
+                                <connections>
+                                    <segue destination="Yeq-Zq-p5C" kind="push" identifier="showEnRoute4" id="7eY-we-JrQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="O9f-vX-wvQ">
+                                <rect key="frame" x="129" y="96" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="YOU'RE AT THE CEO'S OFFICE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="sHb-Ht-ocj">
+                                <rect key="frame" x="32" y="154" width="256" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBd-H9-evX">
+                                <rect key="frame" x="42" y="210" width="240" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">ChaiOne will open its headquartes in mid 2014. Take a look at the building’s renderings and explore some of our awesome ideas. We’re planning on having an awesome rooftop, a indoor pool, a zoo, and free beer 24/7.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5hi-dH-Pc3" firstAttribute="top" secondItem="e6C-hE-IO5" secondAttribute="bottom" constant="25" id="KPH-KD-h4y"/>
+                            <constraint firstItem="cBq-9z-osE" firstAttribute="top" secondItem="rKC-TH-bgS" secondAttribute="bottom" constant="37" id="MK2-Ji-g5C"/>
+                            <constraint firstAttribute="centerX" secondItem="5hi-dH-Pc3" secondAttribute="centerX" id="P46-ye-Uhh"/>
+                            <constraint firstItem="sHb-Ht-ocj" firstAttribute="top" secondItem="O9f-vX-wvQ" secondAttribute="bottom" constant="8" id="hOw-kW-GI3"/>
+                            <constraint firstAttribute="centerX" secondItem="rKC-TH-bgS" secondAttribute="centerX" id="ky7-yq-K8r"/>
+                            <constraint firstItem="O9f-vX-wvQ" firstAttribute="top" secondItem="5hi-dH-Pc3" secondAttribute="bottom" constant="7" id="zbz-IS-KBk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aak-uo-JZn"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="currentBeaconDescriptionLabel" destination="sHb-Ht-ocj" id="s6a-C2-eCR"/>
+                        <outlet property="metadataTextView" destination="nBd-H9-evX" id="C5E-TL-ijk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaZ-rP-4Z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1659" y="1223"/>
+        </scene>
+        <!--En Route View Controller-->
+        <scene sceneID="pb4-cg-p5k">
+            <objects>
+                <viewController id="El6-Qr-erp" customClass="CHEnRouteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cIO-eW-uV0"/>
+                        <viewControllerLayoutGuide type="bottom" id="WCZ-nt-SH4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ice-mu-ZU2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="LnK-Q1-dj4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="left-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="vS3-AL-Gsd">
+                                <rect key="frame" x="103" y="40" width="114" height="116"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="ZDj-0B-ydn">
+                                <rect key="frame" x="16" y="164" width="288" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TURN LEFT">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="20" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C79-UL-65e">
+                                <rect key="frame" x="146" y="524" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="idea-wall-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="nwS-pq-BqV">
+                                <rect key="frame" x="20" y="254" width="280" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZDj-0B-ydn" firstAttribute="leading" secondItem="Ice-mu-ZU2" secondAttribute="leading" constant="16" id="Gex-8i-ECs"/>
+                            <constraint firstAttribute="centerX" secondItem="vS3-AL-Gsd" secondAttribute="centerX" id="LER-wa-xsL"/>
+                            <constraint firstItem="vS3-AL-Gsd" firstAttribute="top" secondItem="cIO-eW-uV0" secondAttribute="bottom" constant="20" id="PcX-of-NkU"/>
+                            <constraint firstAttribute="trailing" secondItem="ZDj-0B-ydn" secondAttribute="trailing" constant="16" id="dAC-L5-JEs"/>
+                            <constraint firstItem="ZDj-0B-ydn" firstAttribute="top" secondItem="vS3-AL-Gsd" secondAttribute="bottom" constant="8" id="m5i-u9-mUF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z1m-Hd-Z6y"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="directionsLabel" destination="ZDj-0B-ydn" id="1Go-Fm-fNs"/>
+                        <outlet property="mapView" destination="nwS-pq-BqV" id="Kv6-N1-9I0"/>
+                        <outlet property="navigationDirectionsImageView" destination="vS3-AL-Gsd" id="PKJ-s2-N33"/>
+                        <segue destination="dYN-Qn-BjS" kind="push" identifier="showBeacon4" id="wnr-V2-DsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OG-n0-gdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197" y="511"/>
+        </scene>
+        <!--En Route View Controller-->
+        <scene sceneID="zSt-13-2do">
+            <objects>
+                <viewController id="Yeq-Zq-p5C" customClass="CHEnRouteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fbM-xT-THQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="axY-OC-cHh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CCj-nu-gIX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="afh-gv-uaf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="left-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="CSn-sW-RKk">
+                                <rect key="frame" x="103" y="40" width="114" height="116"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="GQ3-YJ-3RM">
+                                <rect key="frame" x="16" y="164" width="288" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TURN LEFT">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="20" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUm-Ht-T6L">
+                                <rect key="frame" x="146" y="524" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="idea-wall-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="lYM-uk-CPR">
+                                <rect key="frame" x="20" y="254" width="280" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CSn-sW-RKk" firstAttribute="top" secondItem="fbM-xT-THQ" secondAttribute="bottom" constant="20" id="6qh-6M-y2R"/>
+                            <constraint firstItem="GQ3-YJ-3RM" firstAttribute="leading" secondItem="CCj-nu-gIX" secondAttribute="leading" constant="16" id="YNt-Ai-nzJ"/>
+                            <constraint firstAttribute="centerX" secondItem="CSn-sW-RKk" secondAttribute="centerX" id="eE4-Vj-1OD"/>
+                            <constraint firstItem="GQ3-YJ-3RM" firstAttribute="top" secondItem="CSn-sW-RKk" secondAttribute="bottom" constant="8" id="rbJ-id-Syg"/>
+                            <constraint firstAttribute="trailing" secondItem="GQ3-YJ-3RM" secondAttribute="trailing" constant="16" id="y8e-6i-WhJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bue-3C-3sy"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="directionsLabel" destination="GQ3-YJ-3RM" id="bv5-a1-Pqq"/>
+                        <outlet property="mapView" destination="lYM-uk-CPR" id="RCj-42-Nrb"/>
+                        <outlet property="navigationDirectionsImageView" destination="CSn-sW-RKk" id="bgL-WA-iOS"/>
+                        <segue destination="yca-Yw-YyY" kind="push" identifier="showBeacon5" id="OyX-mJ-x7J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWh-6d-vTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1179" y="1223"/>
         </scene>
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
+        <image name="finish-tour-btn-selected.png" width="270" height="60"/>
+        <image name="finish-tour-btn.png" width="270" height="60"/>
+        <image name="idea-wall-map.png" width="280" height="300"/>
+        <image name="left-arrow.png" width="150" height="116"/>
         <image name="lobby-map.png" width="280" height="300"/>
         <image name="location-icon.png" width="50" height="50"/>
+        <image name="next-stop-btn-selected.png" width="270" height="60"/>
+        <image name="next-stop-btn.png" width="270" height="60"/>
         <image name="prize-marker-empty.png" width="28" height="28"/>
         <image name="prize-marker-filled.png" width="28" height="28"/>
         <image name="start-tour-btn-selected.png" width="270" height="60"/>
+        <image name="start-tour-btn.png" width="270" height="60"/>
         <image name="straight-left-arrow.png" width="114" height="116"/>
         <image name="tour-c1-logo-large.png" width="258" height="64"/>
         <image name="tour-c1-logo-small.png" width="166" height="44"/>
@@ -414,7 +867,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="9ue-5m-MAw"/>
-    </inferredMetricsTieBreakers>
 </document>

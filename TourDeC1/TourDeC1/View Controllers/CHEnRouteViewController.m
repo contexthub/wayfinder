@@ -9,7 +9,10 @@
 #import "CHEnRouteViewController.h"
 #import "CHAppDelegate.h"
 #import "UIImageView+AFNetworking.h"
-#import "CHBeaconMetadataViewController.h"
+#import "CHProductRoomViewController.h"
+#import "CHDeliRoomViewController.h"
+#import "CHCEORoomViewController.h"
+#import "CHExxonRoomViewController.h"
 
 
 @interface CHEnRouteViewController ()
@@ -20,84 +23,94 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-    
-    
-  [[NSNotificationCenter defaultCenter]addObserver:self
-                                          selector:@selector(handleEvent:)
-                                              name:CCHContextEventManagerDidPostEvent object:nil];
-}
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     [self layoutMetadata];
     [self loadNextBeaconMetadata];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(handleEvent:)
+                                                    name:CCHContextEventManagerDidPostEvent object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 - (void)layoutMetadata {
-  self.userAtBeaconName = self.currentBeaconMetadata.name;
-  NSMutableAttributedString *directionsText;
-  //[self.mapView setImageWithURL:[NSURL URLWithString:self.currentBeaconMetadata.nextSegment]];
+    NSMutableAttributedString *directionsText;
+    self.mapView.image = [UIImage imageNamed:self.currentBeaconMetadata.nextBeaconMapImageName];
+    self.navigationDirectionsImageView.image = [UIImage imageNamed:self.currentBeaconMetadata.nextBeaconDirectionImageName];
+    self.directionsLabel.text = self.currentBeaconMetadata.nextBeaconDirection;
     
-  if([self.currentBeaconMetadata.name isEqualToString:BeaconB1]){
-    [self.navigationDirectionsImageView setImage:[UIImage imageNamed:@"straight-left-arrow"]];
-    directionsText = [[NSMutableAttributedString alloc]initWithString:@"Go STRAIGHT and turn LEFT"];
-    [directionsText addAttribute:NSFontAttributeName
-                           value:[UIFont fontWithName:@"AvenirNext-Bold"
+    /*
+    if([self.currentBeaconMetadata.name isEqualToString:BeaconB1]){
+        [self.navigationDirectionsImageView setImage:[UIImage imageNamed:@"straight-left-arrow"]];
+        directionsText = [[NSMutableAttributedString alloc]initWithString:@"Go STRAIGHT and turn LEFT"];
+        [directionsText addAttribute:NSFontAttributeName
+                               value:[UIFont fontWithName:@"AvenirNext-Bold"
                                                  size:20.0]
-                           range:NSRangeFromString(@"STRAIGHT")];
-    [directionsText addAttribute:NSFontAttributeName
-                           value:[UIFont fontWithName:@"AvenirNext-Bold"
+                               range:NSRangeFromString(@"STRAIGHT")];
+    
+        [directionsText addAttribute:NSFontAttributeName
+                               value:[UIFont fontWithName:@"AvenirNext-Bold"
                                                  size:20.0]
-                           range:NSRangeFromString(@"LEFT")];
-    [self.directionsLabel setAttributedText:directionsText];
-  }else if([self.currentBeaconMetadata.name isEqualToString:BeaconB2]){
-    [self.navigationDirectionsImageView setImage:[UIImage imageNamed:@"left-arrow.png"]];
-    directionsText = [[NSMutableAttributedString alloc]initWithString:@"Turn LEFT"];
-    [directionsText addAttribute:NSFontAttributeName
-                           value:[UIFont fontWithName:@"AvenirNext-Bold"
-                                                 size:20.0]
-                           range:NSRangeFromString(@"LEFT")];
-    [self.directionsLabel setAttributedText:directionsText];
-  }
+                               range:NSRangeFromString(@"LEFT")];
+        [self.directionsLabel setAttributedText:directionsText];
+    } else if([self.currentBeaconMetadata.name isEqualToString:BeaconB2]){
+        [self.navigationDirectionsImageView setImage:[UIImage imageNamed:@"left-arrow.png"]];
+        directionsText = [[NSMutableAttributedString alloc]initWithString:@"Turn LEFT"];
+        [directionsText addAttribute:NSFontAttributeName
+                               value:[UIFont fontWithName:@"AvenirNext-Bold"
+                                size:20.0]
+                               range:NSRangeFromString(@"LEFT")];
+        [self.directionsLabel setAttributedText:directionsText];
+    }*/
 }
 
 - (void)loadNextBeaconMetadata {
-    NSString *nextBeaconName =@"";
-    
-    if ([self.userAtBeaconName isEqual:BeaconB1]) {
-        nextBeaconName = BeaconB2 ;
-    } else {
-        nextBeaconName = BeaconB3 ;
-    }
-   self.destinationBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:nextBeaconName];
+    self.destinationBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:self.currentBeaconMetadata.nextBeaconName];
 }
 
 - (void)handleEvent:(NSNotification *)notification {
-    NSDictionary *event = notification.object;
-    NSString *eventName = [event valueForKeyPath:@"event.name"];
-    NSDictionary *beacon = [event valueForKeyPath:@"event.data.beacon"];
-    NSString *udid = [beacon valueForKeyPath:@"uuid"];
-    NSString *state = [beacon valueForKeyPath:@"proximity"];
-
-  
-    if([eventName isEqualToString:CHBeaconInEventName]) {
-        if ([udid isEqualToString:self.destinationBeaconMetadata.uuid]
-            && [state isEqualToString:@"near_state"]) {
-            [self performSegueWithIdentifier:@"showMetadata" sender:nil];
+    // Grab the next beacon
+    CHBeaconMetadata *nextBeacon = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.name];
+    
+    // Detect the next beacon for the lobby to show the "Start Tour" button
+    if ([nextBeacon isNearOrImmediateBeaconWithNotification:notification]) {
+        // Stop notifications
+        [[NSNotificationCenter defaultCenter]removeObserver:self];
+        
+        // Figure out which beacon this is and performSegue accordingly
+        if ([nextBeacon.name isEqualToString:BeaconB2]) {
+            [self performSegueWithIdentifier:@"showBeacon2" sender:nil];
+        } else if ([nextBeacon.name isEqualToString:BeaconB3]) {
+            [self performSegueWithIdentifier:@"showBeacon3" sender:nil];
+        } else if ([nextBeacon.name isEqualToString:BeaconB4]) {
+            [self performSegueWithIdentifier:@"showBeacon4" sender:nil];
+        } else if ([nextBeacon.name isEqualToString:BeaconB5]) {
+            [self performSegueWithIdentifier:@"showBeacon5" sender:nil];
         }
     }
-    
 }
 
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if([segue.identifier isEqualToString:@"showMetadata"]){
-    CHBeaconMetadataViewController *metadataViewController = segue.destinationViewController;
-    metadataViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
-  }
+    if ([segue.identifier isEqualToString:@"showBeacon2"]) {
+        CHProductRoomViewController *productController = segue.destinationViewController;
+        productController.currentBeaconMetadata = self.destinationBeaconMetadata;
+    } else if ([segue.identifier isEqualToString:@"showBeacon3"]) {
+        CHDeliRoomViewController *deliRoomController = segue.destinationViewController;
+        deliRoomController.currentBeaconMetadata = self.destinationBeaconMetadata;
+    } else if ([segue.identifier isEqualToString:@"showBeacon4"]) {
+        CHCEORoomViewController *ceoRoomController = segue.destinationViewController;
+        ceoRoomController.currentBeaconMetadata = self.destinationBeaconMetadata;
+    } else if ([segue.identifier isEqualToString:@"showBeacon5"]) {
+        CHExxonRoomViewController *exxonController = segue.destinationViewController;
+        exxonController.currentBeaconMetadata = self.destinationBeaconMetadata;
+    }
 }
-
 
 @end

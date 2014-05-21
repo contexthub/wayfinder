@@ -17,8 +17,15 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-    [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
+    // Register for notifications
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
+    
+    // Initialize ContextHub with our app ID
+    [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
+    
+    // Set default number of times visited
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"timesVisited":@0}];
+    
     return YES;
 }
 

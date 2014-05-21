@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CHLandingScreenViewController : CHViewController<CCBContextEventManagerDelegate>
+@interface CHLandingScreenViewController : CHViewController
 
 @end
