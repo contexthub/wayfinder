@@ -1,0 +1,77 @@
+[
+   {
+      "uuid":"B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+      "major":"100",
+      "minor":"1",
+      "name":"LOBBY",
+      "locationDescription":"YOU'RE AT THE LOBBY",
+      "locationInformation":"ChaiOne is an Enterprise Mobility Agency focused on creating innovative, beautiful mobile solutions that solve complex business problems of large enterprises, with a specific focus on the energy industry.",
+      "nextBeaconName":"PRODUCT",
+	  "nextBeaconDirection":"Go STRAIGHT and turn RIGHT",
+      "nextBeaconDirectionImageName":"straight-right-arrow",
+      "nextBeaconDirectionBoldWords":[
+         "STRAIGHT",
+         "RIGHT"
+      ],
+      "nextBeaconMapImageName":"product-map"
+   },
+   {
+      "uuid":"B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+      "major":"100",
+      "minor":"2",
+      "name":"PRODUCT",
+      "locationDescription":"YOU'RE AT THE PRODUCT ROOM",
+      "locationInformation":"This is the product room where we work on innovative apps showcasing the best of our developers to the public. This app, powered by ContextHub was developed in this room.",
+      "nextBeaconName":"DELI",
+	  "nextBeaconDirection":"Go STRAIGHT and turn LEFT",
+      "nextBeaconDirectionImageName":"straight-left-arrow",
+      "nextBeaconDirectionBoldWords":[
+         "STRAIGHT",
+         "LEFT"
+      ],
+      "nextBeaconMapImageName":"deli-map"
+   },
+   {
+      "uuid":"B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+      "major":"100",
+      "minor":"3",
+      "name":"DELI",
+      "locationDescription":"YOU'RE AT THE DELI ROOM",
+      "locationInformation":"This is the Deli Room, where Deli Radio is developed. Deli Radio is a music discovery app designed for the connoisseur, generating a stream station based on local artists playing in a given location. Grab it from the App Store and Google Play today!",
+      "nextBeaconName":"CEO",
+	  "nextBeaconDirection":"Go STRAIGHT and turn RIGHT",
+      "nextBeaconDirectionImageName":"straight-right-arrow",
+      "nextBeaconDirectionBoldWords":[
+         "STRAIGHT",
+         "RIGHT"
+      ],
+      "nextBeaconMapImageName":"ceo-map"
+   },
+   {
+      "uuid":"B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+      "major":"100",
+      "minor":"4",
+      "name":"CEO",
+      "locationDescription":"YOU'RE AT GAURAV'S OFFICE",
+      "locationInformation":"This is Gaurav's office.",
+      "nextBeaconName":"EXXON",
+	  "nextBeaconDirection":"Go STRAIGHT",
+      "nextBeaconDirectionImageName":"straight-arrow",
+      "nextBeaconDirectionBoldWords":[
+         "STRAIGHT"
+      ],
+      "nextBeaconMapImageName":"exxon-map"
+   },
+   {
+      "uuid":"B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+      "major":"100",
+      "minor":"5",
+      "name":"LOBBY",
+      "locationDescription":"YOU'RE AT THE EXXON ROOM",
+      "locationInformation":"Exxon is one of our biggest clients. Our design and dev team spend their time happily working on this project. By 2015 the Exxon team will have produced 200 iOS and Android apps. Make sure to download them all!",
+      "nextBeaconName":"PRODUCT",
+	  "nextBeaconDirection":"",
+      "nextBeaconDirectionImageName":"straight-right-arrow",
+      "nextBeaconMapImageName":""
+   }
+]
