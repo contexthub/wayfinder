@@ -43,8 +43,32 @@
     return beacon;
 }
 
+// Tests to see if two beacons are the same based on their UUID, major, and minor identifiers
+- (BOOL)isSameBeacon:(CHBeaconMetadata *)otherBeacon {
+    if ([self.uuid isEqualToString:otherBeacon.uuid] && [self.major isEqualToString:otherBeacon.major] && [self.minor isEqualToString:otherBeacon.minor]) {
+        return true;
+    }
+    
+    return false;
+}
+
 // Determines whether a notification that comes in is the beacon we are interested in and whether we are near it
-- (BOOL)isNearOrImmediateBeaconWithNotification:(NSNotification *)notification {
+- (BOOL)isImmediateToBeaconFromNotification:(NSNotification *)notification {
+    return [self isBeaconFromNotification:notification inState:kBeaconProximityImmediate];
+}
+
+// Determines whether a notification that comes in is the beacon we are interested in and whether we are near it
+- (BOOL)isNearBeaconFromNotification:(NSNotification *)notification {
+    return [self isBeaconFromNotification:notification inState:kBeaconProximityNear];
+}
+
+// Determines whether a notification that comes in is the beacon we are interested in and whether we are near it
+- (BOOL)isFarFromBeaconFromNotification:(NSNotification *)notification {
+    return [self isBeaconFromNotification:notification inState:kBeaconProximityFar];
+}
+
+// Determines if a beacon is in a particular state or not based on the notification the beacon triggered
+- (BOOL)isBeaconFromNotification:(NSNotification *)notification inState:(NSString *)beaconState {
     // Grab data from the notification
     NSDictionary *event = notification.object;
     NSString *eventName = [event valueForKeyPath:@"event.name"];
@@ -57,26 +81,33 @@
         return false;
     }
     
-    // Are we near this beacon?
-    if (![self isNearOrImmediateBeacon:eventName state:state]) {
-        return false;
+    if ([beaconState isEqualToString:kBeaconProximityImmediate]) {
+        if (![self isImmediateToBeacon:eventName state:state]) {
+            return false;
+        }
+    } else if ([beaconState isEqualToString:kBeaconProximityNear]) {
+        if (![self isNearBeacon:eventName state:state]) {
+            return false;
+        }
+    } else {
+        if (![self isFarFromBeacon:eventName state:state]) {
+            return false;
+        }
     }
     
     return true;
 }
 
-// Tests to see if two beacons are the same based on their UUID, major, and minor identifiers
-- (BOOL)isSameBeacon:(CHBeaconMetadata *)otherBeacon {
-    if ([self.uuid isEqualToString:otherBeacon.uuid] && [self.major isEqualToString:otherBeacon.major] && [self.minor isEqualToString:otherBeacon.minor]) {
-        return true;
-    }
-    
-    return false;
+- (BOOL)isNearBeacon:(NSString *)eventName state:(NSString *)state {
+    return ([eventName isEqualToString:CHBeaconChangedEventName] && [state isEqualToString:@"near_state"]);
 }
 
-
-- (BOOL)isNearOrImmediateBeacon:(NSString *)eventName state:(NSString *)state {
-    return ([eventName isEqualToString:CHBeaconChangedEventName] &&
-            ([state isEqualToString:@"near_state"] || [state isEqualToString:@"immediate_state"] ));
+- (BOOL)isImmediateToBeacon:(NSString *)eventName state:(NSString *)state {
+    return ([eventName isEqualToString:CHBeaconChangedEventName] && [state isEqualToString:@"immediate_state"]);
 }
+
+- (BOOL)isFarFromBeacon:(NSString *)eventName state:(NSString *)state {
+    return ([eventName isEqualToString:CHBeaconChangedEventName] && [state isEqualToString:@"far_state"]);
+}
+
 @end

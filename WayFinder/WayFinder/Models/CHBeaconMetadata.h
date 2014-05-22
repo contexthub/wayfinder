@@ -27,11 +27,41 @@
 @property (nonatomic, strong) NSString *nextBeaconMapImageName;
 
 
-// Designated initializer
+/**
+ Designated initializer
+ Create a CLBeaconMetadata object from NSDictionary object
+ @param data information to be used to create a CLBeaconMetadata object
+ */
 - (instancetype)initWithData:(NSDictionary *)data;
+/**
+ Create a CLBeaconMetadata object from a NSNotification object made when ContextHub detects a new beacon
+ @param notification notification object containing information about the beacon which triggered an event
+ */
 + (instancetype)beaconFromNotification:(NSNotification *)notification;
 
-- (BOOL)isNearOrImmediateBeaconWithNotification:(NSNotification *)notification;
+/**
+ Determines whether this beacon and another beacon are the same based on UUID, major and minor values
+ @param otherBeacon beacon to be compared against
+ */
 - (BOOL)isSameBeacon:(CHBeaconMetadata *)otherBeacon;
+
+/**
+ Determines whether a beacon is immediate to the user's device (~6 inches) based on the notification trigged by a beacon
+ @param notification notification object containing information about the beacon which triggered an event
+ */
+- (BOOL)isImmediateToBeaconFromNotification:(NSNotification *)notification;
+
+/**
+ Determines whether a beacon is near the user's device (~1-2 feet) based on the notification trigged by a beacon
+@param notification notification object containing information about the beacon which triggered an event
+ */
+- (BOOL)isNearBeaconFromNotification:(NSNotification *)notification;
+
+/**
+ Determines whether a beacon is far the user's device (~50ft) based on the notification trigged by a beacon
+ @param notification notification object containing information about the beacon which triggered an event
+ */
+- (BOOL)isFarFromBeaconFromNotification:(NSNotification *)notification;
+
 
 @end

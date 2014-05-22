@@ -33,7 +33,7 @@
     CHBeaconMetadata *firstBeacon = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
     
     // Detect the first beacon for the lobby to show the "Start Tour" button
-    if ([firstBeacon isNearOrImmediateBeaconWithNotification:notification]) {
+    if ([firstBeacon isNearBeaconFromNotification:notification] || [firstBeacon isImmediateToBeaconFromNotification:notification]) {
         // Stop notifications
         [[NSNotificationCenter defaultCenter]removeObserver:self];
         

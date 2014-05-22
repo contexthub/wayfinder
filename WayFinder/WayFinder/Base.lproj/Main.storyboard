@@ -229,7 +229,7 @@
                                 <rect key="frame" x="0.0" y="-5" width="320" height="573"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tour-c1-logo-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="48H-RP-goT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="tour-c1-logo-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="48H-RP-goT">
                                 <rect key="frame" x="70" y="38" width="166" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -244,18 +244,18 @@
                                     <action selector="advanceTour:" destination="M4X-HY-yfg" eventType="touchUpInside" id="qLg-I2-wai"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-OP-fNT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-OP-fNT">
                                 <rect key="frame" x="135" y="90" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="THIS IS WHERE YOU ARE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="3gA-Yf-1T9">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="THIS IS WHERE YOU ARE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="3gA-Yf-1T9">
                                 <rect key="frame" x="27" y="148" width="273" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="This is information about where you are." translatesAutoresizingMaskIntoConstraints="NO" id="1zT-yW-dwg">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is information about where you are." translatesAutoresizingMaskIntoConstraints="NO" id="1zT-yW-dwg">
                                 <rect key="frame" x="27" y="209" width="270" height="252"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -267,17 +267,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="ZE1-ua-Euj" secondAttribute="centerX" id="17R-aT-2fC"/>
-                            <constraint firstAttribute="trailing" secondItem="1zT-yW-dwg" secondAttribute="trailing" constant="23" id="Jsn-1O-QsM"/>
+                            <constraint firstItem="ZE1-ua-Euj" firstAttribute="top" secondItem="1zT-yW-dwg" secondAttribute="bottom" constant="8" symbolic="YES" id="EGW-G7-Yk5"/>
+                            <constraint firstItem="1zT-yW-dwg" firstAttribute="leading" secondItem="vKA-k9-9ax" secondAttribute="leading" constant="27" id="NMU-7U-x1G"/>
                             <constraint firstAttribute="centerX" secondItem="48H-RP-goT" secondAttribute="centerX" constant="7" id="Pjm-zU-sKJ"/>
                             <constraint firstItem="jHg-OP-fNT" firstAttribute="top" secondItem="48H-RP-goT" secondAttribute="bottom" constant="8" id="PvK-YQ-e6S"/>
+                            <constraint firstItem="1zT-yW-dwg" firstAttribute="top" secondItem="3gA-Yf-1T9" secondAttribute="bottom" constant="8" symbolic="YES" id="Q9i-CT-zes"/>
                             <constraint firstItem="3gA-Yf-1T9" firstAttribute="top" secondItem="jHg-OP-fNT" secondAttribute="bottom" constant="8" symbolic="YES" id="TAz-h4-OPm"/>
-                            <constraint firstItem="ZE1-ua-Euj" firstAttribute="top" secondItem="1zT-yW-dwg" secondAttribute="bottom" constant="91" id="Zls-av-0Az"/>
-                            <constraint firstItem="1zT-yW-dwg" firstAttribute="top" secondItem="3gA-Yf-1T9" secondAttribute="bottom" constant="37" id="bi3-4A-H49"/>
+                            <constraint firstItem="1zT-yW-dwg" firstAttribute="top" secondItem="3gA-Yf-1T9" secondAttribute="bottom" constant="8" id="bDQ-mC-oCo"/>
                             <constraint firstAttribute="trailing" secondItem="3gA-Yf-1T9" secondAttribute="trailing" constant="20" symbolic="YES" id="dUA-NJ-phm"/>
                             <constraint firstItem="48H-RP-goT" firstAttribute="top" secondItem="Mz0-o6-s0e" secondAttribute="bottom" constant="18" id="foZ-l8-S58"/>
+                            <constraint firstAttribute="trailing" secondItem="1zT-yW-dwg" secondAttribute="trailing" constant="23" id="glV-qu-c6k"/>
                             <constraint firstItem="dkf-81-cjm" firstAttribute="top" secondItem="ZE1-ua-Euj" secondAttribute="bottom" constant="39" id="hFu-oH-T2y"/>
-                            <constraint firstItem="1zT-yW-dwg" firstAttribute="leading" secondItem="3gA-Yf-1T9" secondAttribute="leading" id="wwv-i2-AaV"/>
-                            <constraint firstItem="1zT-yW-dwg" firstAttribute="leading" secondItem="vKA-k9-9ax" secondAttribute="leading" constant="27" id="yKl-C0-hOJ"/>
+                            <constraint firstItem="1zT-yW-dwg" firstAttribute="top" secondItem="vKA-k9-9ax" secondAttribute="top" constant="209" id="iHg-ll-Ga4"/>
+                            <constraint firstItem="1zT-yW-dwg" firstAttribute="leading" secondItem="3gA-Yf-1T9" secondAttribute="leading" id="zUv-NB-wzR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CIB-kC-9hV"/>
