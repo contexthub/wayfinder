@@ -9,12 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @interface CHBeaconMetadata : NSObject
+//   Different from UUID, this is just an integer to keep track of the number of beacons when created by CHBeaconStore
+@property (nonatomic, readwrite) NSInteger beaconID;
+
 @property (nonatomic, strong) NSString *uuid;
 @property (nonatomic, strong) NSString *major;
 @property (nonatomic, strong) NSString *minor;
 @property (nonatomic, strong) NSString *name;
+
 @property (nonatomic, strong) NSString *locationDescription;
 @property (nonatomic, strong) NSString *locationInformation;
+
 @property (nonatomic, strong) NSString *nextBeaconName;
 @property (nonatomic, strong) NSString *nextBeaconDirection;
 @property (nonatomic, strong) NSArray *nextBeaconDirectionBoldWords;

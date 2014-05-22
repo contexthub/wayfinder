@@ -12,7 +12,8 @@
 - (instancetype)initWithData:(NSDictionary *)data {
     self = [super init];
     if(self) {
-      self.uuid = data[@"uuid"];
+        self.beaconID = 0;
+        self.uuid = data[@"uuid"];
         self.major = data[@"major"];
         self.minor = data[@"minor"];
         self.name = data[@"name"];
