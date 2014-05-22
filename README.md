@@ -26,15 +26,16 @@ Beacons have 4 important information fields that need to be programmed: UUID, ma
 - Name: Beacons are given human-readable names to easily distinguish between them. Names are not required to be unique (as uniqueness is determined by the UUID, major and minor value) however they are not allowed to have spaces.
 
 To use the WayFinder app out of the box, prepare 3 beacons with the following information:
-1.  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
+
+*  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
 - Major: 100
 - Minor: 1
 - Name: LOBBY
-2.  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
+*.  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
 - Major: 100
 - Minor: 2
 - Name: IDEAWALL
-3.	UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
+*.	UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
 - Major: 100
 - Minor: 3
 - Name: TEAMROOM
@@ -51,24 +52,34 @@ Launch and run the app from your device (beacons do not work with the iPhone or 
 ### Code
 
 WayFinder makes using quick and easy through the power of ContextHub and a few lines of code. First, make sure you sign up with [ContextHub](www.contexthub.com) and get an app id. Then follow these instructions:
-1. In your ```Objective-C
+1. In your 
+```objective-c
 application:didFinishLaunchingWithOptions:
-``` method, register your app ID ```Objective-C
+``` 
+method, register your app ID 
+```objective-c
 [ContextHub registerWithAppId:@"YOUR-APP-ID-HERE"]
 ```
-2. Start listening for notifications by calling ```Objective-C
+2. Start listening for notifications by calling 
+```objective-c
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHContextEventManagerDidPostEvent object:nil];
 ```
-3. Define a method called ```Objective-C
-handleEvent:``` which will process notifications
-4. Within that method, create a CLBeaconMetadata object for the beacon you are interested in ```Objective-C
+3. Define a method called 
+```objective-c
+handleEvent:
+```
+which will process notifications.
+4. Within that method, create a CLBeaconMetadata object for the beacon you are interested in 
+```objective-c
 CLBeaconMetadata *interestingBeacon = CLBeaconMetadata initWithData:@{@"name": @"LOBBY", @"uuid": "B9407F30-F5F8-466E-AFF9-25556B57FE6D", @"major":@"100", @"minor":1 }
 ``` 
-then compare it with the notification that was just sent ```Objective-C
-[interestingBeacon isNearOrImmediateBeaconWithNotification:notification]```
+then compare it with the notification that was just sent 
+```objective-c
+[interestingBeacon isNearOrImmediateBeaconWithNotification:notification]
+```
 .
 5. Remember to call 
-```Objective-C
+```objective-c
 [[NSNotificationCenter defaultCenter]removeObserver:self];
 ```
 to stop receiving notifications about beacon events.
