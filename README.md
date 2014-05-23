@@ -43,8 +43,9 @@ To use the WayFinder app out of the box, prepare 3 beacons with the following in
 
 ### Demo
 
-Launch and run the app from your device (beacons do not work with the iPhone or iPad Simulators). You will notice a few things.
-1. The app will wait until it detects any beacons are in range to display the welcome screen.
+Launch and run the app from your device (beacons do not work with the iPhone or iPad Simulators). You will notice a few things:
+
+1. The app will wait until it detects any beacons are in range to display the welcome screen. 
 2. The app will wait until it detects the first "LOBBY" beacon specifically in close range (~1-2 ft) before showing the "Start Tour" button.
 3. The app should respond to the close proximity of the 2nd "IDEAWALL" and 3rd "TEAMROOM" beacons and advance screens automatically as if you were walking around our actual office.
 
