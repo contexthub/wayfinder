@@ -1,0 +1,915 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F00BB70192E7AF700A42664 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F00BB6E192E7AF700A42664 /* InfoPlist.strings */; };
+		1F00BB72192E7B0100A42664 /* WayFinderTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F00BB71192E7B0100A42664 /* WayFinderTests-Info.plist */; };
+		1F00BB74192E7C3D00A42664 /* WayFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F00BB73192E7C3D00A42664 /* WayFinderTests.m */; };
+		1F0DDB9D192D54A1000E9303 /* straight-right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */; };
+		1F0DDB9E192D54A1000E9303 /* straight-right-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */; };
+		1F0DDBA1192D55D8000E9303 /* straight-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9F192D55D8000E9303 /* straight-arrow.png */; };
+		1F0DDBA2192D55D8000E9303 /* straight-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDBA0192D55D8000E9303 /* straight-arrow@2x.png */; };
+		1FCA795D192E47A5000164A9 /* CHBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA795C192E47A5000164A9 /* CHBeaconMetadataViewController.m */; };
+		1FCA7962192E70DF000164A9 /* wayFinderDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA7961192E70DF000164A9 /* wayFinderDemo.json */; };
+		598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* CHViewController.m */; };
+		59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
+		59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */; };
+		59FC2B7418E5CEF600887C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7318E5CEF600887C2A /* UIKit.framework */; };
+		59FC2B7A18E5CEF600887C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2B7818E5CEF600887C2A /* InfoPlist.strings */; };
+		59FC2B7C18E5CEF600887C2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2B7B18E5CEF600887C2A /* main.m */; };
+		59FC2B8018E5CEF600887C2A /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2B7F18E5CEF600887C2A /* CHAppDelegate.m */; };
+		59FC2B8318E5CEF600887C2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2B8118E5CEF600887C2A /* Main.storyboard */; };
+		59FC2B8818E5CEF600887C2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2B8718E5CEF600887C2A /* Images.xcassets */; };
+		59FC2B8F18E5CEF700887C2A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B8E18E5CEF700887C2A /* XCTest.framework */; };
+		59FC2B9018E5CEF700887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
+		59FC2B9118E5CEF700887C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7318E5CEF600887C2A /* UIKit.framework */; };
+		59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */; };
+		59FC2BAD18E5D3D300887C2A /* CHEnRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */; };
+		59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */; };
+		59FC2BBF18E5F2E800887C2A /* CHLandingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BBE18E5F2E800887C2A /* CHLandingScreenViewController.m */; };
+		59FC2C2E18E638C500887C2A /* CHFinishedTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2C2D18E638C500887C2A /* CHFinishedTourViewController.m */; };
+		59FC2C6318EB2E4E00887C2A /* claim-prize-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3018EB2E4E00887C2A /* claim-prize-btn.png */; };
+		59FC2C6418EB2E4E00887C2A /* claim-prize-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3118EB2E4E00887C2A /* claim-prize-btn@2x.png */; };
+		59FC2C6518EB2E4E00887C2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3218EB2E4E00887C2A /* Default-568h@2x.png */; };
+		59FC2C6618EB2E4E00887C2A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3318EB2E4E00887C2A /* Default.png */; };
+		59FC2C6718EB2E4E00887C2A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3418EB2E4E00887C2A /* Default@2x.png */; };
+		59FC2C6818EB2E4E00887C2A /* finish-tour-btn-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3518EB2E4E00887C2A /* finish-tour-btn-selected.png */; };
+		59FC2C6918EB2E4E00887C2A /* finish-tour-btn-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3618EB2E4E00887C2A /* finish-tour-btn-selected@2x.png */; };
+		59FC2C6A18EB2E4E00887C2A /* finish-tour-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3718EB2E4E00887C2A /* finish-tour-btn.png */; };
+		59FC2C6B18EB2E4E00887C2A /* finish-tour-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3818EB2E4E00887C2A /* finish-tour-btn@2x.png */; };
+		59FC2C6C18EB2E4E00887C2A /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3918EB2E4E00887C2A /* Icon-40.png */; };
+		59FC2C6D18EB2E4E00887C2A /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3A18EB2E4E00887C2A /* Icon-40@2x.png */; };
+		59FC2C6E18EB2E4E00887C2A /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3B18EB2E4E00887C2A /* Icon-60.png */; };
+		59FC2C6F18EB2E4E00887C2A /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3C18EB2E4E00887C2A /* Icon-60@2x.png */; };
+		59FC2C7018EB2E4E00887C2A /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3D18EB2E4E00887C2A /* Icon-72.png */; };
+		59FC2C7118EB2E4E00887C2A /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3E18EB2E4E00887C2A /* Icon-72@2x.png */; };
+		59FC2C7218EB2E4E00887C2A /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C3F18EB2E4E00887C2A /* Icon-76.png */; };
+		59FC2C7318EB2E4E00887C2A /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4018EB2E4E00887C2A /* Icon-76@2x.png */; };
+		59FC2C7418EB2E4E00887C2A /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4118EB2E4E00887C2A /* Icon-Small-50.png */; };
+		59FC2C7518EB2E4E00887C2A /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4218EB2E4E00887C2A /* Icon-Small-50@2x.png */; };
+		59FC2C7618EB2E4E00887C2A /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4318EB2E4E00887C2A /* Icon-Small.png */; };
+		59FC2C7718EB2E4E00887C2A /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4418EB2E4E00887C2A /* Icon-Small@2x.png */; };
+		59FC2C7818EB2E4E00887C2A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4518EB2E4E00887C2A /* Icon.png */; };
+		59FC2C7918EB2E4E00887C2A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4618EB2E4E00887C2A /* Icon@2x.png */; };
+		59FC2C7A18EB2E4E00887C2A /* idea-wall-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4718EB2E4E00887C2A /* idea-wall-map.png */; };
+		59FC2C7B18EB2E4E00887C2A /* idea-wall-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4818EB2E4E00887C2A /* idea-wall-map@2x.png */; };
+		59FC2C7C18EB2E4E00887C2A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4918EB2E4E00887C2A /* iTunesArtwork.png */; };
+		59FC2C7D18EB2E4E00887C2A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4A18EB2E4E00887C2A /* iTunesArtwork@2x.png */; };
+		59FC2C7E18EB2E4E00887C2A /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4B18EB2E4E00887C2A /* left-arrow.png */; };
+		59FC2C7F18EB2E4E00887C2A /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4C18EB2E4E00887C2A /* left-arrow@2x.png */; };
+		59FC2C8018EB2E4E00887C2A /* lobby-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4D18EB2E4E00887C2A /* lobby-map.png */; };
+		59FC2C8118EB2E4E00887C2A /* lobby-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4E18EB2E4E00887C2A /* lobby-map@2x.png */; };
+		59FC2C8218EB2E4E00887C2A /* location-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C4F18EB2E4E00887C2A /* location-icon.png */; };
+		59FC2C8318EB2E4E00887C2A /* location-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5018EB2E4E00887C2A /* location-icon@2x.png */; };
+		59FC2C8418EB2E4E00887C2A /* next-stop-btn-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5118EB2E4E00887C2A /* next-stop-btn-selected.png */; };
+		59FC2C8518EB2E4E00887C2A /* next-stop-btn-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5218EB2E4E00887C2A /* next-stop-btn-selected@2x.png */; };
+		59FC2C8618EB2E4E00887C2A /* next-stop-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5318EB2E4E00887C2A /* next-stop-btn.png */; };
+		59FC2C8718EB2E4E00887C2A /* next-stop-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5418EB2E4E00887C2A /* next-stop-btn@2x.png */; };
+		59FC2C8818EB2E4E00887C2A /* prize-marker-empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5518EB2E4E00887C2A /* prize-marker-empty.png */; };
+		59FC2C8918EB2E4E00887C2A /* prize-marker-empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5618EB2E4E00887C2A /* prize-marker-empty@2x.png */; };
+		59FC2C8A18EB2E4E00887C2A /* prize-marker-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5718EB2E4E00887C2A /* prize-marker-filled.png */; };
+		59FC2C8B18EB2E4E00887C2A /* prize-marker-filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5818EB2E4E00887C2A /* prize-marker-filled@2x.png */; };
+		59FC2C8C18EB2E4E00887C2A /* start-tour-btn-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5918EB2E4E00887C2A /* start-tour-btn-selected.png */; };
+		59FC2C8D18EB2E4E00887C2A /* start-tour-btn-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5A18EB2E4E00887C2A /* start-tour-btn-selected@2x.png */; };
+		59FC2C8E18EB2E4E00887C2A /* start-tour-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5B18EB2E4E00887C2A /* start-tour-btn.png */; };
+		59FC2C8F18EB2E4E00887C2A /* start-tour-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5C18EB2E4E00887C2A /* start-tour-btn@2x.png */; };
+		59FC2C9018EB2E4E00887C2A /* straight-left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5D18EB2E4E00887C2A /* straight-left-arrow.png */; };
+		59FC2C9118EB2E4E00887C2A /* straight-left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5E18EB2E4E00887C2A /* straight-left-arrow@2x.png */; };
+		59FC2C9218EB2E4E00887C2A /* tour-c1-logo-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C5F18EB2E4E00887C2A /* tour-c1-logo-large.png */; };
+		59FC2C9318EB2E4E00887C2A /* tour-c1-logo-large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C6018EB2E4E00887C2A /* tour-c1-logo-large@2x.png */; };
+		59FC2C9418EB2E4E00887C2A /* tour-c1-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C6118EB2E4E00887C2A /* tour-c1-logo-small.png */; };
+		59FC2C9518EB2E4E00887C2A /* tour-c1-logo-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C6218EB2E4E00887C2A /* tour-c1-logo-small@2x.png */; };
+		59FC2C9C18EB311A00887C2A /* CHPathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2C9B18EB311A00887C2A /* CHPathHelper.m */; };
+		59FC2C9F18EB38DA00887C2A /* CHBeaconStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2C9E18EB38DA00887C2A /* CHBeaconStore.m */; };
+		953C0F60E76F4CC4BC579AF3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7706A0A53154AE99775E372 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59FC2B9218E5CEF700887C2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59FC2B6418E5CEF600887C2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59FC2B6B18E5CEF600887C2A;
+			remoteInfo = WayFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F00BB6F192E7AF700A42664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = WayFinderTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		1F00BB71192E7B0100A42664 /* WayFinderTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WayFinderTests-Info.plist"; path = "WayFinderTests/WayFinderTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1F00BB73192E7C3D00A42664 /* WayFinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WayFinderTests.m; path = WayFinderTests/WayFinderTests.m; sourceTree = SOURCE_ROOT; };
+		1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-right-arrow.png"; sourceTree = "<group>"; };
+		1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-right-arrow@2x.png"; sourceTree = "<group>"; };
+		1F0DDB9F192D55D8000E9303 /* straight-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-arrow.png"; sourceTree = "<group>"; };
+		1F0DDBA0192D55D8000E9303 /* straight-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-arrow@2x.png"; sourceTree = "<group>"; };
+		1FCA795B192E47A5000164A9 /* CHBeaconMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconMetadataViewController.h; sourceTree = "<group>"; };
+		1FCA795C192E47A5000164A9 /* CHBeaconMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconMetadataViewController.m; sourceTree = "<group>"; };
+		1FCA7961192E70DF000164A9 /* wayFinderDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wayFinderDemo.json; path = Data/wayFinderDemo.json; sourceTree = "<group>"; };
+		598729BE18F32F7500D3A1D4 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
+		598729BF18F32F7500D3A1D4 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
+		59A7711E53B14165A0A33716 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		59FC2B6C18E5CEF600887C2A /* WayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59FC2B6F18E5CEF600887C2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		59FC2B7318E5CEF600887C2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		59FC2B7718E5CEF600887C2A /* WayFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WayFinder-Info.plist"; sourceTree = "<group>"; };
+		59FC2B7918E5CEF600887C2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		59FC2B7B18E5CEF600887C2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		59FC2B7D18E5CEF600887C2A /* WayFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WayFinder-Prefix.pch"; sourceTree = "<group>"; };
+		59FC2B7E18E5CEF600887C2A /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
+		59FC2B7F18E5CEF600887C2A /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		59FC2B8218E5CEF600887C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59FC2B8718E5CEF600887C2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		59FC2B8D18E5CEF700887C2A /* WayFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WayFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59FC2B8E18E5CEF700887C2A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		59FC2BA518E5D10E00887C2A /* CHWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHWelcomeViewController.h; sourceTree = "<group>"; };
+		59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHWelcomeViewController.m; sourceTree = "<group>"; };
+		59FC2BAB18E5D3D300887C2A /* CHEnRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHEnRouteViewController.h; sourceTree = "<group>"; };
+		59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEnRouteViewController.m; sourceTree = "<group>"; };
+		59FC2BB818E5D97800887C2A /* CGGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGlobals.h; sourceTree = "<group>"; };
+		59FC2BBA18E5DA9900887C2A /* CHBeaconMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconMetadata.h; sourceTree = "<group>"; };
+		59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconMetadata.m; sourceTree = "<group>"; };
+		59FC2BBD18E5F2E800887C2A /* CHLandingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHLandingScreenViewController.h; sourceTree = "<group>"; };
+		59FC2BBE18E5F2E800887C2A /* CHLandingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHLandingScreenViewController.m; sourceTree = "<group>"; };
+		59FC2C2C18E638C500887C2A /* CHFinishedTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHFinishedTourViewController.h; sourceTree = "<group>"; };
+		59FC2C2D18E638C500887C2A /* CHFinishedTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHFinishedTourViewController.m; sourceTree = "<group>"; };
+		59FC2C3018EB2E4E00887C2A /* claim-prize-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "claim-prize-btn.png"; sourceTree = "<group>"; };
+		59FC2C3118EB2E4E00887C2A /* claim-prize-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "claim-prize-btn@2x.png"; sourceTree = "<group>"; };
+		59FC2C3218EB2E4E00887C2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		59FC2C3318EB2E4E00887C2A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		59FC2C3418EB2E4E00887C2A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		59FC2C3518EB2E4E00887C2A /* finish-tour-btn-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "finish-tour-btn-selected.png"; sourceTree = "<group>"; };
+		59FC2C3618EB2E4E00887C2A /* finish-tour-btn-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "finish-tour-btn-selected@2x.png"; sourceTree = "<group>"; };
+		59FC2C3718EB2E4E00887C2A /* finish-tour-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "finish-tour-btn.png"; sourceTree = "<group>"; };
+		59FC2C3818EB2E4E00887C2A /* finish-tour-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "finish-tour-btn@2x.png"; sourceTree = "<group>"; };
+		59FC2C3918EB2E4E00887C2A /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		59FC2C3A18EB2E4E00887C2A /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		59FC2C3B18EB2E4E00887C2A /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		59FC2C3C18EB2E4E00887C2A /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		59FC2C3D18EB2E4E00887C2A /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		59FC2C3E18EB2E4E00887C2A /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		59FC2C3F18EB2E4E00887C2A /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		59FC2C4018EB2E4E00887C2A /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		59FC2C4118EB2E4E00887C2A /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		59FC2C4218EB2E4E00887C2A /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		59FC2C4318EB2E4E00887C2A /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		59FC2C4418EB2E4E00887C2A /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		59FC2C4518EB2E4E00887C2A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		59FC2C4618EB2E4E00887C2A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		59FC2C4718EB2E4E00887C2A /* idea-wall-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea-wall-map.png"; sourceTree = "<group>"; };
+		59FC2C4818EB2E4E00887C2A /* idea-wall-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea-wall-map@2x.png"; sourceTree = "<group>"; };
+		59FC2C4918EB2E4E00887C2A /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		59FC2C4A18EB2E4E00887C2A /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		59FC2C4B18EB2E4E00887C2A /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
+		59FC2C4C18EB2E4E00887C2A /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
+		59FC2C4D18EB2E4E00887C2A /* lobby-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lobby-map.png"; sourceTree = "<group>"; };
+		59FC2C4E18EB2E4E00887C2A /* lobby-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lobby-map@2x.png"; sourceTree = "<group>"; };
+		59FC2C4F18EB2E4E00887C2A /* location-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-icon.png"; sourceTree = "<group>"; };
+		59FC2C5018EB2E4E00887C2A /* location-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-icon@2x.png"; sourceTree = "<group>"; };
+		59FC2C5118EB2E4E00887C2A /* next-stop-btn-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-stop-btn-selected.png"; sourceTree = "<group>"; };
+		59FC2C5218EB2E4E00887C2A /* next-stop-btn-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-stop-btn-selected@2x.png"; sourceTree = "<group>"; };
+		59FC2C5318EB2E4E00887C2A /* next-stop-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-stop-btn.png"; sourceTree = "<group>"; };
+		59FC2C5418EB2E4E00887C2A /* next-stop-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-stop-btn@2x.png"; sourceTree = "<group>"; };
+		59FC2C5518EB2E4E00887C2A /* prize-marker-empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prize-marker-empty.png"; sourceTree = "<group>"; };
+		59FC2C5618EB2E4E00887C2A /* prize-marker-empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prize-marker-empty@2x.png"; sourceTree = "<group>"; };
+		59FC2C5718EB2E4E00887C2A /* prize-marker-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prize-marker-filled.png"; sourceTree = "<group>"; };
+		59FC2C5818EB2E4E00887C2A /* prize-marker-filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prize-marker-filled@2x.png"; sourceTree = "<group>"; };
+		59FC2C5918EB2E4E00887C2A /* start-tour-btn-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-tour-btn-selected.png"; sourceTree = "<group>"; };
+		59FC2C5A18EB2E4E00887C2A /* start-tour-btn-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-tour-btn-selected@2x.png"; sourceTree = "<group>"; };
+		59FC2C5B18EB2E4E00887C2A /* start-tour-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-tour-btn.png"; sourceTree = "<group>"; };
+		59FC2C5C18EB2E4E00887C2A /* start-tour-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-tour-btn@2x.png"; sourceTree = "<group>"; };
+		59FC2C5D18EB2E4E00887C2A /* straight-left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-left-arrow.png"; sourceTree = "<group>"; };
+		59FC2C5E18EB2E4E00887C2A /* straight-left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-left-arrow@2x.png"; sourceTree = "<group>"; };
+		59FC2C5F18EB2E4E00887C2A /* tour-c1-logo-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tour-c1-logo-large.png"; sourceTree = "<group>"; };
+		59FC2C6018EB2E4E00887C2A /* tour-c1-logo-large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tour-c1-logo-large@2x.png"; sourceTree = "<group>"; };
+		59FC2C6118EB2E4E00887C2A /* tour-c1-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tour-c1-logo-small.png"; sourceTree = "<group>"; };
+		59FC2C6218EB2E4E00887C2A /* tour-c1-logo-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tour-c1-logo-small@2x.png"; sourceTree = "<group>"; };
+		59FC2C9A18EB311A00887C2A /* CHPathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPathHelper.h; sourceTree = "<group>"; };
+		59FC2C9B18EB311A00887C2A /* CHPathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPathHelper.m; sourceTree = "<group>"; };
+		59FC2C9D18EB38DA00887C2A /* CHBeaconStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconStore.h; sourceTree = "<group>"; };
+		59FC2C9E18EB38DA00887C2A /* CHBeaconStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconStore.m; sourceTree = "<group>"; };
+		E7706A0A53154AE99775E372 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59FC2B6918E5CEF600887C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */,
+				59FC2B7418E5CEF600887C2A /* UIKit.framework in Frameworks */,
+				59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */,
+				953C0F60E76F4CC4BC579AF3 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59FC2B8A18E5CEF700887C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FC2B8F18E5CEF700887C2A /* XCTest.framework in Frameworks */,
+				59FC2B9118E5CEF700887C2A /* UIKit.framework in Frameworks */,
+				59FC2B9018E5CEF700887C2A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FCA795E192E63BB000164A9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1FCA7961192E70DF000164A9 /* wayFinderDemo.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		59FC2B6318E5CEF600887C2A = {
+			isa = PBXGroup;
+			children = (
+				59FC2B7518E5CEF600887C2A /* WayFinder */,
+				59FC2B9418E5CEF700887C2A /* WayFinderTests */,
+				59FC2B6E18E5CEF600887C2A /* Frameworks */,
+				59FC2B6D18E5CEF600887C2A /* Products */,
+				59A7711E53B14165A0A33716 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		59FC2B6D18E5CEF600887C2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2B6C18E5CEF600887C2A /* WayFinder.app */,
+				59FC2B8D18E5CEF700887C2A /* WayFinderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59FC2B6E18E5CEF600887C2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2B6F18E5CEF600887C2A /* Foundation.framework */,
+				59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */,
+				59FC2B7318E5CEF600887C2A /* UIKit.framework */,
+				59FC2B8E18E5CEF700887C2A /* XCTest.framework */,
+				E7706A0A53154AE99775E372 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59FC2B7518E5CEF600887C2A /* WayFinder */ = {
+			isa = PBXGroup;
+			children = (
+				1FCA795E192E63BB000164A9 /* Data */,
+				59FC2C9818EB30DD00887C2A /* Helpers */,
+				59FC2C2F18EB2DDC00887C2A /* Resources */,
+				59FC2BB918E5DA7C00887C2A /* Models */,
+				59FC2BA418E5CFC800887C2A /* View Controllers */,
+				59FC2B7E18E5CEF600887C2A /* CHAppDelegate.h */,
+				59FC2B7F18E5CEF600887C2A /* CHAppDelegate.m */,
+				59FC2B8118E5CEF600887C2A /* Main.storyboard */,
+				59FC2B8718E5CEF600887C2A /* Images.xcassets */,
+				59FC2B7618E5CEF600887C2A /* Supporting Files */,
+				59FC2BB818E5D97800887C2A /* CGGlobals.h */,
+			);
+			path = WayFinder;
+			sourceTree = "<group>";
+		};
+		59FC2B7618E5CEF600887C2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2B7718E5CEF600887C2A /* WayFinder-Info.plist */,
+				59FC2B7818E5CEF600887C2A /* InfoPlist.strings */,
+				59FC2B7B18E5CEF600887C2A /* main.m */,
+				59FC2B7D18E5CEF600887C2A /* WayFinder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59FC2B9418E5CEF700887C2A /* WayFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F00BB73192E7C3D00A42664 /* WayFinderTests.m */,
+				59FC2B9518E5CEF700887C2A /* Supporting Files */,
+			);
+			name = WayFinderTests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		59FC2B9518E5CEF700887C2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F00BB71192E7B0100A42664 /* WayFinderTests-Info.plist */,
+				1F00BB6E192E7AF700A42664 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59FC2BA418E5CFC800887C2A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2BBD18E5F2E800887C2A /* CHLandingScreenViewController.h */,
+				59FC2BBE18E5F2E800887C2A /* CHLandingScreenViewController.m */,
+				59FC2BA518E5D10E00887C2A /* CHWelcomeViewController.h */,
+				59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */,
+				59FC2BAB18E5D3D300887C2A /* CHEnRouteViewController.h */,
+				59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */,
+				1FCA795B192E47A5000164A9 /* CHBeaconMetadataViewController.h */,
+				1FCA795C192E47A5000164A9 /* CHBeaconMetadataViewController.m */,
+				59FC2C2C18E638C500887C2A /* CHFinishedTourViewController.h */,
+				59FC2C2D18E638C500887C2A /* CHFinishedTourViewController.m */,
+				598729BE18F32F7500D3A1D4 /* CHViewController.h */,
+				598729BF18F32F7500D3A1D4 /* CHViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		59FC2BB918E5DA7C00887C2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2BBA18E5DA9900887C2A /* CHBeaconMetadata.h */,
+				59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */,
+				59FC2C9D18EB38DA00887C2A /* CHBeaconStore.h */,
+				59FC2C9E18EB38DA00887C2A /* CHBeaconStore.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		59FC2C2F18EB2DDC00887C2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2C3018EB2E4E00887C2A /* claim-prize-btn.png */,
+				59FC2C3118EB2E4E00887C2A /* claim-prize-btn@2x.png */,
+				59FC2C3218EB2E4E00887C2A /* Default-568h@2x.png */,
+				59FC2C3318EB2E4E00887C2A /* Default.png */,
+				59FC2C3418EB2E4E00887C2A /* Default@2x.png */,
+				59FC2C3518EB2E4E00887C2A /* finish-tour-btn-selected.png */,
+				59FC2C3618EB2E4E00887C2A /* finish-tour-btn-selected@2x.png */,
+				59FC2C3718EB2E4E00887C2A /* finish-tour-btn.png */,
+				59FC2C3818EB2E4E00887C2A /* finish-tour-btn@2x.png */,
+				59FC2C3918EB2E4E00887C2A /* Icon-40.png */,
+				59FC2C3A18EB2E4E00887C2A /* Icon-40@2x.png */,
+				59FC2C3B18EB2E4E00887C2A /* Icon-60.png */,
+				59FC2C3C18EB2E4E00887C2A /* Icon-60@2x.png */,
+				59FC2C3D18EB2E4E00887C2A /* Icon-72.png */,
+				59FC2C3E18EB2E4E00887C2A /* Icon-72@2x.png */,
+				59FC2C3F18EB2E4E00887C2A /* Icon-76.png */,
+				59FC2C4018EB2E4E00887C2A /* Icon-76@2x.png */,
+				59FC2C4118EB2E4E00887C2A /* Icon-Small-50.png */,
+				59FC2C4218EB2E4E00887C2A /* Icon-Small-50@2x.png */,
+				59FC2C4318EB2E4E00887C2A /* Icon-Small.png */,
+				59FC2C4418EB2E4E00887C2A /* Icon-Small@2x.png */,
+				59FC2C4518EB2E4E00887C2A /* Icon.png */,
+				59FC2C4618EB2E4E00887C2A /* Icon@2x.png */,
+				59FC2C4718EB2E4E00887C2A /* idea-wall-map.png */,
+				59FC2C4818EB2E4E00887C2A /* idea-wall-map@2x.png */,
+				59FC2C4918EB2E4E00887C2A /* iTunesArtwork.png */,
+				59FC2C4A18EB2E4E00887C2A /* iTunesArtwork@2x.png */,
+				59FC2C4B18EB2E4E00887C2A /* left-arrow.png */,
+				59FC2C4C18EB2E4E00887C2A /* left-arrow@2x.png */,
+				59FC2C4D18EB2E4E00887C2A /* lobby-map.png */,
+				59FC2C4E18EB2E4E00887C2A /* lobby-map@2x.png */,
+				59FC2C4F18EB2E4E00887C2A /* location-icon.png */,
+				59FC2C5018EB2E4E00887C2A /* location-icon@2x.png */,
+				59FC2C5118EB2E4E00887C2A /* next-stop-btn-selected.png */,
+				59FC2C5218EB2E4E00887C2A /* next-stop-btn-selected@2x.png */,
+				59FC2C5318EB2E4E00887C2A /* next-stop-btn.png */,
+				59FC2C5418EB2E4E00887C2A /* next-stop-btn@2x.png */,
+				59FC2C5518EB2E4E00887C2A /* prize-marker-empty.png */,
+				59FC2C5618EB2E4E00887C2A /* prize-marker-empty@2x.png */,
+				59FC2C5718EB2E4E00887C2A /* prize-marker-filled.png */,
+				59FC2C5818EB2E4E00887C2A /* prize-marker-filled@2x.png */,
+				59FC2C5918EB2E4E00887C2A /* start-tour-btn-selected.png */,
+				59FC2C5A18EB2E4E00887C2A /* start-tour-btn-selected@2x.png */,
+				59FC2C5B18EB2E4E00887C2A /* start-tour-btn.png */,
+				59FC2C5C18EB2E4E00887C2A /* start-tour-btn@2x.png */,
+				59FC2C5D18EB2E4E00887C2A /* straight-left-arrow.png */,
+				59FC2C5E18EB2E4E00887C2A /* straight-left-arrow@2x.png */,
+				1F0DDB9B192D54A1000E9303 /* straight-right-arrow.png */,
+				1F0DDB9C192D54A1000E9303 /* straight-right-arrow@2x.png */,
+				1F0DDB9F192D55D8000E9303 /* straight-arrow.png */,
+				1F0DDBA0192D55D8000E9303 /* straight-arrow@2x.png */,
+				59FC2C5F18EB2E4E00887C2A /* tour-c1-logo-large.png */,
+				59FC2C6018EB2E4E00887C2A /* tour-c1-logo-large@2x.png */,
+				59FC2C6118EB2E4E00887C2A /* tour-c1-logo-small.png */,
+				59FC2C6218EB2E4E00887C2A /* tour-c1-logo-small@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		59FC2C9818EB30DD00887C2A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				59FC2C9A18EB311A00887C2A /* CHPathHelper.h */,
+				59FC2C9B18EB311A00887C2A /* CHPathHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59FC2B6B18E5CEF600887C2A /* WayFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59FC2B9E18E5CEF700887C2A /* Build configuration list for PBXNativeTarget "WayFinder" */;
+			buildPhases = (
+				5BE2970E778D4892A5114418 /* Check Pods Manifest.lock */,
+				59FC2B6818E5CEF600887C2A /* Sources */,
+				59FC2B6918E5CEF600887C2A /* Frameworks */,
+				59FC2B6A18E5CEF600887C2A /* Resources */,
+				8DBD7978BC964751BECD6577 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WayFinder;
+			productName = WayFinder;
+			productReference = 59FC2B6C18E5CEF600887C2A /* WayFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59FC2B8C18E5CEF700887C2A /* WayFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59FC2BA118E5CEF700887C2A /* Build configuration list for PBXNativeTarget "WayFinderTests" */;
+			buildPhases = (
+				59FC2B8918E5CEF700887C2A /* Sources */,
+				59FC2B8A18E5CEF700887C2A /* Frameworks */,
+				59FC2B8B18E5CEF700887C2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59FC2B9318E5CEF700887C2A /* PBXTargetDependency */,
+			);
+			name = WayFinderTests;
+			productName = WayFinderTests;
+			productReference = 59FC2B8D18E5CEF700887C2A /* WayFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59FC2B6418E5CEF600887C2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CH;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ChaiONE;
+				TargetAttributes = {
+					59FC2B6B18E5CEF600887C2A = {
+						DevelopmentTeam = K83DSSAEPP;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					59FC2B8C18E5CEF700887C2A = {
+						TestTargetID = 59FC2B6B18E5CEF600887C2A;
+					};
+				};
+			};
+			buildConfigurationList = 59FC2B6718E5CEF600887C2A /* Build configuration list for PBXProject "WayFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59FC2B6318E5CEF600887C2A;
+			productRefGroup = 59FC2B6D18E5CEF600887C2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59FC2B6B18E5CEF600887C2A /* WayFinder */,
+				59FC2B8C18E5CEF700887C2A /* WayFinderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59FC2B6A18E5CEF600887C2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FC2C8A18EB2E4E00887C2A /* prize-marker-filled.png in Resources */,
+				59FC2C6718EB2E4E00887C2A /* Default@2x.png in Resources */,
+				59FC2C8F18EB2E4E00887C2A /* start-tour-btn@2x.png in Resources */,
+				1F0DDBA1192D55D8000E9303 /* straight-arrow.png in Resources */,
+				59FC2C7A18EB2E4E00887C2A /* idea-wall-map.png in Resources */,
+				1F0DDB9D192D54A1000E9303 /* straight-right-arrow.png in Resources */,
+				1F00BB72192E7B0100A42664 /* WayFinderTests-Info.plist in Resources */,
+				59FC2C7E18EB2E4E00887C2A /* left-arrow.png in Resources */,
+				59FC2C6B18EB2E4E00887C2A /* finish-tour-btn@2x.png in Resources */,
+				59FC2C7118EB2E4E00887C2A /* Icon-72@2x.png in Resources */,
+				1F0DDB9E192D54A1000E9303 /* straight-right-arrow@2x.png in Resources */,
+				59FC2C9518EB2E4E00887C2A /* tour-c1-logo-small@2x.png in Resources */,
+				59FC2C6D18EB2E4E00887C2A /* Icon-40@2x.png in Resources */,
+				59FC2C8418EB2E4E00887C2A /* next-stop-btn-selected.png in Resources */,
+				59FC2C6818EB2E4E00887C2A /* finish-tour-btn-selected.png in Resources */,
+				59FC2C8118EB2E4E00887C2A /* lobby-map@2x.png in Resources */,
+				59FC2C7918EB2E4E00887C2A /* Icon@2x.png in Resources */,
+				59FC2C7318EB2E4E00887C2A /* Icon-76@2x.png in Resources */,
+				59FC2C7218EB2E4E00887C2A /* Icon-76.png in Resources */,
+				59FC2C7418EB2E4E00887C2A /* Icon-Small-50.png in Resources */,
+				59FC2B8818E5CEF600887C2A /* Images.xcassets in Resources */,
+				59FC2C8D18EB2E4E00887C2A /* start-tour-btn-selected@2x.png in Resources */,
+				1F00BB70192E7AF700A42664 /* InfoPlist.strings in Resources */,
+				59FC2C6C18EB2E4E00887C2A /* Icon-40.png in Resources */,
+				59FC2C8518EB2E4E00887C2A /* next-stop-btn-selected@2x.png in Resources */,
+				59FC2C6E18EB2E4E00887C2A /* Icon-60.png in Resources */,
+				59FC2C8B18EB2E4E00887C2A /* prize-marker-filled@2x.png in Resources */,
+				59FC2C7F18EB2E4E00887C2A /* left-arrow@2x.png in Resources */,
+				59FC2C7518EB2E4E00887C2A /* Icon-Small-50@2x.png in Resources */,
+				59FC2C6F18EB2E4E00887C2A /* Icon-60@2x.png in Resources */,
+				59FC2C7C18EB2E4E00887C2A /* iTunesArtwork.png in Resources */,
+				59FC2C9018EB2E4E00887C2A /* straight-left-arrow.png in Resources */,
+				59FC2C9318EB2E4E00887C2A /* tour-c1-logo-large@2x.png in Resources */,
+				59FC2C6618EB2E4E00887C2A /* Default.png in Resources */,
+				59FC2C8618EB2E4E00887C2A /* next-stop-btn.png in Resources */,
+				59FC2C8018EB2E4E00887C2A /* lobby-map.png in Resources */,
+				1F0DDBA2192D55D8000E9303 /* straight-arrow@2x.png in Resources */,
+				59FC2C8C18EB2E4E00887C2A /* start-tour-btn-selected.png in Resources */,
+				59FC2C7D18EB2E4E00887C2A /* iTunesArtwork@2x.png in Resources */,
+				59FC2C6418EB2E4E00887C2A /* claim-prize-btn@2x.png in Resources */,
+				59FC2C8918EB2E4E00887C2A /* prize-marker-empty@2x.png in Resources */,
+				59FC2C7818EB2E4E00887C2A /* Icon.png in Resources */,
+				59FC2C7718EB2E4E00887C2A /* Icon-Small@2x.png in Resources */,
+				59FC2C8818EB2E4E00887C2A /* prize-marker-empty.png in Resources */,
+				59FC2C9418EB2E4E00887C2A /* tour-c1-logo-small.png in Resources */,
+				59FC2C6918EB2E4E00887C2A /* finish-tour-btn-selected@2x.png in Resources */,
+				59FC2C7618EB2E4E00887C2A /* Icon-Small.png in Resources */,
+				59FC2C8718EB2E4E00887C2A /* next-stop-btn@2x.png in Resources */,
+				59FC2C9118EB2E4E00887C2A /* straight-left-arrow@2x.png in Resources */,
+				59FC2C8318EB2E4E00887C2A /* location-icon@2x.png in Resources */,
+				59FC2C9218EB2E4E00887C2A /* tour-c1-logo-large.png in Resources */,
+				1FCA7962192E70DF000164A9 /* wayFinderDemo.json in Resources */,
+				59FC2C8E18EB2E4E00887C2A /* start-tour-btn.png in Resources */,
+				59FC2C6A18EB2E4E00887C2A /* finish-tour-btn.png in Resources */,
+				59FC2B7A18E5CEF600887C2A /* InfoPlist.strings in Resources */,
+				59FC2C6518EB2E4E00887C2A /* Default-568h@2x.png in Resources */,
+				59FC2C6318EB2E4E00887C2A /* claim-prize-btn.png in Resources */,
+				59FC2C7B18EB2E4E00887C2A /* idea-wall-map@2x.png in Resources */,
+				59FC2B8318E5CEF600887C2A /* Main.storyboard in Resources */,
+				59FC2C7018EB2E4E00887C2A /* Icon-72.png in Resources */,
+				59FC2C8218EB2E4E00887C2A /* location-icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59FC2B8B18E5CEF700887C2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BE2970E778D4892A5114418 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8DBD7978BC964751BECD6577 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59FC2B6818E5CEF600887C2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */,
+				1FCA795D192E47A5000164A9 /* CHBeaconMetadataViewController.m in Sources */,
+				59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */,
+				59FC2C9C18EB311A00887C2A /* CHPathHelper.m in Sources */,
+				59FC2B7C18E5CEF600887C2A /* main.m in Sources */,
+				59FC2C9F18EB38DA00887C2A /* CHBeaconStore.m in Sources */,
+				598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */,
+				59FC2C2E18E638C500887C2A /* CHFinishedTourViewController.m in Sources */,
+				59FC2B8018E5CEF600887C2A /* CHAppDelegate.m in Sources */,
+				59FC2BBF18E5F2E800887C2A /* CHLandingScreenViewController.m in Sources */,
+				59FC2BAD18E5D3D300887C2A /* CHEnRouteViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59FC2B8918E5CEF700887C2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F00BB74192E7C3D00A42664 /* WayFinderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59FC2B9318E5CEF700887C2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59FC2B6B18E5CEF600887C2A /* WayFinder */;
+			targetProxy = 59FC2B9218E5CEF700887C2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F00BB6E192E7AF700A42664 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F00BB6F192E7AF700A42664 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		59FC2B7818E5CEF600887C2A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59FC2B7918E5CEF600887C2A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		59FC2B8118E5CEF600887C2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59FC2B8218E5CEF600887C2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59AE77D718EF554E0019DC0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		59AE77D818EF554E0019DC0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
+				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = WayFinder;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHoc;
+		};
+		59AE77D918EF554E0019DC0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WayFinder.app/WayFinder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
+				INFOPLIST_FILE = "WayFinderTests/WayFinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = AdHoc;
+		};
+		59FC2B9C18E5CEF700887C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		59FC2B9D18E5CEF700887C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59FC2B9F18E5CEF700887C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
+				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = WayFinder;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		59FC2BA018E5CEF700887C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
+				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = WayFinder;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		59FC2BA218E5CEF700887C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WayFinder.app/WayFinder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WayFinderTests/WayFinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		59FC2BA318E5CEF700887C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WayFinder.app/WayFinder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
+				INFOPLIST_FILE = "WayFinderTests/WayFinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59FC2B6718E5CEF600887C2A /* Build configuration list for PBXProject "WayFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59FC2B9C18E5CEF700887C2A /* Debug */,
+				59FC2B9D18E5CEF700887C2A /* Release */,
+				59AE77D718EF554E0019DC0F /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59FC2B9E18E5CEF700887C2A /* Build configuration list for PBXNativeTarget "WayFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59FC2B9F18E5CEF700887C2A /* Debug */,
+				59FC2BA018E5CEF700887C2A /* Release */,
+				59AE77D818EF554E0019DC0F /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59FC2BA118E5CEF700887C2A /* Build configuration list for PBXNativeTarget "WayFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59FC2BA218E5CEF700887C2A /* Debug */,
+				59FC2BA318E5CEF700887C2A /* Release */,
+				59AE77D918EF554E0019DC0F /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59FC2B6418E5CEF600887C2A /* Project object */;
+}

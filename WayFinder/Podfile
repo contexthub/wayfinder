@@ -1,0 +1,3 @@
+platform:ios,'7.0'
+
+pod 'ContextHub', :git => 'git@github.com:contexthub/contexthub-ios-sdk.git', :branch=>'dev'
