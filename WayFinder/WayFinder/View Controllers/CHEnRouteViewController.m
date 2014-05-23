@@ -8,8 +8,6 @@
 
 #import "CHEnRouteViewController.h"
 #import "CHAppDelegate.h"
-#import "UIImageView+AFNetworking.h"
-
 
 @interface CHEnRouteViewController ()
 

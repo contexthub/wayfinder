@@ -1,24 +1,5 @@
 PODS:
-  - AFNetworking (2.0.3):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-    - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.0.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.0.3):
-    - AFNetworking/NSURLConnection
-  - AFNetworking/Reachability (2.0.3)
-  - AFNetworking/Security (2.0.3)
-  - AFNetworking/Serialization (2.0.3)
-  - AFNetworking/UIKit (2.0.3):
-    - AFNetworking/NSURLConnection
-  - ContextHub (1.0.1):
-    - AFNetworking (~> 2.0.0)
+  - ContextHub (1.0.1)
 
 DEPENDENCIES:
   - ContextHub (from `git@github.com:contexthub/contexthub-ios-sdk.git`, branch `dev`)
@@ -29,7 +10,6 @@ EXTERNAL SOURCES:
     :git: git@github.com:contexthub/contexthub-ios-sdk.git
 
 SPEC CHECKSUMS:
-  AFNetworking: e499052cbf3d743e9bb727bb37adb9dc2547ba15
-  ContextHub: 43adb709eb6563b04812110532fc2f80bcee740a
+  ContextHub: 01fc9e076ec4b485f3223e1af885f5cf08e9cd16
 
 COCOAPODS: 0.32.1
