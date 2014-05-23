@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A89B20A192FB65F001901F7 /* ContextHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89B209192FB65F001901F7 /* ContextHub.framework */; };
+		0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */; };
 		1F00BB70192E7AF700A42664 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F00BB6E192E7AF700A42664 /* InfoPlist.strings */; };
 		1F00BB72192E7B0100A42664 /* WayFinderTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F00BB71192E7B0100A42664 /* WayFinderTests-Info.plist */; };
 		1F00BB74192E7C3D00A42664 /* WayFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F00BB73192E7C3D00A42664 /* WayFinderTests.m */; };
@@ -86,7 +88,6 @@
 		59FC2C9518EB2E4E00887C2A /* tour-c1-logo-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2C6218EB2E4E00887C2A /* tour-c1-logo-small@2x.png */; };
 		59FC2C9C18EB311A00887C2A /* CHPathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2C9B18EB311A00887C2A /* CHPathHelper.m */; };
 		59FC2C9F18EB38DA00887C2A /* CHBeaconStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2C9E18EB38DA00887C2A /* CHBeaconStore.m */; };
-		953C0F60E76F4CC4BC579AF3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7706A0A53154AE99775E372 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A89B209192FB65F001901F7 /* ContextHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextHub.framework; sourceTree = "<group>"; };
+		0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1F00BB6F192E7AF700A42664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = WayFinderTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		1F00BB71192E7B0100A42664 /* WayFinderTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WayFinderTests-Info.plist"; path = "WayFinderTests/WayFinderTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1F00BB73192E7C3D00A42664 /* WayFinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WayFinderTests.m; path = WayFinderTests/WayFinderTests.m; sourceTree = SOURCE_ROOT; };
@@ -112,7 +115,6 @@
 		1FCA7961192E70DF000164A9 /* wayFinderDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wayFinderDemo.json; path = Data/wayFinderDemo.json; sourceTree = "<group>"; };
 		598729BE18F32F7500D3A1D4 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
 		598729BF18F32F7500D3A1D4 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
-		59A7711E53B14165A0A33716 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		59FC2B6C18E5CEF600887C2A /* WayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FC2B6F18E5CEF600887C2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -193,7 +195,6 @@
 		59FC2C9B18EB311A00887C2A /* CHPathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPathHelper.m; sourceTree = "<group>"; };
 		59FC2C9D18EB38DA00887C2A /* CHBeaconStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconStore.h; sourceTree = "<group>"; };
 		59FC2C9E18EB38DA00887C2A /* CHBeaconStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconStore.m; sourceTree = "<group>"; };
-		E7706A0A53154AE99775E372 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,10 +202,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */,
+				0A89B20A192FB65F001901F7 /* ContextHub.framework in Frameworks */,
 				59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */,
 				59FC2B7418E5CEF600887C2A /* UIKit.framework in Frameworks */,
 				59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */,
-				953C0F60E76F4CC4BC579AF3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +238,6 @@
 				59FC2B9418E5CEF700887C2A /* WayFinderTests */,
 				59FC2B6E18E5CEF600887C2A /* Frameworks */,
 				59FC2B6D18E5CEF600887C2A /* Products */,
-				59A7711E53B14165A0A33716 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,11 +253,12 @@
 		59FC2B6E18E5CEF600887C2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */,
+				0A89B209192FB65F001901F7 /* ContextHub.framework */,
 				59FC2B6F18E5CEF600887C2A /* Foundation.framework */,
 				59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */,
 				59FC2B7318E5CEF600887C2A /* UIKit.framework */,
 				59FC2B8E18E5CEF700887C2A /* XCTest.framework */,
-				E7706A0A53154AE99775E372 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -417,11 +419,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59FC2B9E18E5CEF700887C2A /* Build configuration list for PBXNativeTarget "WayFinder" */;
 			buildPhases = (
-				5BE2970E778D4892A5114418 /* Check Pods Manifest.lock */,
 				59FC2B6818E5CEF600887C2A /* Sources */,
 				59FC2B6918E5CEF600887C2A /* Frameworks */,
 				59FC2B6A18E5CEF600887C2A /* Resources */,
-				8DBD7978BC964751BECD6577 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -570,39 +570,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		5BE2970E778D4892A5114418 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8DBD7978BC964751BECD6577 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		59FC2B6818E5CEF600887C2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -702,10 +669,13 @@
 		};
 		59AE77D818EF554E0019DC0F /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
 				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
@@ -806,10 +776,13 @@
 		};
 		59FC2B9F18E5CEF700887C2A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
 				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
@@ -822,10 +795,13 @@
 		};
 		59FC2BA018E5CEF700887C2A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59A7711E53B14165A0A33716 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WayFinder/WayFinder-Prefix.pch";
 				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
