@@ -46,22 +46,11 @@
 - (BOOL)isSameBeacon:(CHBeaconMetadata *)otherBeacon;
 
 /**
- Determines whether a beacon is immediate to the user's device (~6 inches) based on the notification trigged by a beacon
+ Determines whether a beacon is in the proximity (immediate, near, far) of a user's device based on the notification trigged by a beacon
  @param notification notification object containing information about the beacon which triggered an event
+ @param beaconProximity proximity which the beacon is in
  */
-- (BOOL)isImmediateToBeaconFromNotification:(NSNotification *)notification;
-
-/**
- Determines whether a beacon is near the user's device (~1-2 feet) based on the notification trigged by a beacon
-@param notification notification object containing information about the beacon which triggered an event
- */
-- (BOOL)isNearBeaconFromNotification:(NSNotification *)notification;
-
-/**
- Determines whether a beacon is far the user's device (~50ft) based on the notification trigged by a beacon
- @param notification notification object containing information about the beacon which triggered an event
- */
-- (BOOL)isFarFromBeaconFromNotification:(NSNotification *)notification;
+- (BOOL)isSameBeaconFromNotification:(NSNotification *)notification inProximity:(NSString *)beaconProximity;
 
 
 @end

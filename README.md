@@ -15,14 +15,14 @@ ContextHub enabled us to focus on building the view controllers and business log
 
 ## Setup
 
-Setting up WayFinder with iBeacons is easy. iOS devices with iOS 7 and Bluetooth 4.0 can be turned into beacons using apps like Locate iBeacon, or you can purchase beacons from a variety of vendors across the web. Check the Wiki for more information.
+Setting up WayFinder with iBeacons is easy. iOS devices with iOS 7 and Bluetooth 4.0 can be turned into beacons using apps like [Locate for iBeacon](https://itunes.apple.com/us/app/locate-for-ibeacon/id738709014?mt=8), or you can purchase beacons from a variety of vendors across the web. This demo was tested against KS Technologies [Particle Beacon](http://www.kstechnologies.com/products/particle).
 
 Depending on whether you have physical beacons ready to be programmed or using your phone, you need to know about the information which each beacon stores:
 
 Beacons have 4 important information fields that need to be programmed: UUID, major, minor, and name.
 - UUID (Universally unique identifier): UUID is a 32-character hexadecimal id when used with iBeacon is typically set to be the same as a certain type or from a certain organization. For example, all iBeacons placed at a particular store location of your business would have the same UUID.
 - Major: This number identifies a group of beacons at a particular location. For example, all beacons on the 2nd floor or specific department of a particular location (with the same UUID) would have the same major value.
-- Minor: This number uniquely identifies a specific beacon within a group of beacons with the same major value. For example: a beacon located next to the lobby would have a different minor value from a nearby elevator. Every beacon should have a unique combination of UUID, major, and minor value to distinguish between then. 
+- Minor: This number uniquely identifies a specific beacon within a group of beacons with the same major value. For example, a beacon located next to the lobby would have a different minor value from a nearby elevator. Every beacon should have a unique combination of UUID, major, and minor value to distinguish between then. 
 - Name: Beacons are given human-readable names to easily distinguish between them. Names are not required to be unique (as uniqueness is determined by the UUID, major and minor value) however they are not allowed to have spaces.
 
 To use the WayFinder app out of the box, prepare 3 beacons with the following information:
@@ -31,11 +31,11 @@ To use the WayFinder app out of the box, prepare 3 beacons with the following in
 - Major: 100
 - Minor: 1
 - Name: LOBBY
-*.  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
+*  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
 - Major: 100
 - Minor: 2
 - Name: IDEAWALL
-*.	UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
+*  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
 - Major: 100
 - Minor: 3
 - Name: TEAMROOM
@@ -51,18 +51,16 @@ Launch and run the app from your device (beacons do not work with the iPhone or 
 
 ### Code
 
-WayFinder makes using quick and easy through the power of ContextHub and a few lines of code. First, make sure you sign up with [ContextHub](www.contexthub.com) and get an app id. Then follow these instructions:
-1. In your 
+WayFinder is an example of an app that demonstrates the use of iBeacons through the power of ContextHub and a few lines of code. To add this functionality to your own projects, follow the instructions below.
+
+1. First make sure you sign up with [ContextHub](www.contexthub.com) and get an app id. This app id binds all activities with ContextHub to your specific project.
+2. In your 
 ```objective-c
 application:didFinishLaunchingWithOptions:
 ``` 
 method, register your app ID 
 ```objective-c
 [ContextHub registerWithAppId:@"YOUR-APP-ID-HERE"]
-```
-2. Start listening for notifications by calling 
-```objective-c
-[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHContextEventManagerDidPostEvent object:nil];
 ```
 3. Define a method called 
 ```objective-c
@@ -73,12 +71,16 @@ which will process notifications.
 ```objective-c
 CLBeaconMetadata *interestingBeacon = CLBeaconMetadata initWithData:@{@"name": @"LOBBY", @"uuid": "B9407F30-F5F8-466E-AFF9-25556B57FE6D", @"major":@"100", @"minor":1 }
 ``` 
-then compare it with the notification that was just sent 
+then compare it with the notification that was just sent and the proximity you are looking for 
 ```objective-c
-[interestingBeacon isNearOrImmediateBeaconWithNotification:notification]
+BOOL beaconIsNear = [interestingBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]
 ```
 .
-5. Remember to call 
+5. Start listening for notifications by calling 
+```objective-c
+[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHContextEventManagerDidPostEvent object:nil];
+```
+6. Then remember to call 
 ```objective-c
 [[NSNotificationCenter defaultCenter]removeObserver:self];
 ```

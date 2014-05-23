@@ -52,7 +52,7 @@
     CHBeaconMetadata *nextBeacon = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
     
     // Detect if the next beacon is nearby
-    if ([nextBeacon isNearOrImmediateBeaconWithNotification:notification]) {
+    if ([nextBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityImmediate] || [nextBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]) {
         // Stop notifications
         [[NSNotificationCenter defaultCenter]removeObserver:self];
         

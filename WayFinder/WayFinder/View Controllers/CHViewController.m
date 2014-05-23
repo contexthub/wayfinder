@@ -27,7 +27,4 @@
   return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
-
-
-
 @end

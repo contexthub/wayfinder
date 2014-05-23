@@ -15,7 +15,6 @@
 		1F0DDBA1192D55D8000E9303 /* straight-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDB9F192D55D8000E9303 /* straight-arrow.png */; };
 		1F0DDBA2192D55D8000E9303 /* straight-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DDBA0192D55D8000E9303 /* straight-arrow@2x.png */; };
 		1FCA795D192E47A5000164A9 /* CHBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA795C192E47A5000164A9 /* CHBeaconMetadataViewController.m */; };
-		1FCA7960192E63CC000164A9 /* tourDeC1Demo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA795F192E63CC000164A9 /* tourDeC1Demo.json */; };
 		1FCA7962192E70DF000164A9 /* wayFinderDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA7961192E70DF000164A9 /* wayFinderDemo.json */; };
 		598729C018F32F7500D3A1D4 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* CHViewController.m */; };
 		59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
@@ -31,7 +30,6 @@
 		59FC2B9118E5CEF700887C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7318E5CEF600887C2A /* UIKit.framework */; };
 		59FC2BA718E5D10E00887C2A /* CHWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */; };
 		59FC2BAD18E5D3D300887C2A /* CHEnRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */; };
-		59FC2BB718E5D81C00887C2A /* CHBeaconsRouteService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */; };
 		59FC2BBC18E5DA9900887C2A /* CHBeaconMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */; };
 		59FC2BBF18E5F2E800887C2A /* CHLandingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2BBE18E5F2E800887C2A /* CHLandingScreenViewController.m */; };
 		59FC2C2E18E638C500887C2A /* CHFinishedTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2C2D18E638C500887C2A /* CHFinishedTourViewController.m */; };
@@ -111,7 +109,6 @@
 		1F0DDBA0192D55D8000E9303 /* straight-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straight-arrow@2x.png"; sourceTree = "<group>"; };
 		1FCA795B192E47A5000164A9 /* CHBeaconMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconMetadataViewController.h; sourceTree = "<group>"; };
 		1FCA795C192E47A5000164A9 /* CHBeaconMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconMetadataViewController.m; sourceTree = "<group>"; };
-		1FCA795F192E63CC000164A9 /* tourDeC1Demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tourDeC1Demo.json; path = Data/tourDeC1Demo.json; sourceTree = "<group>"; };
 		1FCA7961192E70DF000164A9 /* wayFinderDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wayFinderDemo.json; path = Data/wayFinderDemo.json; sourceTree = "<group>"; };
 		598729BE18F32F7500D3A1D4 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
 		598729BF18F32F7500D3A1D4 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
@@ -134,8 +131,6 @@
 		59FC2BA618E5D10E00887C2A /* CHWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHWelcomeViewController.m; sourceTree = "<group>"; };
 		59FC2BAB18E5D3D300887C2A /* CHEnRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHEnRouteViewController.h; sourceTree = "<group>"; };
 		59FC2BAC18E5D3D300887C2A /* CHEnRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEnRouteViewController.m; sourceTree = "<group>"; };
-		59FC2BB518E5D81C00887C2A /* CHBeaconsRouteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconsRouteService.h; sourceTree = "<group>"; };
-		59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconsRouteService.m; sourceTree = "<group>"; };
 		59FC2BB818E5D97800887C2A /* CGGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGlobals.h; sourceTree = "<group>"; };
 		59FC2BBA18E5DA9900887C2A /* CHBeaconMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeaconMetadata.h; sourceTree = "<group>"; };
 		59FC2BBB18E5DA9900887C2A /* CHBeaconMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeaconMetadata.m; sourceTree = "<group>"; };
@@ -229,7 +224,6 @@
 		1FCA795E192E63BB000164A9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				1FCA795F192E63CC000164A9 /* tourDeC1Demo.json */,
 				1FCA7961192E70DF000164A9 /* wayFinderDemo.json */,
 			);
 			name = Data;
@@ -274,7 +268,6 @@
 				59FC2C9818EB30DD00887C2A /* Helpers */,
 				59FC2C2F18EB2DDC00887C2A /* Resources */,
 				59FC2BB918E5DA7C00887C2A /* Models */,
-				59FC2BB418E5D7E200887C2A /* Service */,
 				59FC2BA418E5CFC800887C2A /* View Controllers */,
 				59FC2B7E18E5CEF600887C2A /* CHAppDelegate.h */,
 				59FC2B7F18E5CEF600887C2A /* CHAppDelegate.m */,
@@ -333,15 +326,6 @@
 				598729BF18F32F7500D3A1D4 /* CHViewController.m */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		59FC2BB418E5D7E200887C2A /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				59FC2BB518E5D81C00887C2A /* CHBeaconsRouteService.h */,
-				59FC2BB618E5D81C00887C2A /* CHBeaconsRouteService.m */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		59FC2BB918E5DA7C00887C2A /* Models */ = {
@@ -539,7 +523,6 @@
 				59FC2C6C18EB2E4E00887C2A /* Icon-40.png in Resources */,
 				59FC2C8518EB2E4E00887C2A /* next-stop-btn-selected@2x.png in Resources */,
 				59FC2C6E18EB2E4E00887C2A /* Icon-60.png in Resources */,
-				1FCA7960192E63CC000164A9 /* tourDeC1Demo.json in Resources */,
 				59FC2C8B18EB2E4E00887C2A /* prize-marker-filled@2x.png in Resources */,
 				59FC2C7F18EB2E4E00887C2A /* left-arrow@2x.png in Resources */,
 				59FC2C7518EB2E4E00887C2A /* Icon-Small-50@2x.png in Resources */,
@@ -635,7 +618,6 @@
 				59FC2C2E18E638C500887C2A /* CHFinishedTourViewController.m in Sources */,
 				59FC2B8018E5CEF600887C2A /* CHAppDelegate.m in Sources */,
 				59FC2BBF18E5F2E800887C2A /* CHLandingScreenViewController.m in Sources */,
-				59FC2BB718E5D81C00887C2A /* CHBeaconsRouteService.m in Sources */,
 				59FC2BAD18E5D3D300887C2A /* CHEnRouteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,6 @@
 #import "CHAppDelegate.h"
 #import "ContextHub.h"
 #import "CCHNotificationService.h"
-#import "CHBeaconsRouteService.h"
 
 @implementation CHAppDelegate
 + (CHAppDelegate *) sharedAppDelegate {
@@ -17,9 +16,6 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-    // Register for notifications
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
-    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Initialize ContextHub with our app ID
@@ -31,10 +27,6 @@
     return YES;
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    //This turns on background updates.
-    [ContextHub application:application didReceiveRemoteNotification:userInfo completion:completionHandler];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -63,18 +55,5 @@
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark - push notifications
-
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    NSLog(@"Did fail to register for push %@", error);
-}
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    
-    CCHNotificationService *sharedService = [CCHNotificationService sharedService];
-    
-    [sharedService registerDeviceToken:deviceToken withCompletion:^(NSError *error) {
-    }];
-}
 
 @end

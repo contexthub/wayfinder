@@ -52,23 +52,8 @@
     return false;
 }
 
-// Determines whether a notification that comes in is the beacon we are interested in and whether we are near it
-- (BOOL)isImmediateToBeaconFromNotification:(NSNotification *)notification {
-    return [self isBeaconFromNotification:notification inState:kBeaconProximityImmediate];
-}
-
-// Determines whether a notification that comes in is the beacon we are interested in and whether we are near it
-- (BOOL)isNearBeaconFromNotification:(NSNotification *)notification {
-    return [self isBeaconFromNotification:notification inState:kBeaconProximityNear];
-}
-
-// Determines whether a notification that comes in is the beacon we are interested in and whether we are near it
-- (BOOL)isFarFromBeaconFromNotification:(NSNotification *)notification {
-    return [self isBeaconFromNotification:notification inState:kBeaconProximityFar];
-}
-
-// Determines if a beacon is in a particular state or not based on the notification the beacon triggered
-- (BOOL)isBeaconFromNotification:(NSNotification *)notification inState:(NSString *)beaconState {
+// Determines if a beacon is in a particular proximity or not based on the notification the beacon triggered
+- (BOOL)isSameBeaconFromNotification:(NSNotification *)notification inProximity:(NSString *)beaconProximity {
     // Grab data from the notification
     NSDictionary *event = notification.object;
     NSString *eventName = [event valueForKeyPath:@"event.name"];
@@ -81,11 +66,11 @@
         return false;
     }
     
-    if ([beaconState isEqualToString:kBeaconProximityImmediate]) {
+    if ([beaconProximity isEqualToString:kBeaconProximityImmediate]) {
         if (![self isImmediateToBeacon:eventName state:state]) {
             return false;
         }
-    } else if ([beaconState isEqualToString:kBeaconProximityNear]) {
+    } else if ([beaconProximity isEqualToString:kBeaconProximityNear]) {
         if (![self isNearBeacon:eventName state:state]) {
             return false;
         }
