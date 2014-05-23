@@ -7,8 +7,8 @@
 //
 
 #import "CHAppDelegate.h"
-#import "ContextHub.h"
-#import "CCHNotificationService.h"
+#import <ContextHub/ContextHub.h>
+
 
 @implementation CHAppDelegate
 + (CHAppDelegate *) sharedAppDelegate {
