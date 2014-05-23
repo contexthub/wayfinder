@@ -25,7 +25,7 @@ Beacons have 4 important information fields that need to be programmed: UUID, ma
 - Minor: This number uniquely identifies a specific beacon within a group of beacons with the same major value. For example, a beacon located next to the lobby would have a different minor value from a nearby elevator. Every beacon should have a unique combination of UUID, major, and minor value to distinguish between then. 
 - Name: Beacons are given human-readable names to easily distinguish between them. Names are not required to be unique (as uniqueness is determined by the UUID, major and minor value) however they are not allowed to have spaces.
 
-To use the WayFinder app out of the box, prepare 3 beacons with the following information:
+To use the WayFinder app out of the box, prepare 3 beacons with the following information using eithe real beacons or Locate for iBeacon:
 
 *  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
 - Major: 100
