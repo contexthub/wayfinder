@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A89B20A192FB65F001901F7 /* ContextHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89B209192FB65F001901F7 /* ContextHub.framework */; };
 		0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */; };
+		1F3B59F119363F6B001E30B3 /* CHBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B59F019363F6B001E30B3 /* CHBeacon.m */; };
 		1FCA795D192E47A5000164A9 /* WFBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */; };
 		1FCA7962192E70DF000164A9 /* wayFinderDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA7961192E70DF000164A9 /* wayFinderDemo.json */; };
 		598729C018F32F7500D3A1D4 /* WFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* WFViewController.m */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		0A89B209192FB65F001901F7 /* ContextHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextHub.framework; sourceTree = "<group>"; };
 		0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1F3B59EF19363F6B001E30B3 /* CHBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBeacon.h; sourceTree = "<group>"; };
+		1F3B59F019363F6B001E30B3 /* CHBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBeacon.m; sourceTree = "<group>"; };
 		1FCA795B192E47A5000164A9 /* WFBeaconMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBeaconMetadataViewController.h; sourceTree = "<group>"; };
 		1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBeaconMetadataViewController.m; sourceTree = "<group>"; };
 		1FCA7961192E70DF000164A9 /* wayFinderDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wayFinderDemo.json; path = Data/wayFinderDemo.json; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				59FC2BBB18E5DA9900887C2A /* WFBeaconMetadata.m */,
 				59FC2C9D18EB38DA00887C2A /* WFBeaconStore.h */,
 				59FC2C9E18EB38DA00887C2A /* WFBeaconStore.m */,
+				1F3B59EF19363F6B001E30B3 /* CHBeacon.h */,
+				1F3B59F019363F6B001E30B3 /* CHBeacon.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				1FCA795D192E47A5000164A9 /* WFBeaconMetadataViewController.m in Sources */,
 				59FC2BA718E5D10E00887C2A /* WFWelcomeViewController.m in Sources */,
 				59FC2C9C18EB311A00887C2A /* WFPathHelper.m in Sources */,
+				1F3B59F119363F6B001E30B3 /* CHBeacon.m in Sources */,
 				59FC2B7C18E5CEF600887C2A /* main.m in Sources */,
 				59FC2C9F18EB38DA00887C2A /* WFBeaconStore.m in Sources */,
 				598729C018F32F7500D3A1D4 /* WFViewController.m in Sources */,
