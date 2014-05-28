@@ -1,7 +1,7 @@
 WayFinder
 =============
 
-A fun app to help you explore the ChaiONE office and explore the power of iBeacons!!
+A fun app to help you explore the ease of use of ContextHub and the power of iBeacons!
 
 ## Purpose
 
@@ -43,11 +43,15 @@ To use the WayFinder app out of the box, prepare 3 beacons with the following in
 
 ### Demo
 
-Launch and run the app from your device (beacons do not work with the iPhone or iPad Simulators). You will notice a few things:
+Launch and run the app from your device (beacons do not work with the iPhone or iPad Simulators). Here's how it works:
 
 1. The app will wait until it detects any beacons are in range to display the welcome screen. 
 2. The app will wait until it detects the first "LOBBY" beacon specifically in close range (~1-2 ft) before showing the "Start Tour" button.
-3. The app should respond to the close proximity of the 2nd "IDEAWALL" and 3rd "TEAMROOM" beacons and advance screens automatically as if you were walking around our actual office.
+3. The user should tap the "Start Tour" button to advance to a map of the next location.
+4. The app should respond to the close proximity of the 2nd "IDEAWALL" beacon and advance automatically as if you were walking around our actual office.
+5. The user again should tap the "Next Stop" button to advance to a map of the next location.
+6. The app should respond to the close proximity of the 3rd "TEAMROOM" beacon and again advance automatically with info about the TEAM ROOM.
+7. The user then finishes the tour and the app shows a screen with the number of times the tour has been completed.
 
 
 ### Code

@@ -255,7 +255,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is information about where you are." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zT-yW-dwg">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is information about where you are." translatesAutoresizingMaskIntoConstraints="NO" id="1zT-yW-dwg">
                                 <rect key="frame" x="27" y="209" width="270" height="252"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -367,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPv-bL-n5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-585" y="117"/>
+            <point key="canvasLocation" x="-585" y="157"/>
         </scene>
     </scenes>
     <resources>

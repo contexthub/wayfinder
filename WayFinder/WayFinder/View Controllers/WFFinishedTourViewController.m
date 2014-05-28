@@ -19,6 +19,7 @@
     self.numTimesVisited = 0;
     
 }
+
 - (void)viewWillAppear:(BOOL)animated {
     NSInteger timesVisited = [[[NSUserDefaults standardUserDefaults] objectForKey:@"timesVisited"] intValue];
     self.timesVisitedLabel.text = [NSString stringWithFormat:@"%ld time(s)", (long)timesVisited];
