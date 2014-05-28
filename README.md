@@ -20,12 +20,12 @@ Setting up WayFinder with iBeacons is easy. iOS devices with iOS 7 and Bluetooth
 Depending on whether you have physical beacons ready to be programmed or using your phone, you need to know about the information which each beacon stores:
 
 Beacons have 4 important information fields that need to be programmed: UUID, major, minor, and name.
-- UUID (Universally unique identifier): UUID is a 32-character hexadecimal id when used with iBeacon is typically set to be the same as a certain type or from a certain organization. For example, all iBeacons placed at a particular store location of your business would have the same UUID.
+- UUID (Universally unique identifier): UUID is a 32-character hexadecimal id when used with iBeacon is typically set to be the same as a certain type or from a certain organization. For example, all iBeacons placed at a particular store location of your business would have the same UUID. UUIDs have a specific format and must be [generated](http://www.uuidgenerator.net).
 - Major: This number identifies a group of beacons at a particular location. For example, all beacons on the 2nd floor or specific department of a particular location (with the same UUID) would have the same major value.
 - Minor: This number uniquely identifies a specific beacon within a group of beacons with the same major value. For example, a beacon located next to the lobby would have a different minor value from a nearby elevator. Every beacon should have a unique combination of UUID, major, and minor value to distinguish between then. 
 - Name: Beacons are given human-readable names to easily distinguish between them. Names are not required to be unique (as uniqueness is determined by the UUID, major and minor value) however they are not allowed to have spaces.
 
-To use the WayFinder app out of the box, prepare 3 beacons with the following information:
+To use the WayFinder app out of the box, prepare 3 beacons with the following information using eithe real beacons or Locate for iBeacon:
 
 *  UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D
 - Major: 100
@@ -43,7 +43,7 @@ To use the WayFinder app out of the box, prepare 3 beacons with the following in
 
 ### Demo
 
-Launch and run the app from your device (beacons do not work with the iPhone or iPad Simulators). Here's how it works:
+Launch and run the app from your device (beacons do not work with the iOS Simulator). Here's how it works:
 
 1. The app will wait until it detects any beacons are in range to display the welcome screen. 
 2. The app will wait until it detects the first "LOBBY" beacon specifically in close range (~1-2 ft) before showing the "Start Tour" button.
