@@ -1,5 +1,5 @@
 //
-//  CHAppDelegate.h
+//  WFAppDelegate.h
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CHAppDelegate : UIResponder <UIApplicationDelegate>
-+ (CHAppDelegate *) sharedAppDelegate;
+@interface WFAppDelegate : UIResponder <UIApplicationDelegate>
++ (WFAppDelegate *) sharedAppDelegate;
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSArray *beaconsMetadata;
 @end

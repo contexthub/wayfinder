@@ -1,14 +1,14 @@
 //
-//  CHBeaconMetadata.m
+//  WFBeaconMetadata.m
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHBeaconMetadata.h"
+#import "WFBeaconMetadata.h"
 
-@implementation CHBeaconMetadata
+@implementation WFBeaconMetadata
 - (instancetype)initWithData:(NSDictionary *)data {
     self = [super init];
     if(self) {
@@ -29,22 +29,21 @@
     return self;
 }
 
+// Creates a beacon from a notification object's data
 + (instancetype)beaconFromNotification:(NSNotification *)notification {
-    // Grab data from the notification
     NSDictionary *event = notification.object;
     NSString *uuid = [event valueForKeyPath:@"event.data.beacon.uuid"];
     NSString *major = [event valueForKeyPath:@"event.data.beacon.major"];
     NSString *minor = [event valueForKeyPath:@"event.data.beacon.minor"];
     
-    // Create a CHBeaconMedata object from the data in the notification
     NSDictionary *data = @{@"uuid":uuid, @"major": major, @"minor": minor, @"name": @"", @"nextBeaconName": @"", @"nextBeaconDirectionName": @"", @"nextBeaconDirectionImageName": @"", @"nextBeaconMapImageName": @""};
-    CHBeaconMetadata *beacon = [[CHBeaconMetadata alloc] initWithData:data];
+    WFBeaconMetadata *beacon = [[WFBeaconMetadata alloc] initWithData:data];
     
     return beacon;
 }
 
 // Tests to see if two beacons are the same based on their UUID, major, and minor identifiers
-- (BOOL)isSameBeacon:(CHBeaconMetadata *)otherBeacon {
+- (BOOL)isSameBeacon:(WFBeaconMetadata *)otherBeacon {
     if ([self.uuid isEqualToString:otherBeacon.uuid] && [self.major isEqualToString:otherBeacon.major] && [self.minor isEqualToString:otherBeacon.minor]) {
         return true;
     }
@@ -54,14 +53,12 @@
 
 // Determines if a beacon is in a particular proximity or not based on the notification the beacon triggered
 - (BOOL)isSameBeaconFromNotification:(NSNotification *)notification inProximity:(NSString *)beaconProximity {
-    // Grab data from the notification
     NSDictionary *event = notification.object;
     NSString *eventName = [event valueForKeyPath:@"event.name"];
     NSString *state = [event valueForKeyPath:@"event.data.state"];
     
-    CHBeaconMetadata *notificationBeacon = [CHBeaconMetadata beaconFromNotification:notification];
+    WFBeaconMetadata *notificationBeacon = [WFBeaconMetadata beaconFromNotification:notification];
     
-    // Is this the beacon we are interested in?
     if (![self isSameBeacon:notificationBeacon]) {
         return false;
     }
@@ -84,15 +81,15 @@
 }
 
 - (BOOL)isNearBeacon:(NSString *)eventName state:(NSString *)state {
-    return ([eventName isEqualToString:CHBeaconChangedEventName] && [state isEqualToString:@"near_state"]);
+    return ([eventName isEqualToString:WFBeaconChangedEventName] && [state isEqualToString:@"near_state"]);
 }
 
 - (BOOL)isImmediateToBeacon:(NSString *)eventName state:(NSString *)state {
-    return ([eventName isEqualToString:CHBeaconChangedEventName] && [state isEqualToString:@"immediate_state"]);
+    return ([eventName isEqualToString:WFBeaconChangedEventName] && [state isEqualToString:@"immediate_state"]);
 }
 
 - (BOOL)isFarFromBeacon:(NSString *)eventName state:(NSString *)state {
-    return ([eventName isEqualToString:CHBeaconChangedEventName] && [state isEqualToString:@"far_state"]);
+    return ([eventName isEqualToString:WFBeaconChangedEventName] && [state isEqualToString:@"far_state"]);
 }
 
 @end

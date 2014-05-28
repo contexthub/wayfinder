@@ -1,18 +1,18 @@
 //
-//  CHAppDelegate.m
+//  WFAppDelegate.m
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHAppDelegate.h"
+#import "WFAppDelegate.h"
 #import <ContextHub/ContextHub.h>
 
 
-@implementation CHAppDelegate
-+ (CHAppDelegate *) sharedAppDelegate {
-  return (CHAppDelegate *)[[UIApplication sharedApplication] delegate];
+@implementation WFAppDelegate
++ (WFAppDelegate *) sharedAppDelegate {
+  return (WFAppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{

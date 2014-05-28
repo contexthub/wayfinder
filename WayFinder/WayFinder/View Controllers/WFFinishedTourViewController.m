@@ -1,18 +1,18 @@
 //
-//  CHFinishedTourViewController.m
+//  WFFinishedTourViewController.m
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHFinishedTourViewController.h"
+#import "WFFinishedTourViewController.h"
 
-@interface CHFinishedTourViewController ()
+@interface WFFinishedTourViewController ()
 
 @end
 
-@implementation CHFinishedTourViewController
+@implementation WFFinishedTourViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

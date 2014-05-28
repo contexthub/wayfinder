@@ -1,5 +1,5 @@
 //
-//  CHViewController.h
+//  WFViewController.h
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 4/7/14.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CHViewController : UIViewController
+@interface WFViewController : UIViewController
 
-@property (nonatomic, strong) CHBeaconMetadata *currentBeaconMetadata;          // This beacon
-@property (nonatomic, strong) CHBeaconMetadata *destinationBeaconMetadata;      // The next beacon
+@property (nonatomic, strong) WFBeaconMetadata *currentBeaconMetadata;          // This beacon
+@property (nonatomic, strong) WFBeaconMetadata *destinationBeaconMetadata;      // The next beacon
 
 - (NSUInteger)supportedInterfaceOrientations;
 - (BOOL)shouldAutorotate;

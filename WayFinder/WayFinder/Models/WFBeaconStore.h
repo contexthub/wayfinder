@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CHBeaconMetadata.h"
+#import "WFBeaconMetadata.h"
 
-@interface CHBeaconStore : NSObject
+@interface WFBeaconStore : NSObject
 
 @property (nonatomic, strong) NSMutableArray *beacons;
 
 + (instancetype)sharedStore;
-- (CHBeaconMetadata *)metadataForBeaconWithName:(NSString *)beaconName;
-- (CHBeaconMetadata *)firstBeacon;
-- (CHBeaconMetadata *)lastBeacon;
+- (WFBeaconMetadata *)metadataForBeaconWithName:(NSString *)beaconName;
+- (WFBeaconMetadata *)firstBeacon;
+- (WFBeaconMetadata *)lastBeacon;
 - (NSUInteger)numBeacons;
 
 @end

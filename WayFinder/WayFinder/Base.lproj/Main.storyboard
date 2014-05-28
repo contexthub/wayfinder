@@ -24,7 +24,7 @@
         <!--Landing Screen View Controller-->
         <scene sceneID="2dY-0y-Pl6">
             <objects>
-                <viewController id="a89-8t-Jol" customClass="CHLandingScreenViewController" sceneMemberID="viewController">
+                <viewController id="a89-8t-Jol" customClass="WFLandingScreenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6e-Al-1s9"/>
                         <viewControllerLayoutGuide type="bottom" id="AWg-Lb-wFb"/>
@@ -70,7 +70,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="CHWelcomeViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="WFWelcomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -134,7 +134,7 @@
         <!--Finished Tour View Controller-->
         <scene sceneID="rev-BP-k9u">
             <objects>
-                <viewController id="1By-35-EY9" customClass="CHFinishedTourViewController" sceneMemberID="viewController">
+                <viewController id="1By-35-EY9" customClass="WFFinishedTourViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4TO-3T-Fsk"/>
                         <viewControllerLayoutGuide type="bottom" id="rUZ-6N-yd7"/>
@@ -216,7 +216,7 @@
         <!--Beacon Metadata View Controller-->
         <scene sceneID="kZW-UZ-WnJ">
             <objects>
-                <viewController id="M4X-HY-yfg" customClass="CHBeaconMetadataViewController" sceneMemberID="viewController">
+                <viewController id="M4X-HY-yfg" customClass="WFBeaconMetadataViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mz0-o6-s0e"/>
                         <viewControllerLayoutGuide type="bottom" id="dkf-81-cjm"/>
@@ -298,7 +298,7 @@
         <!--En Route View Controller-->
         <scene sceneID="ODi-N2-gEJ">
             <objects>
-                <viewController id="YrA-QD-PcO" customClass="CHEnRouteViewController" sceneMemberID="viewController">
+                <viewController id="YrA-QD-PcO" customClass="WFEnRouteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uaN-vB-Jlf"/>
                         <viewControllerLayoutGuide type="bottom" id="db0-rU-msW"/>

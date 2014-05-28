@@ -1,5 +1,5 @@
 //
-//  CHWelcomeViewController.h
+//  WFLandingScreenViewController.h
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CHAppDelegate.h"
-#import "CHBeaconMetadata.h"
 
-@interface CHWelcomeViewController : CHViewController
+@interface WFLandingScreenViewController : WFViewController
+
 @end

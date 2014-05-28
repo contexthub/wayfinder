@@ -1,18 +1,18 @@
 //
-//  CHViewController.m
+//  WFViewController.m
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 4/7/14.
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHViewController.h"
+#import "WFViewController.h"
 
-@interface CHViewController ()
+@interface WFViewController ()
 
 @end
 
-@implementation CHViewController
+@implementation WFViewController
 
 - (NSUInteger)supportedInterfaceOrientations {
   return UIInterfaceOrientationMaskPortrait;

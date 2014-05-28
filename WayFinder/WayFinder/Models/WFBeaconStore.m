@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHBeaconStore.h"
+#import "WFBeaconStore.h"
 
-@interface CHBeaconStore()
+@interface WFBeaconStore()
 
 @property (nonatomic, strong) NSArray *beaconsDict;
 
@@ -16,13 +16,13 @@
 
 @end
 
-@implementation CHBeaconStore
-static CHBeaconStore *__instance = nil;
+@implementation WFBeaconStore
+static WFBeaconStore *__instance = nil;
 
 + (instancetype)sharedStore {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        __instance = [[CHBeaconStore alloc]init];
+        __instance = [[WFBeaconStore alloc]init];
     });
     
     return __instance;
@@ -30,30 +30,31 @@ static CHBeaconStore *__instance = nil;
 
 - (id)init  {
 	if ((self = [super init])) {
-        
-        NSString *beaconsPath = [[NSBundle mainBundle] pathForResource: @"wayFinderDemo" ofType: @"json"];
-        NSData *data = [NSData dataWithContentsOfFile:beaconsPath];
-        NSError *error = nil;
-        self.beaconsDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-        
         [self parseBeacons];
 	}
     
 	return self;
 }
 
+// Parses JSON into array of WFBeaconMetadata objects
 - (void)parseBeacons {
+    NSString *beaconsPath = [[NSBundle mainBundle] pathForResource: @"wayFinderDemo" ofType: @"json"];
+    NSData *data = [NSData dataWithContentsOfFile:beaconsPath];
+    NSError *error = nil;
+    
     self.beacons = [NSMutableArray new];
+    self.beaconsDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     
     [self.beaconsDict enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        CHBeaconMetadata *beacon = [[CHBeaconMetadata alloc]initWithData:(NSDictionary *)obj];
+        WFBeaconMetadata *beacon = [[WFBeaconMetadata alloc]initWithData:(NSDictionary *)obj];
         beacon.beaconID = idx;
         [self.beacons addObject:beacon];
     }];
 }
 
-- (CHBeaconMetadata *)metadataForBeaconWithName:(NSString *)beaconName {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name LIKE %@",beaconName];
+// Searches the beacon store for a beacon with the same name
+- (WFBeaconMetadata *)metadataForBeaconWithName:(NSString *)beaconName {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name LIKE %@", beaconName];
     NSArray *filteredBeacons = [self.beacons filteredArrayUsingPredicate:predicate];
     if([filteredBeacons count] > 0){
         return filteredBeacons[0];
@@ -62,11 +63,11 @@ static CHBeaconStore *__instance = nil;
     return nil;
 }
 
-- (CHBeaconMetadata *)firstBeacon {
+- (WFBeaconMetadata *)firstBeacon {
     return [self.beacons firstObject];
 }
 
-- (CHBeaconMetadata *)lastBeacon {
+- (WFBeaconMetadata *)lastBeacon {
     return [self.beacons lastObject];
 }
 

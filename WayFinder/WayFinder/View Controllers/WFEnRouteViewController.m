@@ -1,19 +1,19 @@
 //
-//  CHEnRouteViewController.m
+//  WFEnRouteViewController.m
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHEnRouteViewController.h"
-#import "CHAppDelegate.h"
+#import "WFEnRouteViewController.h"
+#import "WFAppDelegate.h"
 
-@interface CHEnRouteViewController ()
+@interface WFEnRouteViewController ()
 
 @end
 
-@implementation CHEnRouteViewController
+@implementation WFEnRouteViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -42,12 +42,12 @@
 }
 
 - (void)loadNextBeaconMetadata {
-    self.destinationBeaconMetadata = [[CHBeaconStore sharedStore]metadataForBeaconWithName:self.currentBeaconMetadata.nextBeaconName];
+    self.destinationBeaconMetadata = [[WFBeaconStore sharedStore]metadataForBeaconWithName:self.currentBeaconMetadata.nextBeaconName];
 }
 
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the next beacon
-    CHBeaconMetadata *nextBeacon = [[CHBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
+    WFBeaconMetadata *nextBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
     
     // Detect if the next beacon is nearby
     if ([nextBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityImmediate] || [nextBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]) {
@@ -62,8 +62,8 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    CHViewController *chViewController = segue.destinationViewController;
-    chViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
+    WFViewController *wfViewController = segue.destinationViewController;
+    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
 }
 
 @end

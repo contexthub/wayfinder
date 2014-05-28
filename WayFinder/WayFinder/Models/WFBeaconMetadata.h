@@ -1,5 +1,5 @@
 //
-//  CHBeaconMetadata.h
+//  WFBeaconMetadata.h
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CHBeaconMetadata : NSObject
+@interface WFBeaconMetadata : NSObject
 //   Different from UUID, this is just an integer to keep track of the number of beacons when created by CHBeaconStore
 @property (nonatomic, readwrite) NSInteger beaconID;
 
@@ -43,7 +43,7 @@
  Determines whether this beacon and another beacon are the same based on UUID, major and minor values
  @param otherBeacon beacon to be compared against
  */
-- (BOOL)isSameBeacon:(CHBeaconMetadata *)otherBeacon;
+- (BOOL)isSameBeacon:(WFBeaconMetadata *)otherBeacon;
 
 /**
  Determines whether a beacon is in the proximity (immediate, near, far) of a user's device based on the notification trigged by a beacon

@@ -1,5 +1,5 @@
 //
-//  CHEnRouteViewController.h
+//  WFEnRouteViewController.h
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CHBeaconMetadata.h"
+#import "WFBeaconMetadata.h"
 
-@interface CHEnRouteViewController : CHViewController
+@interface WFEnRouteViewController : WFViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *navigationDirectionsImageView;

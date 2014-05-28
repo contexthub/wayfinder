@@ -1,5 +1,5 @@
 //
-//  CHPathHelper.h
+//  WFPathHelper.h
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 4/1/14.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CHPathHelper : NSObject
+@interface WFPathHelper : NSObject
 
 @end

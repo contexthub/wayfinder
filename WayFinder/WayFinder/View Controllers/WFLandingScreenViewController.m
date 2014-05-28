@@ -1,21 +1,21 @@
 //
-//  CHLandingScreenViewController.m
+//  WFLandingScreenViewController.m
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHLandingScreenViewController.h"
-#import "CHWelcomeViewController.h"
-#import "CHBeaconStore.h"
-#import "CGGlobals.h"
+#import "WFLandingScreenViewController.h"
+#import "WFWelcomeViewController.h"
+#import "WFBeaconStore.h"
+#import "WFGlobals.h"
 
-@interface CHLandingScreenViewController ()
+@interface WFLandingScreenViewController ()
 
 @end
 
-@implementation CHLandingScreenViewController
+@implementation WFLandingScreenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +34,7 @@
 
 // Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
-    CHBeaconMetadata *anyBeacon = [CHBeaconMetadata beaconFromNotification:notification];
+    WFBeaconMetadata *anyBeacon = [WFBeaconMetadata beaconFromNotification:notification];
         
     // At the landing screen, we only care we can detect the BeaconUUID (meaning we are somewhere near the office)
     if([anyBeacon.uuid isEqualToString:BeaconUdid]) {
@@ -47,11 +47,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showWelcomeScreen"]){
         // Set up the beacon info the welcome screen needs to know about (Beacon1)
-        CHWelcomeViewController *welcomeVC = segue.destinationViewController;
+        WFWelcomeViewController *welcomeVC = segue.destinationViewController;
         
         // Not currently at any specific beacon
         //welcomeVC.currentBeaconMetadata = nil;
-        welcomeVC.destinationBeaconMetadata = [[CHBeaconStore sharedStore] firstBeacon];
+        welcomeVC.destinationBeaconMetadata = [[WFBeaconStore sharedStore] firstBeacon];
     }
 }
 
