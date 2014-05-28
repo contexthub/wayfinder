@@ -40,11 +40,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="dXP-5u-1YO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="dXP-5u-1YO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tour-c1-logo-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="qbo-ge-0sN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tour-c1-logo-large" translatesAutoresizingMaskIntoConstraints="NO" id="qbo-ge-0sN">
                                 <rect key="frame" x="40" y="72" width="258" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -79,7 +79,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="3uE-Vl-mkA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="3uE-Vl-mkA">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -94,7 +94,7 @@
                                     <segue destination="M4X-HY-yfg" kind="push" identifier="showBeacon1" id="Cr2-dC-Zkj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tour-c1-logo-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZq-Ag-dwQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tour-c1-logo-large" translatesAutoresizingMaskIntoConstraints="NO" id="QZq-Ag-dwQ">
                                 <rect key="frame" x="47" y="67" width="258" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -143,7 +143,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Df-Km-Mo4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="9Df-Km-Mo4">
                                 <rect key="frame" x="0.0" y="-5" width="320" height="574"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -172,23 +172,23 @@
                                 <rect key="frame" x="55" y="382" width="218" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-filled.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nyc-LQ-9GU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-filled" translatesAutoresizingMaskIntoConstraints="NO" id="Nyc-LQ-9GU">
                                         <rect key="frame" x="6" y="8" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZAM-wp-MPx">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty" translatesAutoresizingMaskIntoConstraints="NO" id="ZAM-wp-MPx">
                                         <rect key="frame" x="49" y="8" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-3P-7Vy">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-3P-7Vy">
                                         <rect key="frame" x="95" y="8" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="bEk-cK-J8a">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty" translatesAutoresizingMaskIntoConstraints="NO" id="bEk-cK-J8a">
                                         <rect key="frame" x="177" y="8" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-qA-djc">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prize-marker-empty" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-qA-djc">
                                         <rect key="frame" x="136" y="8" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
@@ -225,18 +225,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="8WK-qg-AUf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="8WK-qg-AUf">
                                 <rect key="frame" x="0.0" y="-5" width="320" height="573"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="tour-c1-logo-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="48H-RP-goT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="tour-c1-logo-small" translatesAutoresizingMaskIntoConstraints="NO" id="48H-RP-goT">
                                 <rect key="frame" x="70" y="38" width="166" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE1-ua-Euj">
                                 <rect key="frame" x="25" y="469" width="270" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="next-stop-btn.png">
+                                <state key="normal" image="next-stop-btn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" image="next-stop-btn-selected.png"/>
@@ -244,7 +244,7 @@
                                     <action selector="advanceTour:" destination="M4X-HY-yfg" eventType="touchUpInside" id="qLg-I2-wai"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-OP-fNT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-OP-fNT">
                                 <rect key="frame" x="135" y="90" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -255,7 +255,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is information about where you are." translatesAutoresizingMaskIntoConstraints="NO" id="1zT-yW-dwg">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is information about where you are." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zT-yW-dwg">
                                 <rect key="frame" x="27" y="209" width="270" height="252"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -307,11 +307,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="OSD-dn-d3X">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="OSD-dn-d3X">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="straight-left-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="eRZ-ie-Dp5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="straight-left-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="eRZ-ie-Dp5">
                                 <rect key="frame" x="103" y="40" width="114" height="116"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -339,7 +339,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lobby-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="omm-MB-aLQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lobby-map" translatesAutoresizingMaskIntoConstraints="NO" id="omm-MB-aLQ">
                                 <rect key="frame" x="20" y="254" width="280" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -371,18 +371,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Default.png" width="320" height="480"/>
-        <image name="lobby-map.png" width="280" height="300"/>
-        <image name="location-icon.png" width="50" height="50"/>
+        <image name="Default" width="320" height="480"/>
+        <image name="lobby-map" width="280" height="300"/>
+        <image name="location-icon" width="50" height="50"/>
+        <image name="next-stop-btn" width="270" height="60"/>
         <image name="next-stop-btn-selected.png" width="270" height="60"/>
-        <image name="next-stop-btn.png" width="270" height="60"/>
-        <image name="prize-marker-empty.png" width="28" height="28"/>
-        <image name="prize-marker-filled.png" width="28" height="28"/>
+        <image name="prize-marker-empty" width="28" height="28"/>
+        <image name="prize-marker-filled" width="28" height="28"/>
         <image name="start-tour-btn-selected.png" width="270" height="60"/>
         <image name="start-tour-btn.png" width="270" height="60"/>
-        <image name="straight-left-arrow.png" width="114" height="116"/>
-        <image name="tour-c1-logo-large.png" width="258" height="64"/>
-        <image name="tour-c1-logo-small.png" width="166" height="44"/>
+        <image name="straight-left-arrow" width="114" height="116"/>
+        <image name="tour-c1-logo-large" width="258" height="64"/>
+        <image name="tour-c1-logo-small" width="166" height="44"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -50,7 +50,7 @@
         CHWelcomeViewController *welcomeVC = segue.destinationViewController;
         
         // Not currently at any specific beacon
-        welcomeVC.currentBeaconMetadata = nil;
+        //welcomeVC.currentBeaconMetadata = nil;
         welcomeVC.destinationBeaconMetadata = [[CHBeaconStore sharedStore] firstBeacon];
     }
 }
