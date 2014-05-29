@@ -1,5 +1,5 @@
 //
-//  main.m
+//  WFWelcomeViewController.h
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 3/28/14.
@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "WFAppDelegate.h"
+#import "WFBeaconMetadata.h"
 
-int main(int argc, char * argv[])
-{
-  @autoreleasepool {
-      return UIApplicationMain(argc, argv, nil, NSStringFromClass([WFAppDelegate class]));
-  }
-}
+@interface WFWelcomeViewController : WFViewController
+@end
