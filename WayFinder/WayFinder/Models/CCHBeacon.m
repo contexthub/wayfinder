@@ -1,22 +1,22 @@
 //
-//  CHBeacon.m
+//  CCHBeacon.m
 //  WayFinder
 //
 //  Created by Joefrey Kibuule on 5/28/14.
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CHBeacon.h"
+#import "CCHBeacon.h"
 #import <ContextHub/ContextHub.h>
 
-@implementation CHBeacon
-- (instancetype)initWithData:(NSDictionary *)data {
+@implementation CCHBeacon
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if(self) {
-        self.uuid = data[@"uuid"];
-        self.major = data[@"major"];
-        self.minor = data[@"minor"];
-        self.name = data[@"name"];
+        self.uuid = dictionary[@"uuid"];
+        self.major = dictionary[@"major"];
+        self.minor = dictionary[@"minor"];
+        self.name = dictionary[@"name"];
     }
     
     return self;
@@ -30,13 +30,13 @@
     NSString *minor = [event valueForKeyPath:@"event.data.beacon.minor"];
     
     NSDictionary *data = @{@"uuid":uuid, @"major": major, @"minor": minor};
-    CHBeacon *beacon = [[CHBeacon alloc] initWithData:data];
+    CCHBeacon *beacon = [[CCHBeacon alloc] initWithDictionary:data];
     
     return beacon;
 }
 
 // Tests to see if two beacons are the same based on their UUID, major, and minor identifiers
-- (BOOL)isSameBeacon:(CHBeacon *)otherBeacon {
+- (BOOL)isSameBeacon:(CCHBeacon *)otherBeacon {
     if ([self.uuid isEqualToString:otherBeacon.uuid] && [self.major isEqualToString:otherBeacon.major] && [self.minor isEqualToString:otherBeacon.minor]) {
         return true;
     }
@@ -46,7 +46,7 @@
 
 // Determines if a beacon is in a particular proximity or not based on the notification the beacon triggered
 - (BOOL)isSameBeaconFromNotification:(NSNotification *)notification inProximity:(NSString *)beaconProximity {
-    CHBeacon *notificationBeacon = [CHBeacon beaconFromNotification:notification];
+    CCHBeacon *notificationBeacon = [CCHBeacon beaconFromNotification:notification];
     
     if (![self isSameBeacon:notificationBeacon]) {
         return false;
@@ -83,6 +83,30 @@
 
 - (BOOL)isFarFromBeaconWithEvent:(NSString *)eventName state:(NSString *)state {
     return ([eventName isEqualToString:kBeaconChangedEvent] && [state isEqualToString:kBeaconProximityFar]);
+}
+
+
+#pragma mark - NSCoding
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    self.uuid = [aDecoder decodeObjectForKey:@"uuid"];
+    self.major = [aDecoder decodeObjectForKey:@"major"];
+    self.minor = [aDecoder decodeObjectForKey:@"minor"];
+    self.name = [aDecoder decodeObjectForKey:@"name"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.uuid forKey:@"uuid"];
+    [aCoder encodeObject:self.major forKey:@"major"];
+    [aCoder encodeObject:self.minor forKey:@"minor"];
+    [aCoder encodeObject:self.name forKey:@"name"];
 }
 
 @end

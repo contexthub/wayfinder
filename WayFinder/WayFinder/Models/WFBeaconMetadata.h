@@ -10,8 +10,8 @@
 
 #import "CHBeacon.h"
 
-@interface WFBeaconMetadata : CHBeacon
-//   Different from UUID, this is just an integer to keep track of the number of beacons when created by CHBeaconStore
+@interface WFBeaconMetadata : CCHBeacon
+//   Different from UUID, this is just an integer to keep track of the number of beacons when created by WFBeaconStore
 @property (nonatomic, readwrite) NSInteger beaconID;
 
 @property (nonatomic, strong) NSString *locationDescription;
