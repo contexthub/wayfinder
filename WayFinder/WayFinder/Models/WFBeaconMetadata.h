@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CHBeacon.h"
+#import "CCHBeacon.h"
 
 @interface WFBeaconMetadata : CCHBeacon
 //   Different from UUID, this is just an integer to keep track of the number of beacons when created by WFBeaconStore
