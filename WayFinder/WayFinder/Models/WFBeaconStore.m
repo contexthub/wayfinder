@@ -1,5 +1,5 @@
 //
-//  CHBeaconStore.m
+//  WFBeaconStore.m
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 4/1/14.
@@ -46,7 +46,7 @@ static WFBeaconStore *__instance = nil;
     self.beaconsDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     
     [self.beaconsDict enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        WFBeaconMetadata *beacon = [[WFBeaconMetadata alloc]initWithData:(NSDictionary *)obj];
+        WFBeaconMetadata *beacon = [[WFBeaconMetadata alloc]initWithDictionary:(NSDictionary *)obj];
         beacon.beaconID = idx;
         [self.beacons addObject:beacon];
     }];

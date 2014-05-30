@@ -1,5 +1,5 @@
 //
-//  CHBeaconStore.h
+//  WFBeaconStore.h
 //  WayFinder
 //
 //  Created by Anuradha Ramprakash on 4/1/14.

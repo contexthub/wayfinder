@@ -9,8 +9,8 @@
 #import "WFBeaconMetadata.h"
 
 @implementation WFBeaconMetadata
-- (instancetype)initWithData:(NSDictionary *)data {
-    self = [super initWithData:data];
+- (instancetype)initWithDictionary:(NSDictionary *)data {
+    self = [super initWithDictionary:data];
     if(self) {
         self.beaconID = 0;
         self.locationDescription = data[@"locationDescription"];

@@ -1,5 +1,5 @@
 //
-//  CarbonBlack.h
+//  ContextHub.h
 //  ContextHub
 //
 //  Created by Travis Fischer on 9/18/13.
@@ -28,12 +28,12 @@
 #import "CCHVaultService.h"
 
 /**
- * The primary interface with the ContextHub Black SDK
+ * The primary interface with the ContextHub SDK
  */
 @interface ContextHub : NSObject <CLLocationManagerDelegate>
 
 /**
- * Returns the default instance of CabonBlack
+ * Returns the default instance of ContextHub
  */
 + (ContextHub *)sharedInstance;
 
@@ -44,6 +44,12 @@
  */
 + (void)registerWithAppId:(NSString *)appId;
 
+/**
+ Synchronizes the context rules and context elements with the local event manager.
+ The mehtod gives you a way to load new context information if you are not using background push notifictions.
+ @param completion can be nil, is called when synchronization has completed.
+*/
++ (void)synchronize:(void(^)(BOOL success))completion;
 
 /**
  * The application's ID registered with ContextHub
@@ -66,7 +72,7 @@
 
 /**
  When contextual elements are changed, ContextHub will send background push notifications to the applicaiton letting you know that new content is available.
- This will allow the context events to update and stay in sync with the server.  Otherwise, the user will need to relaunch the app to recieving context changes.
+ This will allow the context events to update and stay in sync with the server.  Otherwise, the user will need to relaunch the app to receiving context changes.
  @param application that is receiving the remote notification.
  @param userInfo that was delivered with the remote notification.
  @param completion a completion block that is executed when the context sync is completed.
