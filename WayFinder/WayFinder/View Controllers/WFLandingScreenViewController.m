@@ -20,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+#if TARGET_IPHONE_SIMULATOR
+    // Pop a notification that this app only works on actual devices
+    [[[UIAlertView alloc] initWithTitle:@"Important!" message:@"This demo will only work using a real iOS device." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+#endif
+    
     // Turn on notifications about beacons
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(handleEvent:)
