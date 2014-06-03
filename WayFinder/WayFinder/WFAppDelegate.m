@@ -19,7 +19,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Initialize ContextHub with our app ID
-    [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
+    [ContextHub registerWithAppId:@"e5fe07d7-3335-4e75-9473-42ded3aece9d"];
     
     // Set default number of times visited
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"timesVisited":@0}];
