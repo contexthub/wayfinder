@@ -28,8 +28,9 @@ static WFBeaconStore *__instance = nil;
     return __instance;
 }
 
-- (id)init  {
-	if ((self = [super init])) {
+- (instancetype)init  {
+    self = [super init];
+	if (self) {
         [self parseBeacons];
 	}
     

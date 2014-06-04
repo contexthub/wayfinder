@@ -32,12 +32,14 @@
     WFBeaconMetadata *firstBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
     
     // Detect the first beacon for the lobby to show the "Start Tour" button
-    if ([firstBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityImmediate] || [firstBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]) {
-        // Stop notifications
-        [[NSNotificationCenter defaultCenter]removeObserver:self];
-        
-        self.startTourPromptLabel.hidden = YES;
-        self.startTourButton.hidden = NO;
+    if (firstBeacon) {
+        if ([firstBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityImmediate] || [firstBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]) {
+            // Stop notifications
+            [[NSNotificationCenter defaultCenter]removeObserver:self];
+            
+            self.startTourPromptLabel.hidden = YES;
+            self.startTourButton.hidden = NO;
+        }
     }
 }
 

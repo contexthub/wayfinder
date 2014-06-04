@@ -50,11 +50,13 @@
     WFBeaconMetadata *nextBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
     
     // Detect if the next beacon is nearby
-    if ([nextBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityImmediate] || [nextBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]) {
-        // Stop notifications
-        [[NSNotificationCenter defaultCenter]removeObserver:self];
-        
-        [self performSegueWithIdentifier:@"showBeacon" sender:nil];
+    if (nextBeacon) {
+        if ([nextBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityImmediate] || [nextBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]) {
+            // Stop notifications
+            [[NSNotificationCenter defaultCenter]removeObserver:self];
+            
+            [self performSegueWithIdentifier:@"showBeacon" sender:nil];
+        }
     }
 }
 
