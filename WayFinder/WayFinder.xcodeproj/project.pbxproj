@@ -71,7 +71,6 @@
 		59FC2BA618E5D10E00887C2A /* WFWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWelcomeViewController.m; sourceTree = "<group>"; };
 		59FC2BAB18E5D3D300887C2A /* WFEnRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFEnRouteViewController.h; sourceTree = "<group>"; };
 		59FC2BAC18E5D3D300887C2A /* WFEnRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFEnRouteViewController.m; sourceTree = "<group>"; };
-		59FC2BB818E5D97800887C2A /* WFGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFGlobals.h; sourceTree = "<group>"; };
 		59FC2BBA18E5DA9900887C2A /* WFBeaconMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBeaconMetadata.h; sourceTree = "<group>"; };
 		59FC2BBB18E5DA9900887C2A /* WFBeaconMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBeaconMetadata.m; sourceTree = "<group>"; };
 		59FC2BBD18E5F2E800887C2A /* WFLandingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLandingScreenViewController.h; sourceTree = "<group>"; };
@@ -161,7 +160,6 @@
 				59FC2B8118E5CEF600887C2A /* Main.storyboard */,
 				59FC2B8718E5CEF600887C2A /* Images.xcassets */,
 				59FC2B7618E5CEF600887C2A /* Supporting Files */,
-				59FC2BB818E5D97800887C2A /* WFGlobals.h */,
 			);
 			path = WayFinder;
 			sourceTree = "<group>";

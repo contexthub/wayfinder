@@ -7,7 +7,6 @@
 //
 
 #import "WFWelcomeViewController.h"
-#import "WFGlobals.h"
 
 @interface WFWelcomeViewController ()
 
