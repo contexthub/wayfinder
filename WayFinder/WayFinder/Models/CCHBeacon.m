@@ -13,10 +13,10 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if(self) {
-        self.uuid = dictionary[@"uuid"];
-        self.major = dictionary[@"major"];
-        self.minor = dictionary[@"minor"];
-        self.name = dictionary[@"name"];
+        _uuid = dictionary[@"uuid"];
+        _major = dictionary[@"major"];
+        _minor = dictionary[@"minor"];
+        _name = dictionary[@"name"];
     }
     
     return self;
@@ -26,6 +26,12 @@
 + (instancetype)beaconFromNotification:(NSNotification *)notification {
     NSDictionary *event = notification.object;
     NSString *uuid = [event valueForKeyPath:@"event.data.beacon.uuid"];
+    
+    // Invalid UUID = invalid beacon
+    if (!uuid || [uuid isEqualToString:@""]) {
+        return nil;
+    }
+    
     NSString *major = [event valueForKeyPath:@"event.data.beacon.major"];
     NSString *minor = [event valueForKeyPath:@"event.data.beacon.minor"];
     
@@ -42,6 +48,34 @@
     }
     
     return false;
+}
+
+// Determines what state a beacon is in (in, out, changed) based on the notification trigged by a beacon
+- (BOOL)isSameBeaconFromNotification:(NSNotification *)notification withEvent:(NSString *)beaconEvent {
+    CCHBeacon *notificationBeacon = [CCHBeacon beaconFromNotification:notification];
+    
+    if (![self isSameBeacon:notificationBeacon]) {
+        return false;
+    }
+    
+    NSDictionary *event = notification.object;
+    NSString *eventName = [event valueForKeyPath:@"event.name"];
+    
+    if ([beaconEvent isEqualToString:kBeaconInEvent]) {
+        if (![eventName isEqualToString:kBeaconInEvent]) {
+            return false;
+        }
+    } else if ([beaconEvent isEqualToString:kBeaconOutEvent]) {
+        if (![eventName isEqualToString:kBeaconOutEvent]) {
+            return false;
+        }
+    } else if ([beaconEvent isEqualToString:kBeaconChangedEvent]){
+        if (![eventName isEqualToString:kBeaconChangedEvent]) {
+            return false;
+        }
+    }
+    
+    return true;
 }
 
 // Determines if a beacon is in a particular proximity or not based on the notification the beacon triggered
@@ -64,7 +98,7 @@
         if (![self isNearBeaconWithEvent:eventName state:state]) {
             return false;
         }
-    } else {
+    } else if ([beaconProximity isEqualToString:kBeaconProximityFar]){
         if (![self isFarFromBeaconWithEvent:eventName state:state]) {
             return false;
         }
@@ -72,6 +106,8 @@
     
     return true;
 }
+
+#pragma mark - Helper methods
 
 - (BOOL)isImmediateToBeaconWithEvent:(NSString *)eventName state:(NSString *)state {
     return ([eventName isEqualToString:kBeaconChangedEvent] && [state isEqualToString:kBeaconProximityImmediate]);
@@ -85,19 +121,21 @@
     return ([eventName isEqualToString:kBeaconChangedEvent] && [state isEqualToString:kBeaconProximityFar]);
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Beacon: %@, UUID: %@, Major #: %@, Minor #: %@", self.name, self.uuid, self.major, self.minor];
+}
+
 
 #pragma mark - NSCoding
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
-    if (!self) {
-        return nil;
+    if (self) {
+        _uuid = [aDecoder decodeObjectForKey:@"uuid"];
+        _major = [aDecoder decodeObjectForKey:@"major"];
+        _minor = [aDecoder decodeObjectForKey:@"minor"];
+        _name = [aDecoder decodeObjectForKey:@"name"];
     }
-    
-    self.uuid = [aDecoder decodeObjectForKey:@"uuid"];
-    self.major = [aDecoder decodeObjectForKey:@"major"];
-    self.minor = [aDecoder decodeObjectForKey:@"minor"];
-    self.name = [aDecoder decodeObjectForKey:@"name"];
     
     return self;
 }

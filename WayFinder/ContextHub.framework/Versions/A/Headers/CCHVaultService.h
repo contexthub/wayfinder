@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCHVaultItem.h"
 
 #define kContextHubVaultErrorDomain @"com.contexthub.vault.error"
 /** 

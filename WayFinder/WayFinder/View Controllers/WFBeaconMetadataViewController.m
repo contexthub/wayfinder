@@ -32,12 +32,14 @@
     WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.name];
     
     // Setup buttons
-    if ([beacon isSameBeacon:[[WFBeaconStore sharedStore] lastBeacon]]) {
-        [self.advanceTourButton setImage:[UIImage imageNamed:@"finish-tour-btn"] forState:UIControlStateNormal];
-        [self.advanceTourButton setImage:[UIImage imageNamed:@"finish-tour-btn-selected"] forState:UIControlStateHighlighted];
-    } else {
-        [self.advanceTourButton setImage:[UIImage imageNamed:@"next-stop-btn"] forState:UIControlStateNormal];
-        [self.advanceTourButton setImage:[UIImage imageNamed:@"next-stop-btn-selected"] forState:UIControlStateHighlighted];
+    if (beacon) {
+        if ([beacon isSameBeacon:[[WFBeaconStore sharedStore] lastBeacon]]) {
+            [self.advanceTourButton setImage:[UIImage imageNamed:@"finish-tour-btn"] forState:UIControlStateNormal];
+            [self.advanceTourButton setImage:[UIImage imageNamed:@"finish-tour-btn-selected"] forState:UIControlStateHighlighted];
+        } else {
+            [self.advanceTourButton setImage:[UIImage imageNamed:@"next-stop-btn"] forState:UIControlStateNormal];
+            [self.advanceTourButton setImage:[UIImage imageNamed:@"next-stop-btn-selected"] forState:UIControlStateHighlighted];
+        }
     }
 }
 

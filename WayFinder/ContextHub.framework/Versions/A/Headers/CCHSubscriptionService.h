@@ -27,39 +27,44 @@ typedef NS_ENUM(NSInteger, CCHSubscriptionErrorCode) {
  */
 @interface CCHSubscriptionService : NSObject
 
+/** 
+ @return The singleton instance of the CCHSubscriptionService.
+ */
++ (instancetype)sharedService;
+
 /**
  Gets all subscriptions for the current device.
  @param completion executed when the request completes.  The block is passed an NSArray of subscriptions.  If an error occurs, the NSError will be passed to the block.
  */
-+ (void)getSubscriptionsWithCompletion:(void(^)(NSArray *subscripitons, NSError *error))completion;
+- (void)getSubscriptionsWithCompletion:(void(^)(NSArray *subscripitons, NSError *error))completion;
 
 /**
  Subscribes the device to beacon change notifications for the specified tags.
  @param tags An NSArray of tags
- @param completion (optional) Is executed when the request complets.  The block is passed a BOOL indicating the success of the reuqest.  If an error occurs, the NSError will be passed to the block.
+ @param completion (optional) Is executed when the request complets.  If an error occurs, the NSError will be passed to the block.
  */
-+ (void)addBeaconSubscriptionForTags:(NSArray *)tags withCompletion:(void(^)(BOOL successful, NSError *error))completion;
+- (void)addBeaconSubscriptionForTags:(NSArray *)tags withCompletion:(void(^)(NSError *error))completion;
 
 /**
  Unsubscribes the device from beacon change notifications for the specified tags.
  @param tags An NSArray of tags
- @param completion (optional) Is executed when the request complets.  The block is passed a BOOL indicating the success of the reuqest.  If an error occurs, the NSError will be passed to the block.
+ @param completion (optional) Is executed when the request complets.  If an error occurs, the NSError will be passed to the block.
  */
-+ (void)removeBeaconSubscriptionForTags:(NSArray *)tags withCompletion:(void(^)(BOOL successful, NSError *error))completion;
+- (void)removeBeaconSubscriptionForTags:(NSArray *)tags withCompletion:(void(^)(NSError *error))completion;
 
 /**
  Subscribes the device to geofence change notifications for the specified tags.
  @param tags An NSArray of tags
- @param completion (optional) Is executed when the request complets.  The block is passed a BOOL indicating the success of the reuqest.  If an error occurs, the NSError will be passed to the block.
+ @param completion (optional) Is executed when the request complets.  If an error occurs, the NSError will be passed to the block.
  */
-+ (void)addGeofenceSubscriptionForTags:(NSArray *)tags withCompletion:(void(^)(BOOL successful, NSError *error))completion;
+- (void)addGeofenceSubscriptionForTags:(NSArray *)tags withCompletion:(void(^)(NSError *error))completion;
 
 /**
  Unubscribes the device from geofence change notifications for the specified tags.
  @param tags An NSArray of tags
- @param completion (optional) Is executed when the request complets.  The block is passed a BOOL indicating the success of the reuqest.  If an error occurs, the NSError will be passed to the block.
+ @param completion (optional) Is executed when the request complets.  If an error occurs, the NSError will be passed to the block.
  */
-+ (void)removeGeofenceSubscriptionForTags:(NSArray *)tags withCompletion:(void(^)(BOOL successful, NSError *error))completion;
+- (void)removeGeofenceSubscriptionForTags:(NSArray *)tags withCompletion:(void(^)(NSError *error))completion;
 
 
 @end

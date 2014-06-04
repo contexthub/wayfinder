@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  The notification service should be used to register devices and to send push notifications with the ContextHub Push service.
@@ -26,14 +27,7 @@
  * @param tags (optional) An array of tags to associate with the token
  * @param completion (optional) returns nil if succeeded otherwise includes an error object.
  */
-- (void)registerDeviceToken:(id)token withAlias:(NSString *)alias andTags:(NSArray *)tags withCompletion:(void(^)(NSError *error))completion;
-
-/**
- * Request the devices registered to receive push notifications
- * @param completion Completion block that takes a list of devices and an error. If the request succeeded, the error object will be nil.
- */
-- (void)requestDevicesForNotificationWithCompletion:(void(^)(NSArray *devices, NSError * error))completion;
-
+- (void)registerDeviceToken:(id)token withAlias:(NSString *)alias tags:(NSArray *)tags andCompletion:(void(^)(NSError *error))completion;
 
 /**
  Send Push Notifications to devices
@@ -48,7 +42,7 @@
  | content-available | pass in a 1 if you want to deliver a push in the background |
  | badge | the number to be displayed on the icon |
 
-  @param devices The device tokens to notify
+  @param devices The device Id's to notify.
   @param userInfo Other data to be sent in the notification
   @param completion Completion block. Not sure what this should take yet.
  */
@@ -65,7 +59,7 @@
  * | key | value|
  * | --- | --- |
  * | alert | the message you want sent |
- * | sound | sound you want played |
+ * | sound | the name of the sound file that you want to be played |
  * | content-available | pass in a 1 if you want to deliver a push in the background |
  * | badge | the number to be displayed on the icon |
  *
@@ -96,6 +90,15 @@
  */
 - (void)sendNotificationToTags:(NSArray *)tags userInfo:(NSDictionary *)userInfo withCompletion:(void (^)(NSError *error))completion;
 
+
+/**
+ When contextual elements are changed, ContextHub will send background push notifications to the application letting you know that new content is available.
+ This will allow the context events to update and stay in sync with the server.  Otherwise, the user will need to relaunch the app to receiving context changes.
+ @param application that is receiving the remote notification.
+ @param userInfo that was delivered with the remote notification.
+ @param completion a completion block that is executed when the context sync is completed.
+ */
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo completion:(void(^)(enum UIBackgroundFetchResult result))completion;
 
 
 @end

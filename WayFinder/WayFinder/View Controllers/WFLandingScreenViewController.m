@@ -9,7 +9,6 @@
 #import "WFLandingScreenViewController.h"
 #import "WFWelcomeViewController.h"
 #import "WFBeaconStore.h"
-#import "WFGlobals.h"
 
 @interface WFLandingScreenViewController ()
 
@@ -40,12 +39,19 @@
 // Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
     WFBeaconMetadata *anyBeacon = [WFBeaconMetadata beaconFromNotification:notification];
-        
-    // At the landing screen, we only care we can detect the BeaconUUID (meaning we are somewhere near the office)
-    if([anyBeacon.uuid isEqualToString:BeaconUdid]) {
-        // Turn off notifications about beacons
-        [[NSNotificationCenter defaultCenter]removeObserver:self];
-        [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
+    
+    // First check and make sure the notification event is from a beacon
+    if (anyBeacon) {
+        // Make sure we have beacons in the store (the ones we are interested in)
+        if ([WFBeaconStore sharedStore].beacons.count > 0) {
+            // At the landing screen, we only care we can detect the BeaconUUID (meaning we are somewhere near the office)
+            if([anyBeacon.uuid isEqualToString:[[WFBeaconStore sharedStore] firstBeacon].uuid]) {
+                // Turn off notifications about beacons
+                [[NSNotificationCenter defaultCenter] removeObserver:self name:CCHContextEventManagerDidPostEvent object:nil];
+                
+                [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
+            }
+        }
     }
 }
 
