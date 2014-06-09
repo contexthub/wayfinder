@@ -10,7 +10,14 @@
 
 @implementation WFBeaconMetadata
 - (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super initWithDictionary:data];
+    // Pull the data out of the dictionary to create a CLBeaconRegion
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:data[@"uuid"]];
+    NSString *major = data[@"major"];
+    NSString *minor = data[@"minor"];
+    NSString *identifier = data[@"name"];
+    self = [super initWithProximityUUID:uuid major:[major integerValue] minor:[minor integerValue] identifier:identifier];
+    
+    // Setup other data
     if(self) {
         _beaconID = 0;
         _locationDescription = data[@"locationDescription"];

@@ -55,7 +55,7 @@ static WFBeaconStore *__instance = nil;
 
 // Searches the beacon store for a beacon with the same name
 - (WFBeaconMetadata *)metadataForBeaconWithName:(NSString *)beaconName {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name LIKE %@", beaconName];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.identifier LIKE %@", beaconName];
     NSArray *filteredBeacons = [self.beacons filteredArrayUsingPredicate:predicate];
     if([filteredBeacons count] > 0){
         return filteredBeacons[0];

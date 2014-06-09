@@ -31,8 +31,6 @@
                                             selector:@selector(handleEvent:)
                                                 name:CCHSensorPipelineDidPostEvent
                                               object:nil];
-    
-    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -49,7 +47,7 @@
         // Make sure we have beacons in the store (the ones we are interested in)
         if ([WFBeaconStore sharedStore].beacons.count > 0) {
             // At the landing screen, we only care we can detect the BeaconUUID (meaning we are somewhere near the office)
-            if([anyBeacon.uuid isEqualToString:[[WFBeaconStore sharedStore] firstBeacon].uuid]) {
+            if([anyBeacon.proximityUUID isEqual:[[WFBeaconStore sharedStore] firstBeacon].proximityUUID]) {
                 // Turn off notifications about beacons
                 [[NSNotificationCenter defaultCenter] removeObserver:self name:CCHSensorPipelineDidPostEvent object:nil];
                 

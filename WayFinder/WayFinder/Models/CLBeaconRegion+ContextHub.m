@@ -1,26 +1,15 @@
 //
-//  CCHBeacon.m
+//  CLBeaconRegion+ContextHub.m
 //  WayFinder
 //
 //  Created by Joefrey Kibuule on 5/28/14.
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import "CCHBeacon.h"
+#import "CLBeaconRegion+ContextHub.h"
 #import <ContextHub/ContextHub.h>
 
-@implementation CCHBeacon
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
-    if(self) {
-        _uuid = dictionary[@"uuid"];
-        _major = dictionary[@"major"];
-        _minor = dictionary[@"minor"];
-        _name = dictionary[@"name"];
-    }
-    
-    return self;
-}
+@implementation CLBeaconRegion (ContextHub)
 
 // Creates a beacon from a notification object's data
 + (instancetype)beaconFromNotification:(NSNotification *)notification {
@@ -35,15 +24,14 @@
     NSString *major = [event valueForKeyPath:@"event.data.beacon.major"];
     NSString *minor = [event valueForKeyPath:@"event.data.beacon.minor"];
     
-    NSDictionary *data = @{@"uuid":uuid, @"major": major, @"minor": minor};
-    CCHBeacon *beacon = [[CCHBeacon alloc] initWithDictionary:data];
+    CLBeaconRegion *beaconRegion =  [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:uuid] major:[major integerValue]  minor:[minor integerValue] identifier:@""];
     
-    return beacon;
+    return beaconRegion;
 }
 
 // Tests to see if two beacons are the same based on their UUID, major, and minor identifiers
-- (BOOL)isSameBeacon:(CCHBeacon *)otherBeacon {
-    if ([self.uuid isEqualToString:otherBeacon.uuid] && [self.major isEqualToString:otherBeacon.major] && [self.minor isEqualToString:otherBeacon.minor]) {
+- (BOOL)isSameBeacon:(CLBeaconRegion *)otherBeacon {
+    if ([self.proximityUUID isEqual:otherBeacon.proximityUUID] && [self.major isEqual:otherBeacon.major] && [self.minor isEqual:otherBeacon.minor]) {
         return true;
     }
     
@@ -52,7 +40,7 @@
 
 // Determines what state a beacon is in (in, out, changed) based on the notification trigged by a beacon
 - (BOOL)isSameBeaconFromNotification:(NSNotification *)notification withEvent:(NSString *)beaconEvent {
-    CCHBeacon *notificationBeacon = [CCHBeacon beaconFromNotification:notification];
+    CLBeaconRegion *notificationBeacon = [CLBeaconRegion beaconFromNotification:notification];
     
     if (![self isSameBeacon:notificationBeacon]) {
         return false;
@@ -80,7 +68,7 @@
 
 // Determines if a beacon is in a particular proximity or not based on the notification the beacon triggered
 - (BOOL)isSameBeaconFromNotification:(NSNotification *)notification inProximity:(NSString *)beaconProximity {
-    CCHBeacon *notificationBeacon = [CCHBeacon beaconFromNotification:notification];
+    CLBeaconRegion *notificationBeacon = [CLBeaconRegion beaconFromNotification:notification];
     
     if (![self isSameBeacon:notificationBeacon]) {
         return false;
@@ -122,29 +110,8 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"Beacon: %@, UUID: %@, Major #: %@, Minor #: %@", self.name, self.uuid, self.major, self.minor];
+    return [NSString stringWithFormat:@"Beacon: %@, UUID: %@, Major #: %@, Minor #: %@", self.identifier, self.proximityUUID, self.major, self.minor];
 }
 
-
-#pragma mark - NSCoding
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    if (self) {
-        _uuid = [aDecoder decodeObjectForKey:@"uuid"];
-        _major = [aDecoder decodeObjectForKey:@"major"];
-        _minor = [aDecoder decodeObjectForKey:@"minor"];
-        _name = [aDecoder decodeObjectForKey:@"name"];
-    }
-    
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:self.uuid forKey:@"uuid"];
-    [aCoder encodeObject:self.major forKey:@"major"];
-    [aCoder encodeObject:self.minor forKey:@"minor"];
-    [aCoder encodeObject:self.name forKey:@"name"];
-}
 
 @end

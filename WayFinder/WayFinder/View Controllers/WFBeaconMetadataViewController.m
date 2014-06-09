@@ -29,7 +29,7 @@
     self.currentBeaconDescriptionLabel.text = self.currentBeaconMetadata.locationDescription;
     self.metadataTextView.text = self.currentBeaconMetadata.locationInformation;
     
-    WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.name];
+    WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.identifier];
     
     // Setup buttons
     if (beacon) {
@@ -56,7 +56,7 @@
 }
 
 - (IBAction)advanceTour:(id)sender {
-    WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.name];
+    WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.identifier];
     
     // Last beacon means its the end of the tour
     if ([beacon isSameBeacon:[[WFBeaconStore sharedStore] lastBeacon]]) {

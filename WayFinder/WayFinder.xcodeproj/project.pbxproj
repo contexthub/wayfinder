@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */; };
 		1F090C8519460C0500FB4F36 /* ContextHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F090C8419460C0500FB4F36 /* ContextHub.framework */; };
-		1F3B59F119363F6B001E30B3 /* CCHBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B59F019363F6B001E30B3 /* CCHBeacon.m */; };
+		1F3B59F119363F6B001E30B3 /* CLBeaconRegion+ContextHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */; };
 		1F8E91A8193F9AD800F69759 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E91A7193F9AD800F69759 /* CoreMotion.framework */; };
 		1FCA795D192E47A5000164A9 /* WFBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */; };
 		1FCA7962192E70DF000164A9 /* wayFinderDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA7961192E70DF000164A9 /* wayFinderDemo.json */; };
@@ -47,8 +47,8 @@
 /* Begin PBXFileReference section */
 		0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1F090C8419460C0500FB4F36 /* ContextHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextHub.framework; sourceTree = "<group>"; };
-		1F3B59EF19363F6B001E30B3 /* CCHBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHBeacon.h; sourceTree = "<group>"; };
-		1F3B59F019363F6B001E30B3 /* CCHBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHBeacon.m; sourceTree = "<group>"; };
+		1F3B59EF19363F6B001E30B3 /* CLBeaconRegion+ContextHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeaconRegion+ContextHub.h"; sourceTree = "<group>"; };
+		1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeaconRegion+ContextHub.m"; sourceTree = "<group>"; };
 		1F8E91A7193F9AD800F69759 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		1FCA795B192E47A5000164A9 /* WFBeaconMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBeaconMetadataViewController.h; sourceTree = "<group>"; };
 		1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBeaconMetadataViewController.m; sourceTree = "<group>"; };
@@ -205,8 +205,8 @@
 				59FC2BBB18E5DA9900887C2A /* WFBeaconMetadata.m */,
 				59FC2C9D18EB38DA00887C2A /* WFBeaconStore.h */,
 				59FC2C9E18EB38DA00887C2A /* WFBeaconStore.m */,
-				1F3B59EF19363F6B001E30B3 /* CCHBeacon.h */,
-				1F3B59F019363F6B001E30B3 /* CCHBeacon.m */,
+				1F3B59EF19363F6B001E30B3 /* CLBeaconRegion+ContextHub.h */,
+				1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 				1FCA795D192E47A5000164A9 /* WFBeaconMetadataViewController.m in Sources */,
 				59FC2BA718E5D10E00887C2A /* WFWelcomeViewController.m in Sources */,
 				59FC2C9C18EB311A00887C2A /* WFPathHelper.m in Sources */,
-				1F3B59F119363F6B001E30B3 /* CCHBeacon.m in Sources */,
+				1F3B59F119363F6B001E30B3 /* CLBeaconRegion+ContextHub.m in Sources */,
 				59FC2B7C18E5CEF600887C2A /* main.m in Sources */,
 				59FC2C9F18EB38DA00887C2A /* WFBeaconStore.m in Sources */,
 				598729C018F32F7500D3A1D4 /* WFViewController.m in Sources */,

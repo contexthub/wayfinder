@@ -29,7 +29,7 @@
 
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the first beacon
-    WFBeaconMetadata *firstBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
+    WFBeaconMetadata *firstBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.identifier];
     
     // Detect the first beacon for the lobby to show the "Start Tour" button
     if (firstBeacon) {

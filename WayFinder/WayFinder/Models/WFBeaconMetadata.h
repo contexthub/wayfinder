@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CCHBeacon.h"
+#import "CLBeaconRegion+ContextHub.h"
 
-@interface WFBeaconMetadata : CCHBeacon
+@interface WFBeaconMetadata : CLBeaconRegion
+
+- (instancetype)initWithDictionary:(NSDictionary *)data;
+
 //   Different from UUID, this is just an integer to keep track of the number of beacons when created by WFBeaconStore
 @property (nonatomic, readwrite) NSInteger beaconID;
 

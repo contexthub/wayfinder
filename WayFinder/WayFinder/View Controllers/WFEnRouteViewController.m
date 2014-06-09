@@ -47,7 +47,7 @@
 
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the next beacon
-    WFBeaconMetadata *nextBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
+    WFBeaconMetadata *nextBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.identifier];
     
     // Detect if the next beacon is nearby
     if (nextBeacon) {

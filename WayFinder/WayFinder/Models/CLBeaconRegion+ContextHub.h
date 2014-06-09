@@ -1,5 +1,5 @@
 //
-//  CCHBeacon.h
+//  CLBeaconRegion+ContextHub.h
 //  WayFinder
 //
 //  Created by Joefrey Kibuule on 5/28/14.
@@ -16,40 +16,21 @@
 #define kBeaconProximityImmediate @"immediate_state"
 
 /**
- The CCHBeacon is an object that should be used to get beacon information from a notification sent from the CCHContextEventManager
+ The ContextHub category extensions to CLBeaconRegion allow for easy retrieval and comparison of beacons generated from CCHSensorPipeline events
  */
-@interface CCHBeacon : NSObject <NSCoding>
-
-@property (nonatomic, strong) NSString *uuid;
-@property (nonatomic, strong) NSString *major;
-@property (nonatomic, strong) NSString *minor;
-@property (nonatomic, strong) NSString *name;
-
+@interface CLBeaconRegion (ContextHub)
 
 /**
- Designated initializer
- Create a CCHBeacon object from NSDictionary object that contains uuid, major, minor, and name keys
- * | key   | value |
- * | ----- | ----- |
- * | uuid  | UUID of the beacon |
- * | major | major value of the beacon |
- * | minor | minor value of the beacon |
- * | name  | name of the beacon |
- @param dictionary information to be used to create a CCHBeacon object
- */
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
-/**
- Create a CCHBeacon object from a NSNotification object made when ContextHub detects a new beacon
+ Create a CLBeaconRegion object from a NSNotification object made when ContextHub detects a new beacon
  @param notification notification object containing information about the beacon which triggered an event
  */
 + (instancetype)beaconFromNotification:(NSNotification *)notification;
 
 /**
- Determines whether this CCHBeacon and another CCHBeacon are the same based on UUID, major and minor values
+ Determines whether this CLBeaconRegion and another CLBeaconRegion are the same based on UUID, major and minor values
  @param otherBeacon beacon to be compared against
  */
-- (BOOL)isSameBeacon:(CCHBeacon *)otherBeacon;
+- (BOOL)isSameBeacon:(CLBeaconRegion *)otherBeacon;
 
 /**
  Determines what state a beacon is in (in, out, changed) based on the notification trigged by a beacon
