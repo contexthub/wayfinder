@@ -19,7 +19,16 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Initialize ContextHub with our app ID
-    [ContextHub registerWithAppId:@"e5fe07d7-3335-4e75-9473-42ded3aece9d"];
+    [ContextHub registerWithAppId:@"4816b346-c944-4482-98e9-3dd1c566abc8"];
+    
+    // Subscribe to "beacondemo" beacon tag
+    [[CCHSubscriptionService sharedService] addBeaconSubscriptionForTags:@[@"beacondemo"] completionHandler:^(NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully subscribed to \"beacondemo\" beacon tag");
+        } else {
+            NSLog(@"Subscription failed");
+        }
+    }];
     
     // Set default number of times visited
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"timesVisited":@0}];

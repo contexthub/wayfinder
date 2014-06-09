@@ -23,7 +23,7 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(handleEvent:)
-                                                name:CCHContextEventManagerDidPostEvent
+                                                name:CCHSensorPipelineDidPostEvent
                                               object:nil];
 }
 

@@ -27,8 +27,10 @@
     // Turn on notifications about beacons
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(handleEvent:)
-                                                name:CCHContextEventManagerDidPostEvent
+                                                name:CCHSensorPipelineDidPostEvent
                                               object:nil];
+    
+    [WFBeaconStore sharedStore];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -47,7 +49,7 @@
             // At the landing screen, we only care we can detect the BeaconUUID (meaning we are somewhere near the office)
             if([anyBeacon.uuid isEqualToString:[[WFBeaconStore sharedStore] firstBeacon].uuid]) {
                 // Turn off notifications about beacons
-                [[NSNotificationCenter defaultCenter] removeObserver:self name:CCHContextEventManagerDidPostEvent object:nil];
+                [[NSNotificationCenter defaultCenter] removeObserver:self name:CCHSensorPipelineDidPostEvent object:nil];
                 
                 [self performSegueWithIdentifier:@"showWelcomeScreen" sender:nil];
             }
