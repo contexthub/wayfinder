@@ -24,13 +24,15 @@
     [[[UIAlertView alloc] initWithTitle:@"Important!" message:@"This demo will only work using a real iOS device." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 #endif
     
+    [WFBeaconStore sharedStore];
+    
     // Turn on notifications about beacons
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(handleEvent:)
                                                 name:CCHSensorPipelineDidPostEvent
                                               object:nil];
     
-    [WFBeaconStore sharedStore];
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

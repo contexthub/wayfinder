@@ -21,14 +21,15 @@
     // Initialize ContextHub with our app ID
     [ContextHub registerWithAppId:@"4816b346-c944-4482-98e9-3dd1c566abc8"];
     
+    [[CCHSensorPipeline sharedPipeline] setDelegate:self];
+    [[CCHSensorPipeline sharedPipeline] setDataSource:self];
+    
     // Subscribe to "beacondemo" beacon tag
-    [[CCHSubscriptionService sharedService] addBeaconSubscriptionForTags:@[@"beacondemo"] completionHandler:^(NSError *error) {
-        if (!error) {
-            NSLog(@"Successfully subscribed to \"beacondemo\" beacon tag");
-        } else {
-            NSLog(@"Subscription failed");
-        }
-    }];
+    if (![[CCHSensorPipeline sharedPipeline] addSubscriptionForTags:@[@"beacondemo"]]) {
+        NSLog(@"Failed to add subscription to \"beacondemo\" tag");
+    } else {
+        NSLog(@"Successfully added subscription");
+    }
     
     // Set default number of times visited
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"timesVisited":@0}];
@@ -64,5 +65,31 @@
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Sensor Pipeline Delegate
+- (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event {
+    return YES;
+}
+
+- (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline willPostEvent:(NSDictionary *)event {
+    NSLog(@"will post event: %@", event);
+}
+
+- (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline didPostEvent:(NSDictionary *)event {
+    NSLog(@"did post event: %@", event);
+}
+
+#pragma mark - Sensor Pipeline Data Source
+
+/*- (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event {
+    //If you'd like to keep events from hitting the server, you can return NO here.
+    //This is a good spot to filter events.
+    NSLog(@"Should post event?");
+    return YES;
+} */
+
+- (NSDictionary*)sensorPipeline:(CCHSensorPipeline *)sensorPipeline payloadForEvent:(NSDictionary *)event {
+    //Add custom data structures to the events, and they will end up on the server.
+    return @{@"Name": @"Kevin"};
+}
 
 @end
