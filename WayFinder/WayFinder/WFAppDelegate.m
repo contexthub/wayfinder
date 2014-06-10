@@ -67,29 +67,25 @@
 
 #pragma mark - Sensor Pipeline Delegate
 - (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event {
+    // If you'd like to keep events from hitting the server, you can return NO here.
+    // This is a good spot to filter events.
+    NSLog(@"Should post event?");
     return YES;
 }
 
 - (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline willPostEvent:(NSDictionary *)event {
-    NSLog(@"will post event: %@", event);
+    NSLog(@"Will post event: %@", event);
 }
 
 - (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline didPostEvent:(NSDictionary *)event {
-    NSLog(@"did post event: %@", event);
+    NSLog(@"Did post event: %@", event);
 }
 
 #pragma mark - Sensor Pipeline Data Source
 
-/*- (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event {
-    //If you'd like to keep events from hitting the server, you can return NO here.
-    //This is a good spot to filter events.
-    NSLog(@"Should post event?");
-    return YES;
-} */
-
 - (NSDictionary*)sensorPipeline:(CCHSensorPipeline *)sensorPipeline payloadForEvent:(NSDictionary *)event {
-    //Add custom data structures to the events, and they will end up on the server.
-    return @{@"Name": @"Kevin"};
+    // Add custom data structures to the events, and they will end up on the server.
+    return @{};
 }
 
 @end
