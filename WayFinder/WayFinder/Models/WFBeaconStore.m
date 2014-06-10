@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSArray *beaconsDict;
 
--(void)parseBeacons;
+-(void)getBeaconsFromFile;
 
 @end
 
