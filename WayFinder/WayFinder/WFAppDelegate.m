@@ -25,10 +25,10 @@
     [[CCHSensorPipeline sharedPipeline] setDataSource:self];
     
     // Subscribe to "beacondemo" beacon tag
-    if (![[CCHSensorPipeline sharedPipeline] addSubscriptionForTags:@[@"beacondemo"]]) {
-        NSLog(@"Failed to add subscription to \"beacondemo\" tag");
-    } else {
+    if ([[CCHSensorPipeline sharedPipeline] addSubscriptionForTags:@[@"beacondemo"]]) {
         NSLog(@"Successfully added subscription");
+    } else {
+        NSLog(@"Failed to add subscription to \"beacondemo\" tag");
     }
     
     // Set default number of times visited
