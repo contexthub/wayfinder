@@ -28,13 +28,79 @@ static WFBeaconStore *__instance = nil;
     return __instance;
 }
 
-- (instancetype)init  {
-    self = [super init];
-	if (self) {
-        [self getBeaconsFromFile];
+- (id)init  {
+	if ((self = [super init])) {
+        [self getBeaconsFromServer];
 	}
     
 	return self;
+}
+
+// Grabs beacon data from the server
+- (void)getBeaconsFromServer {
+    [[CCHBeaconService sharedService] getBeaconsWithTags:@[@"wayfinder"] completionHandler:^(NSArray *beacons, NSError *error) {
+        if (!error)
+        {
+            if (beacons.count > 0) {
+                self.beacons = [NSMutableArray new];
+                
+                [beacons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    CLBeaconRegion *beaconRegion = [CCHBeaconService regionForBeacon:obj];
+                    NSDictionary *beaconDict = @{@"name":obj[@"name"], @"uuid":[beaconRegion.proximityUUID UUIDString], @"major":[beaconRegion.major stringValue], @"minor":[beaconRegion.minor stringValue]};
+                    WFBeaconMetadata *beacon = [[WFBeaconMetadata alloc] initWithDictionary:beaconDict];
+                    beacon.beaconID = idx;
+                    [self.beacons addObject:beacon];
+                }];
+                
+                [self updateBeaconDataFromServer];
+            } else {
+                // No beacons in server
+                //[self getBeaconsFromFile];
+                NSLog(@"No beacons on server");
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"NoBeaconsOnServer" object:nil];
+            }
+        } else {
+            NSLog(@"Error: %@", error);
+        }
+    }];
+}
+
+// Grabs vault data from the server
+- (void)updateBeaconDataFromServer {
+    [[CCHVault sharedService] getItemsInContainer:@"wayfinderdemo" completionHandler:^(NSArray *responses, NSError *error) {
+        if (!error) {
+            if (responses.count > 0) {
+                [responses enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    NSString *beaconName = obj[@"name"];
+                    WFBeaconMetadata *beacon = [self metadataForBeaconWithName:beaconName];
+                    
+                    if (beacon) {
+                        beacon.locationDescription = obj[@"locationDescription"];
+                        beacon.locationInformation = obj[@"locationInformation"];
+                        beacon.nextBeaconName = obj[@"nextBeaconName"];
+                        beacon.nextBeaconDirection = obj[@"nextBeaconDirection"];
+                        beacon.nextBeaconDirectionImageName = obj[@"nextBeaconDirectionImageName"];
+                        beacon.nextBeaconMapImageName = obj[@"nextBeaconMapImageName"];
+                        
+                        // Strip extraneous text to make for a properly formatted array of BOLD words
+                        NSString *boldWords = obj[@"nextBeaconDirectionBoldWords"];
+                        boldWords = [boldWords stringByReplacingOccurrencesOfString:@"[" withString:@""];
+                        boldWords = [boldWords stringByReplacingOccurrencesOfString:@"]" withString:@""];
+                        boldWords = [boldWords stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+                        boldWords = [boldWords stringByReplacingOccurrencesOfString:@" " withString:@""];
+                        beacon.nextBeaconDirectionBoldWords = [boldWords componentsSeparatedByString:@","];
+                    }
+                }];
+                
+                [self sortBeacons];
+            } else {
+                NSLog(@"No vault items in container");
+            }
+        } else {
+            NSLog(@"Error: %@", error);
+        }
+    }];
 }
 
 // Parses JSON into array of WFBeaconMetadata objects
