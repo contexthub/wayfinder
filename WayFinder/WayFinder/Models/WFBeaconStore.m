@@ -38,7 +38,7 @@ static WFBeaconStore *__instance = nil;
 
 // Grabs beacon data from the server
 - (void)getBeaconsFromServer {
-    [[CCHBeaconService sharedService] getBeaconsWithTags:@[@"wayfinder"] completionHandler:^(NSArray *beacons, NSError *error) {
+    [[CCHBeaconService sharedInstance] getBeaconsWithTags:@[@"wayfinder"] completionHandler:^(NSArray *beacons, NSError *error) {
         if (!error)
         {
             if (beacons.count > 0) {
@@ -68,7 +68,7 @@ static WFBeaconStore *__instance = nil;
 
 // Grabs vault data from the server
 - (void)updateBeaconDataFromServer {
-    [[CCHVault sharedService] getItemsInContainer:@"wayfinderdemo" completionHandler:^(NSArray *responses, NSError *error) {
+    [[CCHVault sharedInstance] getItemsInContainer:@"wayfinderdemo" completionHandler:^(NSArray *responses, NSError *error) {
         if (!error) {
             if (responses.count > 0) {
                 [responses enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

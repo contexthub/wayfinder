@@ -18,14 +18,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    // Initialize ContextHub with our app ID
-    [ContextHub registerWithAppId:@"4816b346-c944-4482-98e9-3dd1c566abc8"];
+    // Register for remote notifications
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeNewsstandContentAvailability ];
     
-    [[CCHSensorPipeline sharedPipeline] setDelegate:self];
-    [[CCHSensorPipeline sharedPipeline] setDataSource:self];
+#ifdef DEBUG
+    [[ContextHub sharedInstance] setDebug:TRUE];
+#endif
+    
+    // Initialize ContextHub with our app ID
+    [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
+    
+    [[CCHSensorPipeline sharedInstance] setDelegate:self];
+    [[CCHSensorPipeline sharedInstance] setDataSource:self];
     
     // Subscribe to "beacondemo" beacon tag
-    if ([[CCHSensorPipeline sharedPipeline] addSubscriptionForTags:@[@"beacondemo"]]) {
+    if ([[CCHSensorPipeline sharedInstance] addSubscriptionForTags:@[@"wayfinder"]]) {
         NSLog(@"Successfully added subscription");
     } else {
         NSLog(@"Failed to add subscription to \"beacondemo\" tag");
@@ -86,6 +93,45 @@
 - (NSDictionary*)sensorPipeline:(CCHSensorPipeline *)sensorPipeline payloadForEvent:(NSDictionary *)event {
     // Add custom data structures to the events, and they will end up on the server.
     return @{};
+}
+
+#pragma mark - Push
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"Did fail to register %@", error);
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSLog (@"Did register for push notifications");
+    // saving token in user defaults so that it can be used later to test push
+    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:@"push_token"];
+    NSLog(@"token:%@", deviceToken);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // Set up the alias, tag, and register for push notifications on the server
+        NSString *alias = [ContextHub deviceId];
+        NSArray *tags = @[@"testing"];
+        [[CCHPush sharedInstance] registerDeviceToken:deviceToken alias:alias tags:tags completionHandler:^(NSError *error) {
+            if (!error) {
+                NSLog(@"Successfully registered device with alias %@ and tags %@", alias, tags);
+            }
+            else {
+                NSLog(@"Error: %@", error);
+            }
+        }];
+    });
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"Push Received %@", userInfo);
+    
+    NSString *message = [userInfo valueForKeyPath:@"aps.alert"];
+    
+    // Pop an alert about our message
+    [[[UIAlertView alloc] initWithTitle:@"ContextHub" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    
+    [[CCHPush sharedInstance] application:application didReceiveRemoteNotification:userInfo completionHandler:completionHandler];
 }
 
 @end
