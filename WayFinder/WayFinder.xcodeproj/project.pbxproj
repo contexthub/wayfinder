@@ -269,7 +269,7 @@
 				ORGANIZATIONNAME = ChaiONE;
 				TargetAttributes = {
 					59FC2B6B18E5CEF600887C2A = {
-						DevelopmentTeam = K83DSSAEPP;
+						DevelopmentTeam = G54H62625F;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -426,7 +426,7 @@
 				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WayFinder;
-				PROVISIONING_PROFILE = "E333C380-EA34-499C-ADC1-9F890BA5F633";
+				PROVISIONING_PROFILE = "78FE99C6-B062-4325-BEF5-300F2371F399";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;
@@ -535,7 +535,7 @@
 				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WayFinder;
-				PROVISIONING_PROFILE = "E333C380-EA34-499C-ADC1-9F890BA5F633";
+				PROVISIONING_PROFILE = "78FE99C6-B062-4325-BEF5-300F2371F399";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -556,7 +556,7 @@
 				INFOPLIST_FILE = "WayFinder/WayFinder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WayFinder;
-				PROVISIONING_PROFILE = "E333C380-EA34-499C-ADC1-9F890BA5F633";
+				PROVISIONING_PROFILE = "78FE99C6-B062-4325-BEF5-300F2371F399";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

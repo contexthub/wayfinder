@@ -21,22 +21,8 @@
     // Register for remote notifications
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeNewsstandContentAvailability ];
     
-#ifdef DEBUG
-    [[ContextHub sharedInstance] setDebug:TRUE];
-#endif
-    
-    // Initialize ContextHub with our app ID
-    [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
-    
-    [[CCHSensorPipeline sharedInstance] setDelegate:self];
-    [[CCHSensorPipeline sharedInstance] setDataSource:self];
-    
-    // Subscribe to "beacondemo" beacon tag
-    if ([[CCHSensorPipeline sharedInstance] addSubscriptionForTags:@[@"wayfinder"]]) {
-        NSLog(@"Successfully added subscription");
-    } else {
-        NSLog(@"Failed to add subscription to \"beacondemo\" tag");
-    }
+    // Setup ContextHub App ID, CCHSensorPipeline datasource and delegate, and tags
+    [self setupContextHub];
     
     // Set default number of times visited
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"timesVisited":@0}];
@@ -70,6 +56,26 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - ContextHub
+- (void)setupContextHub {
+#ifdef DEBUG
+    [[ContextHub sharedInstance] setDebug:TRUE];
+#endif
+    
+    // Initialize ContextHub with our app ID
+    [ContextHub registerWithAppId:@"cc8445cf-2f4b-425e-a48b-ed710e6eebfc"];
+    
+    [[CCHSensorPipeline sharedInstance] setDelegate:self];
+    [[CCHSensorPipeline sharedInstance] setDataSource:self];
+    
+    // Subscribe to "beacondemo" beacon tag
+    if ([[CCHSensorPipeline sharedInstance] addSubscriptionForTags:@[@"wayfinder"]]) {
+        NSLog(@"Successfully added subscription");
+    } else {
+        NSLog(@"Failed to add subscription to \"beacondemo\" tag");
+    }
 }
 
 #pragma mark - Sensor Pipeline Delegate
@@ -107,19 +113,17 @@
     [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:@"push_token"];
     NSLog(@"token:%@", deviceToken);
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // Set up the alias, tag, and register for push notifications on the server
-        NSString *alias = [ContextHub deviceId];
-        NSArray *tags = @[@"testing"];
-        [[CCHPush sharedInstance] registerDeviceToken:deviceToken alias:alias tags:tags completionHandler:^(NSError *error) {
-            if (!error) {
-                NSLog(@"Successfully registered device with alias %@ and tags %@", alias, tags);
-            }
-            else {
-                NSLog(@"Error: %@", error);
-            }
-        }];
-    });
+    // Set up the alias, tag, and register for push notifications on the server
+    NSString *alias = [ContextHub deviceId];
+    NSArray *tags = @[@"testing"];
+    [[CCHPush sharedInstance] registerDeviceToken:deviceToken alias:alias tags:tags completionHandler:^(NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully registered device with alias %@ and tags %@", alias, tags);
+        }
+        else {
+            NSLog(@"Error: %@", error);
+        }
+    }];
     
 }
 
