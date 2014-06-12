@@ -12,7 +12,6 @@
 		1F3B59F119363F6B001E30B3 /* CLBeaconRegion+ContextHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */; };
 		1F8E91A8193F9AD800F69759 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E91A7193F9AD800F69759 /* CoreMotion.framework */; };
 		1FCA795D192E47A5000164A9 /* WFBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */; };
-		1FCA7962192E70DF000164A9 /* wayFinderDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA7961192E70DF000164A9 /* wayFinderDemo.json */; };
 		598729C018F32F7500D3A1D4 /* WFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* WFViewController.m */; };
 		59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
 		59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */; };
@@ -52,7 +51,6 @@
 		1F8E91A7193F9AD800F69759 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		1FCA795B192E47A5000164A9 /* WFBeaconMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBeaconMetadataViewController.h; sourceTree = "<group>"; };
 		1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBeaconMetadataViewController.m; sourceTree = "<group>"; };
-		1FCA7961192E70DF000164A9 /* wayFinderDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wayFinderDemo.json; path = Data/wayFinderDemo.json; sourceTree = "<group>"; };
 		598729BE18F32F7500D3A1D4 /* WFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFViewController.h; sourceTree = "<group>"; };
 		598729BF18F32F7500D3A1D4 /* WFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFViewController.m; sourceTree = "<group>"; };
 		59FC2B6C18E5CEF600887C2A /* WayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,14 +110,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FCA795E192E63BB000164A9 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				1FCA7961192E70DF000164A9 /* wayFinderDemo.json */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
 		59FC2B6318E5CEF600887C2A = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +145,6 @@
 		59FC2B7518E5CEF600887C2A /* WayFinder */ = {
 			isa = PBXGroup;
 			children = (
-				1FCA795E192E63BB000164A9 /* Data */,
 				59FC2C9818EB30DD00887C2A /* Helpers */,
 				59FC2BB918E5DA7C00887C2A /* Models */,
 				59FC2BA418E5CFC800887C2A /* View Controllers */,
@@ -306,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				59FC2B8818E5CEF600887C2A /* Images.xcassets in Resources */,
-				1FCA7962192E70DF000164A9 /* wayFinderDemo.json in Resources */,
 				59FC2B7A18E5CEF600887C2A /* InfoPlist.strings in Resources */,
 				59FC2B8318E5CEF600887C2A /* Main.storyboard in Resources */,
 			);

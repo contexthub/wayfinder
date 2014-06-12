@@ -27,16 +27,28 @@
     [WFBeaconStore sharedStore];
     
     // Turn on notifications about beacons
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(handleEvent:)
-                                                name:CCHSensorPipelineDidPostEvent
-                                              object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     // Definitely make sure we get no more notifications about beacons (next screen will turn them on when needed)
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:CCHSensorPipelineDidPostEvent object:nil];
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showWelcomeScreen"]){
+        // Set up the beacon info the welcome screen needs to know about (Beacon1)
+        WFWelcomeViewController *welcomeVC = segue.destinationViewController;
+        
+        // Not currently at any specific beacon
+        //welcomeVC.currentBeaconMetadata = nil;
+        welcomeVC.destinationBeaconMetadata = [[WFBeaconStore sharedStore] firstBeacon];
+    }
+}
+
+#pragma mark - Events
 
 // Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
@@ -57,15 +69,5 @@
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"showWelcomeScreen"]){
-        // Set up the beacon info the welcome screen needs to know about (Beacon1)
-        WFWelcomeViewController *welcomeVC = segue.destinationViewController;
-        
-        // Not currently at any specific beacon
-        //welcomeVC.currentBeaconMetadata = nil;
-        welcomeVC.destinationBeaconMetadata = [[WFBeaconStore sharedStore] firstBeacon];
-    }
-}
 
 @end

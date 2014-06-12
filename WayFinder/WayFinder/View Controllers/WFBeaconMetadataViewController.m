@@ -24,6 +24,8 @@
     [self layoutMetadata];
 }
 
+#pragma mark - Layout
+
 - (void)layoutMetadata {
     // Setup text
     self.currentBeaconDescriptionLabel.text = self.currentBeaconMetadata.locationDescription;
@@ -43,6 +45,8 @@
     }
 }
 
+#pragma mark - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showEnRoute"]){
         WFEnRouteViewController *destinationVC = segue.destinationViewController;
@@ -54,6 +58,8 @@
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:(int)timesVisited] forKey:@"timesVisited"];
     }
 }
+
+#pragma mark - Actions
 
 - (IBAction)advanceTour:(id)sender {
     WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.identifier];

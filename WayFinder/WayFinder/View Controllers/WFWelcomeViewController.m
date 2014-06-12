@@ -21,11 +21,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(handleEvent:)
-                                                name:CCHSensorPipelineDidPostEvent
-                                              object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    WFViewController *wfViewController = segue.destinationViewController;
+    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
+}
+
+#pragma mark - Events
 
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the first beacon
@@ -41,12 +47,6 @@
             self.startTourButton.hidden = NO;
         }
     }
-}
-
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    WFViewController *wfViewController = segue.destinationViewController;
-    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
 }
 
 @end

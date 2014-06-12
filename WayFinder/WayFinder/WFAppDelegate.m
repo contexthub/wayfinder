@@ -30,7 +30,6 @@
     return YES;
 }
 
-
 - (void)applicationWillResignActive:(UIApplication *)application
 {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -59,6 +58,7 @@
 }
 
 #pragma mark - ContextHub
+
 - (void)setupContextHub {
 #ifdef DEBUG
     [[ContextHub sharedInstance] setDebug:TRUE];
@@ -74,24 +74,32 @@
     if ([[CCHSensorPipeline sharedInstance] addSubscriptionForTags:@[@"wayfinder"]]) {
         NSLog(@"Successfully added subscription");
     } else {
-        NSLog(@"Failed to add subscription to \"beacondemo\" tag");
+        NSLog(@"Failed to add subscription to \"wayfinder\" tag");
     }
+    
+    [[CCHSubscriptionService sharedInstance] addBeaconSubscriptionForTags:@[@"wayfinder"] completionHandler:^(NSError *error) {
+        if (!error) {
+            NSLog(@"Succesfully added beacon CRUD subscription");
+        } else {
+            NSLog(@"Failed to add beacon CRUD subscription");
+        }
+    }];
 }
 
 #pragma mark - Sensor Pipeline Delegate
 - (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event {
     // If you'd like to keep events from hitting the server, you can return NO here.
     // This is a good spot to filter events.
-    NSLog(@"Should post event?");
+    //NSLog(@"Should post event?");
     return YES;
 }
 
 - (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline willPostEvent:(NSDictionary *)event {
-    NSLog(@"Will post event: %@", event);
+    //NSLog(@"Will post event: %@", event);
 }
 
 - (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline didPostEvent:(NSDictionary *)event {
-    NSLog(@"Did post event: %@", event);
+    //NSLog(@"Did post event: %@", event);
 }
 
 #pragma mark - Sensor Pipeline Data Source
@@ -101,7 +109,7 @@
     return @{};
 }
 
-#pragma mark - Push
+#pragma mark - Remote Notifications
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"Did fail to register %@", error);
@@ -111,7 +119,6 @@
     NSLog (@"Did register for push notifications");
     // saving token in user defaults so that it can be used later to test push
     [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:@"push_token"];
-    NSLog(@"token:%@", deviceToken);
     
     // Set up the alias, tag, and register for push notifications on the server
     NSString *alias = [ContextHub deviceId];
@@ -128,14 +135,24 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    NSLog(@"Push Received %@", userInfo);
     
-    NSString *message = [userInfo valueForKeyPath:@"aps.alert"];
-    
-    // Pop an alert about our message
-    [[[UIAlertView alloc] initWithTitle:@"ContextHub" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
-    
-    [[CCHPush sharedInstance] application:application didReceiveRemoteNotification:userInfo completionHandler:completionHandler];
+    // Make sure it's not a ContextHub push
+    if ([userInfo valueForKey:@"context_hub"]) {
+        NSLog(@"Background ContextHub push received");
+        [[CCHPush sharedInstance] application:application didReceiveRemoteNotification:userInfo completionHandler:completionHandler];
+        
+        
+    } else {
+        NSLog(@"Push Received %@", userInfo);
+        
+        NSString *message = [userInfo valueForKeyPath:@"aps.alert"];
+        
+        // Pop an alert about our message
+        [[[UIAlertView alloc] initWithTitle:@"ContextHub" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        
+        // This push resulted in no new background data
+        completionHandler(UIBackgroundFetchResultNoData);
+    }
 }
 
 @end

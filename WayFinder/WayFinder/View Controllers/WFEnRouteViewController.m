@@ -21,11 +21,10 @@
     [self layoutMetadata];
     [self loadNextBeaconMetadata];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(handleEvent:)
-                                                name:CCHSensorPipelineDidPostEvent
-                                              object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
 }
+
+#pragma mark - Layout
 
 - (void)layoutMetadata {
     NSMutableAttributedString *directionsText;
@@ -45,6 +44,15 @@
     self.destinationBeaconMetadata = [[WFBeaconStore sharedStore]metadataForBeaconWithName:self.currentBeaconMetadata.nextBeaconName];
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    WFViewController *wfViewController = segue.destinationViewController;
+    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
+}
+
+#pragma mark - Events
+
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the next beacon
     WFBeaconMetadata *nextBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.identifier];
@@ -58,14 +66,6 @@
             [self performSegueWithIdentifier:@"showBeacon" sender:nil];
         }
     }
-}
-
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    WFViewController *wfViewController = segue.destinationViewController;
-    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
 }
 
 @end
