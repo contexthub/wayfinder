@@ -19,13 +19,13 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Initialize ContextHub with our app ID
-    [ContextHub registerWithAppId:@"4816b346-c944-4482-98e9-3dd1c566abc8"];
+    [ContextHub registerWithAppId:@"e5fe07d7-3335-4e75-9473-42ded3aece9d"];
     
-    [[CCHSensorPipeline sharedPipeline] setDelegate:self];
-    [[CCHSensorPipeline sharedPipeline] setDataSource:self];
+    [[CCHSensorPipeline sharedInstance] setDelegate:self];
+    [[CCHSensorPipeline sharedInstance] setDataSource:self];
     
     // Subscribe to "beacondemo" beacon tag
-    if ([[CCHSensorPipeline sharedPipeline] addSubscriptionForTags:@[@"beacondemo"]]) {
+    if ([[CCHSensorPipeline sharedInstance] addSubscriptionForTags:@[@"beacondemo"]]) {
         NSLog(@"Successfully added subscription");
     } else {
         NSLog(@"Failed to add subscription to \"beacondemo\" tag");
