@@ -33,7 +33,7 @@
     // Turn on notifications about beacons
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
     
-    // Respond to a notification that there are no beacons on the server (likely because of incorrect tags)
+    // Respond to a notification that there are no beacons on the server (likely because of incorrect tags) - sent by WFBeaconStore in getBeaconsFromServer
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noBeaconsOnServer:) name:WFNoBeaconsOnServerNotification object:nil];
 }
 

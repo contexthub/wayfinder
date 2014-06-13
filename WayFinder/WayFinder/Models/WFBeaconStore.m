@@ -51,9 +51,9 @@ static WFBeaconStore *__instance = nil;
                 [self updateBeaconDataFromServer];
             } else {
                 // No beacons in server
-                //[self getBeaconsFromFile];
                 NSLog(@"No beacons on server");
                 
+                // Send a notifications that there are no beacons on the server
                 [[NSNotificationCenter defaultCenter] postNotificationName:WFNoBeaconsOnServerNotification object:nil];
             }
         } else {
