@@ -18,7 +18,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Initialize ContextHub with our app ID
-    [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
+    [ContextHub registerWithAppId:@"YOUR-APP-ID"];
     
     [[CCHSensorPipeline sharedInstance] setDelegate:self];
     [[CCHSensorPipeline sharedInstance] setDataSource:self];
