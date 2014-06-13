@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #define kBeaconInEvent @"beacon_in"
 #define kBeaconOutEvent @"beacon_out"
 #define kBeaconChangedEvent @"beacon_changed"
@@ -45,6 +43,5 @@
  @param beaconProximity proximity which the beacon is in (kBeaconProximityImmediate, kBeaconProximityNear, kBeaconProximityFar)
  */
 - (BOOL)isSameBeaconFromNotification:(NSNotification *)notification inProximity:(NSString *)beaconProximity;
-
 
 @end

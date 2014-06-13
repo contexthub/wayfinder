@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+#define kContextHubSensorPipelineErrorDomain @"com.contexthub.sensorpipeline.error"
+/**
+ ContextHub Pipeline error codes.
+ */
+typedef NS_ENUM(NSInteger, CCHSensorPipelineErrorCode) {
+    /**
+     Synchronization timeout error code.
+     */
+    CCHSensorPipelineTimeOutError = 0
+};
+
 @class CCHSensorPipeline;
 /**
  Implement the delegate if you want to take action before or after an event is sent to ContextHub.  You can also decide keep an event from firing.
@@ -55,14 +66,9 @@
 
 @optional
 
-/**
- Returns a serializable dictionary that will get added to context event payload property.
- @param event The event that was triggered.
- */
-- (NSDictionary *)payloadForEvent:(NSDictionary *)event;
 
 /**
- Returns a serializable dictionary that will get added to context event payload property.
+ Return a serializable dictionary that will get added to context event payload property.
  @param event The event that was triggered.
  @param sensorPipeline The CCHSensorPipeline.
  */
@@ -154,7 +160,7 @@ extern NSString * const CCHUntaggedElements;
 @property (nonatomic, strong) id<CCHSensorPipelineDelegate> delegate;
 
 /**
- The CCHSenesorPipelineDataSource
+ The CCHSensorPipelineDataSource
  */
 @property (nonatomic, strong) id<CCHSensorPipelineDataSource> dataSource;
 

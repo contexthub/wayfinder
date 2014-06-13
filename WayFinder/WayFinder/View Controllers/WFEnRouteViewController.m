@@ -7,20 +7,23 @@
 //
 
 #import "WFEnRouteViewController.h"
-#import "WFAppDelegate.h"
+
+#import "WFBeaconMetadata.h"
+#import "WFBeaconStore.h"
 
 @interface WFEnRouteViewController ()
-
 @end
+
 
 @implementation WFEnRouteViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-
+    [super viewDidLoad];
+    
     [self layoutMetadata];
     [self loadNextBeaconMetadata];
     
+    // Turn on notifications about beacons
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
 }
 
@@ -51,8 +54,10 @@
     wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
 }
 
+
 #pragma mark - Events
 
+// Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the next beacon
     WFBeaconMetadata *nextBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.identifier];

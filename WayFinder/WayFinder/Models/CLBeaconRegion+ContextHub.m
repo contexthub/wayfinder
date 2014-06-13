@@ -113,5 +113,4 @@
     return [NSString stringWithFormat:@"Beacon: %@, UUID: %@, Major #: %@, Minor #: %@", self.identifier, self.proximityUUID, self.major, self.minor];
 }
 
-
 @end

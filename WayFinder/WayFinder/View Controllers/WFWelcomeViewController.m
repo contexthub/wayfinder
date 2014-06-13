@@ -8,6 +8,9 @@
 
 #import "WFWelcomeViewController.h"
 
+#import "WFBeaconStore.h"
+#import "WFBeaconMetadata.h"
+
 @interface WFWelcomeViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *startTourPromptLabel;
@@ -15,12 +18,13 @@
 
 @end
 
-@implementation WFWelcomeViewController
 
+@implementation WFWelcomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Turn on notifications about beacons
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
 }
 
@@ -33,6 +37,7 @@
 
 #pragma mark - Events
 
+// Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the first beacon
     WFBeaconMetadata *firstBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.identifier];

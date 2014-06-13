@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class WFBeaconMetadata;
 
 @interface WFViewController : UIViewController
 
@@ -16,4 +16,5 @@
 - (NSUInteger)supportedInterfaceOrientations;
 - (BOOL)shouldAutorotate;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
+
 @end

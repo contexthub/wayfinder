@@ -7,7 +7,11 @@
 //
 
 #import "WFBeaconMetadataViewController.h"
+
 #import "WFEnRouteViewController.h"
+
+#import "WFBeaconMetadata.h"
+#import "WFBeaconStore.h"
 
 @interface WFBeaconMetadataViewController ()
 
@@ -16,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *advanceTourButton;
 
 @end
+
 
 @implementation WFBeaconMetadataViewController
 

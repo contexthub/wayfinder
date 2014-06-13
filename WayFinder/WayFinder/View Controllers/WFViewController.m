@@ -9,22 +9,22 @@
 #import "WFViewController.h"
 
 @interface WFViewController ()
-
 @end
+
 
 @implementation WFViewController
 
 - (NSUInteger)supportedInterfaceOrientations {
-  return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (BOOL)shouldAutorotate {
-  return NO;
+    return NO;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
-  // Return YES for supported orientations
-  return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
 @end

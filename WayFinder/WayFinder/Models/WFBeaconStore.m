@@ -8,15 +8,17 @@
 
 #import "WFBeaconStore.h"
 
+#import "WFBeaconMetadata.h"
+
 @interface WFBeaconStore()
 
 @property (nonatomic, strong) NSArray *beaconsDict;
 
--(void)getBeaconsFromFile;
-
 @end
 
+
 @implementation WFBeaconStore
+
 static WFBeaconStore *__instance = nil;
 
 + (instancetype)sharedStore {
@@ -26,14 +28,6 @@ static WFBeaconStore *__instance = nil;
     });
     
     return __instance;
-}
-
-- (id)init  {
-	if ((self = [super init])) {
-        [self getBeaconsFromServer];
-	}
-    
-	return self;
 }
 
 // Grabs beacon data from the server
@@ -55,10 +49,10 @@ static WFBeaconStore *__instance = nil;
                 [self updateBeaconDataFromServer];
             } else {
                 // No beacons in server
-                //[self getBeaconsFromFile];
                 NSLog(@"No beacons on server");
                 
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"NoBeaconsOnServer" object:nil];
+                // Send a notifications that there are no beacons on the server
+                [[NSNotificationCenter defaultCenter] postNotificationName:WFNoBeaconsOnServerNotification object:nil];
             }
         } else {
             NSLog(@"Error: %@", error);
@@ -154,4 +148,5 @@ static WFBeaconStore *__instance = nil;
         beacon.beaconID = idx;
     }];
 }
+
 @end
