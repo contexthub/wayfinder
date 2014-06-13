@@ -7,12 +7,15 @@
 //
 
 #import "WFLandingScreenViewController.h"
+
 #import "WFWelcomeViewController.h"
+
+#import "WFBeaconMetadata.h"
 #import "WFBeaconStore.h"
 
 @interface WFLandingScreenViewController ()
-
 @end
+
 
 @implementation WFLandingScreenViewController
 
@@ -24,19 +27,35 @@
     [[[UIAlertView alloc] initWithTitle:@"Important!" message:@"This demo will only work using a real iOS device." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 #endif
     
-    [WFBeaconStore sharedStore];
+    // Load beacons from the server
+    [[WFBeaconStore sharedStore] getBeaconsFromFile];
     
     // Turn on notifications about beacons
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(handleEvent:)
-                                                name:CCHSensorPipelineDidPostEvent
-                                              object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
+    
+    // Respond to a notification that there are no beacons on the server (likely because of incorrect tags) - sent by WFBeaconStore in getBeaconsFromServer
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noBeaconsOnServer:) name:WFNoBeaconsOnServerNotification object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     // Definitely make sure we get no more notifications about beacons (next screen will turn them on when needed)
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showWelcomeScreen"]){
+        // Set up the beacon info the welcome screen needs to know about (Beacon1)
+        WFWelcomeViewController *welcomeVC = segue.destinationViewController;
+        
+        // Not currently at any specific beacon
+        //welcomeVC.currentBeaconMetadata = nil;
+        welcomeVC.destinationBeaconMetadata = [[WFBeaconStore sharedStore] firstBeacon];
+    }
+}
+
+#pragma mark - Events
 
 // Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
@@ -57,15 +76,12 @@
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"showWelcomeScreen"]){
-        // Set up the beacon info the welcome screen needs to know about (Beacon1)
-        WFWelcomeViewController *welcomeVC = segue.destinationViewController;
-        
-        // Not currently at any specific beacon
-        //welcomeVC.currentBeaconMetadata = nil;
-        welcomeVC.destinationBeaconMetadata = [[WFBeaconStore sharedStore] firstBeacon];
-    }
+// Responds to notification that there are no beacons on the server
+- (void)noBeaconsOnServer:(NSNotification *)notification {
+    [[[UIAlertView alloc] initWithTitle:@"Wayfinder" message:@"There are no beacons with the tag \"wayfinder\" on the server" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    
+    // Remove observer on NSNotificationCenter
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"NoBeaconsOnServer" object:nil];
 }
 
 @end

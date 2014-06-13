@@ -8,6 +8,8 @@
 
 #import "WFBeaconStore.h"
 
+#import "WFBeaconMetadata.h"
+
 @interface WFBeaconStore()
 
 @property (nonatomic, strong) NSArray *beaconsDict;
@@ -16,7 +18,9 @@
 
 @end
 
+
 @implementation WFBeaconStore
+
 static WFBeaconStore *__instance = nil;
 
 + (instancetype)sharedStore {
@@ -26,15 +30,6 @@ static WFBeaconStore *__instance = nil;
     });
     
     return __instance;
-}
-
-- (instancetype)init  {
-    self = [super init];
-	if (self) {
-        [self getBeaconsFromFile];
-	}
-    
-	return self;
 }
 
 // Parses JSON into array of WFBeaconMetadata objects
@@ -88,4 +83,5 @@ static WFBeaconStore *__instance = nil;
         beacon.beaconID = idx;
     }];
 }
+
 @end
