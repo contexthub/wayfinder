@@ -6,14 +6,17 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "WFBeaconMetadata.h"
+@class WFBeaconMetadata;
 
 @interface WFBeaconStore : NSObject
 
 @property (nonatomic, strong) NSMutableArray *beacons;
 
 + (instancetype)sharedStore;
+
+- (void)getBeaconsFromServer;
+- (void)getBeaconsFromFile;
+
 - (WFBeaconMetadata *)metadataForBeaconWithName:(NSString *)beaconName;
 - (WFBeaconMetadata *)firstBeacon;
 - (WFBeaconMetadata *)lastBeacon;

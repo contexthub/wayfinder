@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "CLBeaconRegion+ContextHub.h"
 
 @interface WFBeaconMetadata : CLBeaconRegion

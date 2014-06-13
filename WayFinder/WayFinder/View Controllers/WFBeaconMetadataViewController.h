@@ -9,5 +9,4 @@
 #import "WFViewController.h"
 
 @interface WFBeaconMetadataViewController : WFViewController
-
 @end

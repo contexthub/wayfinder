@@ -8,6 +8,9 @@
 
 #import "WFWelcomeViewController.h"
 
+#import "WFBeaconStore.h"
+#import "WFBeaconMetadata.h"
+
 @interface WFWelcomeViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *startTourPromptLabel;
@@ -15,18 +18,26 @@
 
 @end
 
-@implementation WFWelcomeViewController
 
+@implementation WFWelcomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(handleEvent:)
-                                                name:CCHSensorPipelineDidPostEvent
-                                              object:nil];
+    // Turn on notifications about beacons
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    WFViewController *wfViewController = segue.destinationViewController;
+    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
+}
+
+#pragma mark - Events
+
+// Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the first beacon
     WFBeaconMetadata *firstBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.identifier];
@@ -41,12 +52,6 @@
             self.startTourButton.hidden = NO;
         }
     }
-}
-
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    WFViewController *wfViewController = segue.destinationViewController;
-    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
 }
 
 @end

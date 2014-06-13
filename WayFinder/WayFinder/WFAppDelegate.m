@@ -7,10 +7,9 @@
 //
 
 #import "WFAppDelegate.h"
-#import <ContextHub/ContextHub.h>
-
 
 @implementation WFAppDelegate
+
 + (WFAppDelegate *) sharedAppDelegate {
   return (WFAppDelegate *)[[UIApplication sharedApplication] delegate];
 }
@@ -19,16 +18,16 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Initialize ContextHub with our app ID
-    [ContextHub registerWithAppId:@"4816b346-c944-4482-98e9-3dd1c566abc8"];
+    [ContextHub registerWithAppId:@"76a53f7d-3984-4e5c-9fdc-be3941d2cd69"];
     
-    [[CCHSensorPipeline sharedPipeline] setDelegate:self];
-    [[CCHSensorPipeline sharedPipeline] setDataSource:self];
+    [[CCHSensorPipeline sharedInstance] setDelegate:self];
+    [[CCHSensorPipeline sharedInstance] setDataSource:self];
     
-    // Subscribe to "beacondemo" beacon tag
-    if ([[CCHSensorPipeline sharedPipeline] addSubscriptionForTags:@[@"beacondemo"]]) {
+    // Subscribe to "wayfinder" beacon tag
+    if ([[CCHSensorPipeline sharedInstance] addSubscriptionForTags:@[@"wayfinder"]]) {
         NSLog(@"Successfully added subscription");
     } else {
-        NSLog(@"Failed to add subscription to \"beacondemo\" tag");
+        NSLog(@"Failed to add subscription to \"wayfinder\" tag");
     }
     
     // Set default number of times visited
@@ -36,7 +35,6 @@
     
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -66,6 +64,7 @@
 }
 
 #pragma mark - Sensor Pipeline Delegate
+
 - (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event {
     // If you'd like to keep events from hitting the server, you can return NO here.
     // This is a good spot to filter events.

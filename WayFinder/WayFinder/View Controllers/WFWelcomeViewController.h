@@ -6,9 +6,7 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "WFAppDelegate.h"
-#import "WFBeaconMetadata.h"
+#import "WFViewController.h"
 
 @interface WFWelcomeViewController : WFViewController
 @end
