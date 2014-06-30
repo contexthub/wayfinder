@@ -19,7 +19,6 @@
 //Applicatoin Services
 #import "CCHPush.h"
 #import "CCHVault.h"
-#import "CCHVaultAttachment.h"
 
 
 /**

@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
+#import <ContextHub/ContextHub.h>
+
 @interface WFAppDelegate : UIResponder <UIApplicationDelegate, CCHSensorPipelineDataSource, CCHSensorPipelineDelegate>
 + (WFAppDelegate *) sharedAppDelegate;
 

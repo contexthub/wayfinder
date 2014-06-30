@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */; };
-		1F090C8519460C0500FB4F36 /* ContextHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F090C8419460C0500FB4F36 /* ContextHub.framework */; };
+		1F2B767F19622258002392A3 /* ContextHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2B767E19622258002392A3 /* ContextHub.framework */; };
 		1F3B59F119363F6B001E30B3 /* CLBeaconRegion+ContextHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */; };
 		1F8E91A8193F9AD800F69759 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E91A7193F9AD800F69759 /* CoreMotion.framework */; };
 		1FCA795D192E47A5000164A9 /* WFBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */; };
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		1F090C8419460C0500FB4F36 /* ContextHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextHub.framework; sourceTree = "<group>"; };
+		1F2B767E19622258002392A3 /* ContextHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextHub.framework; sourceTree = "<group>"; };
 		1F3B59EF19363F6B001E30B3 /* CLBeaconRegion+ContextHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeaconRegion+ContextHub.h"; sourceTree = "<group>"; };
 		1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeaconRegion+ContextHub.m"; sourceTree = "<group>"; };
 		1F8E91A7193F9AD800F69759 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -95,7 +95,7 @@
 			files = (
 				1F8E91A8193F9AD800F69759 /* CoreMotion.framework in Frameworks */,
 				0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */,
-				1F090C8519460C0500FB4F36 /* ContextHub.framework in Frameworks */,
+				1F2B767F19622258002392A3 /* ContextHub.framework in Frameworks */,
 				59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */,
 				59FC2B7418E5CEF600887C2A /* UIKit.framework in Frameworks */,
 				59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */,
@@ -144,7 +144,7 @@
 		59FC2B6E18E5CEF600887C2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F090C8419460C0500FB4F36 /* ContextHub.framework */,
+				1F2B767E19622258002392A3 /* ContextHub.framework */,
 				1F8E91A7193F9AD800F69759 /* CoreMotion.framework */,
 				0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */,
 				59FC2B6F18E5CEF600887C2A /* Foundation.framework */,
