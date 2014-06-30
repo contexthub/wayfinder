@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */; };
-		1F090C8519460C0500FB4F36 /* ContextHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F090C8419460C0500FB4F36 /* ContextHub.framework */; };
 		1F3B59F119363F6B001E30B3 /* CLBeaconRegion+ContextHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */; };
 		1F8E91A8193F9AD800F69759 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E91A7193F9AD800F69759 /* CoreMotion.framework */; };
 		1FCA795D192E47A5000164A9 /* WFBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */; };
 		1FCA7962192E70DF000164A9 /* wayFinderDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA7961192E70DF000164A9 /* wayFinderDemo.json */; };
 		1FD9965E194BADCC00DFD8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FC2B8118E5CEF600887C2A /* Main.storyboard */; };
 		1FD99661194BAE8400DFD8BD /* WFConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD99660194BAE8400DFD8BD /* WFConstants.m */; };
+		1FE83C5119622361000B814A /* ContextHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE83C5019622361000B814A /* ContextHub.framework */; };
 		598729C018F32F7500D3A1D4 /* WFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598729BF18F32F7500D3A1D4 /* WFViewController.m */; };
 		59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B6F18E5CEF600887C2A /* Foundation.framework */; };
 		59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC2B7118E5CEF600887C2A /* CoreGraphics.framework */; };
@@ -47,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		1F090C8419460C0500FB4F36 /* ContextHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextHub.framework; sourceTree = "<group>"; };
 		1F3B59EF19363F6B001E30B3 /* CLBeaconRegion+ContextHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeaconRegion+ContextHub.h"; sourceTree = "<group>"; };
 		1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeaconRegion+ContextHub.m"; sourceTree = "<group>"; };
 		1F8E91A7193F9AD800F69759 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -56,6 +55,7 @@
 		1FCA7961192E70DF000164A9 /* wayFinderDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wayFinderDemo.json; path = Data/wayFinderDemo.json; sourceTree = "<group>"; };
 		1FD9965F194BAE8400DFD8BD /* WFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFConstants.h; sourceTree = "<group>"; };
 		1FD99660194BAE8400DFD8BD /* WFConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFConstants.m; sourceTree = "<group>"; };
+		1FE83C5019622361000B814A /* ContextHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextHub.framework; sourceTree = "<group>"; };
 		598729BE18F32F7500D3A1D4 /* WFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFViewController.h; sourceTree = "<group>"; };
 		598729BF18F32F7500D3A1D4 /* WFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFViewController.m; sourceTree = "<group>"; };
 		59FC2B6C18E5CEF600887C2A /* WayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			files = (
 				1F8E91A8193F9AD800F69759 /* CoreMotion.framework in Frameworks */,
 				0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */,
-				1F090C8519460C0500FB4F36 /* ContextHub.framework in Frameworks */,
+				1FE83C5119622361000B814A /* ContextHub.framework in Frameworks */,
 				59FC2B7218E5CEF600887C2A /* CoreGraphics.framework in Frameworks */,
 				59FC2B7418E5CEF600887C2A /* UIKit.framework in Frameworks */,
 				59FC2B7018E5CEF600887C2A /* Foundation.framework in Frameworks */,
@@ -144,7 +144,7 @@
 		59FC2B6E18E5CEF600887C2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F090C8419460C0500FB4F36 /* ContextHub.framework */,
+				1FE83C5019622361000B814A /* ContextHub.framework */,
 				1F8E91A7193F9AD800F69759 /* CoreMotion.framework */,
 				0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */,
 				59FC2B6F18E5CEF600887C2A /* Foundation.framework */,

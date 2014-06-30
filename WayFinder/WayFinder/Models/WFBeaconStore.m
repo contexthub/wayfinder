@@ -7,6 +7,7 @@
 //
 
 #import "WFBeaconStore.h"
+#import <ContextHub/ContextHub.h>
 
 #import "WFBeaconMetadata.h"
 
@@ -64,28 +65,22 @@ static WFBeaconStore *__instance = nil;
 
 // Grabs vault data from the server
 - (void)updateBeaconDataFromServer {
-    [[CCHVault sharedInstance] getItemsInContainer:@"wayfinderdemo" completionHandler:^(NSArray *responses, NSError *error) {
+    [[CCHVault sharedInstance] getItemsWithTags:@[@"wayfinderdemo"] completionHandler:^(NSArray *responses, NSError *error) {
         if (!error) {
             if (responses.count > 0) {
                 [responses enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                    NSString *beaconName = obj[@"name"];
+                    NSString *beaconName = [obj valueForKeyPath:@"data.name"];
                     WFBeaconMetadata *beacon = [self metadataForBeaconWithName:beaconName];
                     
                     if (beacon) {
-                        beacon.locationDescription = obj[@"locationDescription"];
-                        beacon.locationInformation = obj[@"locationInformation"];
-                        beacon.nextBeaconName = obj[@"nextBeaconName"];
-                        beacon.nextBeaconDirection = obj[@"nextBeaconDirection"];
-                        beacon.nextBeaconDirectionImageName = obj[@"nextBeaconDirectionImageName"];
-                        beacon.nextBeaconMapImageName = obj[@"nextBeaconMapImageName"];
+                        beacon.locationDescription = [obj valueForKeyPath:@"data.locationDescription"];
+                        beacon.locationInformation = [obj valueForKeyPath:@"data.locationInformation"];
                         
-                        // Strip extraneous text to make for a properly formatted array of BOLD words
-                        NSString *boldWords = obj[@"nextBeaconDirectionBoldWords"];
-                        boldWords = [boldWords stringByReplacingOccurrencesOfString:@"[" withString:@""];
-                        boldWords = [boldWords stringByReplacingOccurrencesOfString:@"]" withString:@""];
-                        boldWords = [boldWords stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-                        boldWords = [boldWords stringByReplacingOccurrencesOfString:@" " withString:@""];
-                        beacon.nextBeaconDirectionBoldWords = [boldWords componentsSeparatedByString:@","];
+                        beacon.nextBeaconName = [obj valueForKeyPath:@"data.nextBeaconName"];
+                        beacon.nextBeaconDirection = [obj valueForKeyPath:@"data.nextBeaconDirection"];
+                        beacon.nextBeaconDirectionImageName = [obj valueForKeyPath:@"data.nextBeaconDirectionImageName"];
+                        beacon.nextBeaconMapImageName = [obj valueForKeyPath:@"data.nextBeaconMapImageName"];
+                        beacon.nextBeaconDirectionBoldWords = [obj valueForKeyPath:@"data.nextBeaconDirectionBoldWords"];
                     }
                 }];
                 
