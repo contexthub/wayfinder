@@ -7,6 +7,7 @@
 //
 
 #import "WFAppDelegate.h"
+#import <ContextHub/ContextHub.h>
 
 @implementation WFAppDelegate
 

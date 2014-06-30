@@ -7,6 +7,7 @@
 //
 
 #import "WFBeaconStore.h"
+#import <ContextHub/ContextHub.h>
 
 #import "WFBeaconMetadata.h"
 
@@ -62,7 +63,7 @@ static WFBeaconStore *__instance = nil;
 
 // Grabs vault data from the server
 - (void)updateBeaconDataFromServer {
-    [[CCHVault sharedInstance] getItemsInContainer:@"wayfinderdemo" completionHandler:^(NSArray *responses, NSError *error) {
+    [[CCHVault sharedInstance] getItemsWithTags:@[@"wayfinderdemo"] completionHandler:^(NSArray *responses, NSError *error) {
         if (!error) {
             if (responses.count > 0) {
                 [responses enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
