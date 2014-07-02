@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WFViewController.h"
 
 @interface WFLandingScreenViewController : WFViewController
-
 @end

@@ -7,25 +7,27 @@
 //
 
 #import "WFEnRouteViewController.h"
-#import "WFAppDelegate.h"
+
+#import "WFBeaconMetadata.h"
+#import "WFBeaconStore.h"
 
 @interface WFEnRouteViewController ()
-
 @end
+
 
 @implementation WFEnRouteViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-
+    [super viewDidLoad];
+    
     [self layoutMetadata];
     [self loadNextBeaconMetadata];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(handleEvent:)
-                                                name:CCHContextEventManagerDidPostEvent
-                                              object:nil];
+    // Turn on notifications about beacons
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];
 }
+
+#pragma mark - Layout
 
 - (void)layoutMetadata {
     NSMutableAttributedString *directionsText;
@@ -45,9 +47,20 @@
     self.destinationBeaconMetadata = [[WFBeaconStore sharedStore]metadataForBeaconWithName:self.currentBeaconMetadata.nextBeaconName];
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    WFViewController *wfViewController = segue.destinationViewController;
+    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
+}
+
+
+#pragma mark - Events
+
+// Handles events from beacons
 - (void)handleEvent:(NSNotification *)notification {
     // Grab the next beacon
-    WFBeaconMetadata *nextBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.name];
+    WFBeaconMetadata *nextBeacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.destinationBeaconMetadata.identifier];
     
     // Detect if the next beacon is nearby
     if (nextBeacon) {
@@ -58,14 +71,6 @@
             [self performSegueWithIdentifier:@"showBeacon" sender:nil];
         }
     }
-}
-
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    WFViewController *wfViewController = segue.destinationViewController;
-    wfViewController.currentBeaconMetadata = self.destinationBeaconMetadata;
 }
 
 @end

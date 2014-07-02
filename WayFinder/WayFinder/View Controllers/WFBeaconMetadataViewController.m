@@ -7,7 +7,11 @@
 //
 
 #import "WFBeaconMetadataViewController.h"
+
 #import "WFEnRouteViewController.h"
+
+#import "WFBeaconMetadata.h"
+#import "WFBeaconStore.h"
 
 @interface WFBeaconMetadataViewController ()
 
@@ -17,6 +21,7 @@
 
 @end
 
+
 @implementation WFBeaconMetadataViewController
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -24,12 +29,14 @@
     [self layoutMetadata];
 }
 
+#pragma mark - Layout
+
 - (void)layoutMetadata {
     // Setup text
     self.currentBeaconDescriptionLabel.text = self.currentBeaconMetadata.locationDescription;
     self.metadataTextView.text = self.currentBeaconMetadata.locationInformation;
     
-    WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.name];
+    WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.identifier];
     
     // Setup buttons
     if (beacon) {
@@ -43,6 +50,8 @@
     }
 }
 
+#pragma mark - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showEnRoute"]){
         WFEnRouteViewController *destinationVC = segue.destinationViewController;
@@ -55,8 +64,10 @@
     }
 }
 
+#pragma mark - Actions
+
 - (IBAction)advanceTour:(id)sender {
-    WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.name];
+    WFBeaconMetadata *beacon = [[WFBeaconStore sharedStore] metadataForBeaconWithName:self.currentBeaconMetadata.identifier];
     
     // Last beacon means its the end of the tour
     if ([beacon isSameBeacon:[[WFBeaconStore sharedStore] lastBeacon]]) {

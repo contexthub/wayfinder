@@ -8,23 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-// Public Headers
-#import "CCHContextService.h"
+//Event Services
+#import "CCHSensorPipeline.h"
 
+//Element Services
 #import "CCHBeaconService.h"
-
 #import "CCHGeofenceService.h"
-
 #import "CCHSubscriptionService.h"
 
-#import "CCHNotificationService.h"
+//Applicatoin Services
+#import "CCHPush.h"
+#import "CCHVault.h"
 
-#import "CCHVaultService.h"
-#import "CCHVaultResource.h"
-
-
-
-#define CCHGlobalTag @""
 
 /**
  * The primary interface with the ContextHub SDK

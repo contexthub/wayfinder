@@ -6,21 +6,22 @@
 //  Copyright (c) 2014 ChaiONE. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "CLBeaconRegion+ContextHub.h"
 
-#import "CCHBeacon.h"
+@interface WFBeaconMetadata : CLBeaconRegion
 
-@interface WFBeaconMetadata : CCHBeacon
+- (instancetype)initWithDictionary:(NSDictionary *)data;
+
 //   Different from UUID, this is just an integer to keep track of the number of beacons when created by WFBeaconStore
 @property (nonatomic, readwrite) NSInteger beaconID;
 
-@property (nonatomic, strong) NSString *locationDescription;
-@property (nonatomic, strong) NSString *locationInformation;
+@property (nonatomic, copy) NSString *locationDescription;
+@property (nonatomic, copy) NSString *locationInformation;
 
-@property (nonatomic, strong) NSString *nextBeaconName;
-@property (nonatomic, strong) NSString *nextBeaconDirection;
+@property (nonatomic, copy) NSString *nextBeaconName;
+@property (nonatomic, copy) NSString *nextBeaconDirection;
 @property (nonatomic, strong) NSArray *nextBeaconDirectionBoldWords;
-@property (nonatomic, strong) NSString *nextBeaconDirectionImageName;
-@property (nonatomic, strong) NSString *nextBeaconMapImageName;
+@property (nonatomic, copy) NSString *nextBeaconDirectionImageName;
+@property (nonatomic, copy) NSString *nextBeaconMapImageName;
 
 @end

@@ -8,15 +8,19 @@
 
 #import "WFBeaconStore.h"
 
+#import "WFBeaconMetadata.h"
+
 @interface WFBeaconStore()
 
 @property (nonatomic, strong) NSArray *beaconsDict;
 
--(void)parseBeacons;
+-(void)getBeaconsFromFile;
 
 @end
 
+
 @implementation WFBeaconStore
+
 static WFBeaconStore *__instance = nil;
 
 + (instancetype)sharedStore {
@@ -28,17 +32,8 @@ static WFBeaconStore *__instance = nil;
     return __instance;
 }
 
-- (instancetype)init  {
-    self = [super init];
-	if (self) {
-        [self parseBeacons];
-	}
-    
-	return self;
-}
-
 // Parses JSON into array of WFBeaconMetadata objects
-- (void)parseBeacons {
+- (void)getBeaconsFromFile {
     NSString *beaconsPath = [[NSBundle mainBundle] pathForResource: @"wayFinderDemo" ofType: @"json"];
     NSData *data = [NSData dataWithContentsOfFile:beaconsPath];
     NSError *error = nil;
@@ -55,7 +50,7 @@ static WFBeaconStore *__instance = nil;
 
 // Searches the beacon store for a beacon with the same name
 - (WFBeaconMetadata *)metadataForBeaconWithName:(NSString *)beaconName {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name LIKE %@", beaconName];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.identifier LIKE %@", beaconName];
     NSArray *filteredBeacons = [self.beacons filteredArrayUsingPredicate:predicate];
     if([filteredBeacons count] > 0){
         return filteredBeacons[0];
@@ -75,4 +70,18 @@ static WFBeaconStore *__instance = nil;
 - (NSUInteger)numBeacons {
     return [self.beacons count];
 }
+
+- (void)sortBeacons {
+    NSSortDescriptor *sortByMajorValue = [[NSSortDescriptor alloc] initWithKey:@"major" ascending:YES];
+    NSSortDescriptor *sortByMinorValue = [[NSSortDescriptor alloc] initWithKey:@"minor" ascending:YES];
+    
+    [self.beacons sortUsingDescriptors:@[sortByMajorValue, sortByMinorValue]];
+    
+    // Reassign indicies
+    [self.beacons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        WFBeaconMetadata *beacon = obj;
+        beacon.beaconID = idx;
+    }];
+}
+
 @end

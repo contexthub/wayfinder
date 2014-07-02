@@ -14,6 +14,5 @@
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
   #import <ContextHub/ContextHub.h>
-  #import "WFBeaconStore.h"
-  #import "WFViewController.h"
+  #import "WFConstants.h"
 #endif

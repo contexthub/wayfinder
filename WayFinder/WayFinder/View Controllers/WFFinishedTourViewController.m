@@ -9,15 +9,14 @@
 #import "WFFinishedTourViewController.h"
 
 @interface WFFinishedTourViewController ()
-
 @end
+
 
 @implementation WFFinishedTourViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.numTimesVisited = 0;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
