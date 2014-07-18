@@ -35,10 +35,13 @@
     self.navigationDirectionsImageView.image = [UIImage imageNamed:self.currentBeaconMetadata.nextBeaconDirectionImageName];
     
     // Setup such that specific words are in bold
-    directionsText = [[NSMutableAttributedString alloc] initWithString:self.currentBeaconMetadata.nextBeaconDirection];
+    NSDictionary *regularAttributes = @{NSFontAttributeName:[UIFont fontWithName:@"Avenir-Roman" size:18.0], NSForegroundColorAttributeName:[UIColor whiteColor]};
+    directionsText = [[NSMutableAttributedString alloc] initWithString:self.currentBeaconMetadata.nextBeaconDirection attributes:regularAttributes];
     
     for (NSString *boldWord in self.currentBeaconMetadata.nextBeaconDirectionBoldWords) {
-        [directionsText addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"AvenirNext-Bold" size:20.0] range:NSRangeFromString(boldWord)];
+        NSRange boldRange = [self.currentBeaconMetadata.nextBeaconDirection rangeOfString:boldWord];
+        
+        [directionsText addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Avenir-Heavy" size:18.0] range:boldRange];
     }
     [self.directionsLabel setAttributedText:directionsText];
 }
