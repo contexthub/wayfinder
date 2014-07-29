@@ -15,8 +15,9 @@
 #import "CCHBeaconService.h"
 #import "CCHGeofenceService.h"
 #import "CCHSubscriptionService.h"
+#import "CCHLog.h"
 
-//Applicatoin Services
+//Application Services
 #import "CCHPush.h"
 #import "CCHVault.h"
 

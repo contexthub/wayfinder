@@ -23,11 +23,11 @@
     [[CCHSensorPipeline sharedInstance] setDelegate:self];
     [[CCHSensorPipeline sharedInstance] setDataSource:self];
     
-    // Subscribe to "wayfinder" beacon tag
-    if ([[CCHSensorPipeline sharedInstance] addSubscriptionForTags:@[@"wayfinder"]]) {
-        NSLog(@"Successfully added subscription");
+    // Subscribe to "beacon-wayfinder" beacon tag
+    if ([[CCHSensorPipeline sharedInstance] addSubscriptionForTags:@[WFBeaconTag]]) {
+        NSLog(@"Successfully added subscription to \"%@\" tag", WFBeaconTag);
     } else {
-        NSLog(@"Failed to add subscription to \"wayfinder\" tag");
+        NSLog(@"Failed to add subscription to \"%@\" tag", WFBeaconTag);
     }
     
     // Set default number of times visited

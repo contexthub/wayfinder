@@ -34,7 +34,7 @@ static WFBeaconStore *__instance = nil;
 
 // Parses JSON into array of WFBeaconMetadata objects
 - (void)getBeaconsFromFile {
-    NSString *beaconsPath = [[NSBundle mainBundle] pathForResource: @"wayFinderDemo" ofType: @"json"];
+    NSString *beaconsPath = [[NSBundle mainBundle] pathForResource: @"wayFinderBeaconVaultData" ofType: @"json"];
     NSData *data = [NSData dataWithContentsOfFile:beaconsPath];
     NSError *error = nil;
     
