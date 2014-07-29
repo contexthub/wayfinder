@@ -58,7 +58,7 @@ Launch and run the app from your device (beacons do not work with the iOS Simula
 
 WayFinder is an example of an app that demonstrates the use of iBeacons through the power of ContextHub and a few lines of code. To add this functionality to your own projects, follow the instructions below:
 
-1. First make sure you sign up with [ContextHub](www.contexthub.com) and get an app id. This app id binds all activities with ContextHub to your specific project.
+1. First make sure you sign up with [ContextHub](http://www.contexthub.com) and get an app id. This app id binds all activities with ContextHub to your specific project.
 2. Then create a beacon with the following UUID `B9407F30-F5F8-466E-AFF9-25556B57FE6D`. Leave the major and minor values blank so you receive messages from any beacon with that UUID.
 2. In your `application:didFinishLaunchingWithOptions:` method, register your app ID `[ContextHub registerWithAppId:@"YOUR-APP-ID-HERE"]`
 3. Define a method called `- (void)handleEvent:(NSNotification *)notification` which will process these notifications.
