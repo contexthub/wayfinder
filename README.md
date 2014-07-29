@@ -1,5 +1,5 @@
 WayFinder
-=============
+--
 
 A fun app to help you explore the ease of use of ContextHub and the power of iBeacons!
 
@@ -62,11 +62,11 @@ WayFinder is an example of an app that demonstrates the use of iBeacons through 
 2. Then create a beacon with the following UUID `B9407F30-F5F8-466E-AFF9-25556B57FE6D`. Leave the major and minor values blank so you receive messages from any beacon with that UUID.
 2. In your `application:didFinishLaunchingWithOptions:` method, register your app ID `[ContextHub registerWithAppId:@"YOUR-APP-ID-HERE"]`
 3. Define a method called `- (void)handleEvent:(NSNotification *)notification` which will process these notifications.
-4. Within that `handleEvent:` method, create a CCHBeacon object for the beacon you are interested in `CCHBeacon *interestingBeacon = CCHBeacon initWithData:@{@"name": @"LOBBY", @"uuid": "B9407F30-F5F8-466E-AFF9-25556B57FE6D", @"major":@"100", @"minor":1 }` then compare it with the notification that was just sent and the proximity you are looking for `BOOL beaconIsNear = [interestingBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]`.
-5. Start listening for notifications by calling `[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHContextEventManagerDidPostEvent object:nil];`
+4. Within that `handleEvent:` method, create a CLBeaconRegion object for the beacon you are interested in `CLBeaconRegion *interestingBeacon = [CLBeaconRegion initWithProximityUUID:B9407F30-F5F8-466E-AFF9-25556B57FE6D major:100 minor:1 identifier:@"LOBBY"];` then compare it with the notification that was just sent and the proximity you are looking for `BOOL beaconIsNear = [interestingBeacon isSameBeaconFromNotification:notification inProximity:kBeaconProximityNear]`.
+5. Start listening for notifications by calling `[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleEvent:) name:CCHSensorPipelineDidPostEvent object:nil];`
 6. Then remember to call `[[NSNotificationCenter defaultCenter]removeObserver:self];` to stop receiving notifications about beacon events.
 
-That's it!
+That's it! Hopefully this demo showed you that integrating beacons into your existing application can be quick and painless and will allow you to add contextual awareness to your applications!
 
 
 Note: Current demo is set up such that a response from a beacon is triggered when it is either "near" the device (6-12 inches) or "immediate" to the device (within 6 inches). It takes approximately 2-3 seconds to notice a transition in state from far (within 50 ft) to other states (near or immediate).

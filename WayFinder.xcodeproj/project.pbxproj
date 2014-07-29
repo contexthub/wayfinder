@@ -10,6 +10,9 @@
 		0A89B20C192FB6BA001901F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89B20B192FB6BA001901F7 /* MobileCoreServices.framework */; };
 		1F2B767F19622258002392A3 /* ContextHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2B767E19622258002392A3 /* ContextHub.framework */; };
 		1F3B59F119363F6B001E30B3 /* CLBeaconRegion+ContextHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */; };
+		1F76B30219884371009C506E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1F76B30119884371009C506E /* README.md */; };
+		1F76B30419884374009C506E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1F76B30319884374009C506E /* release_notes.md */; };
+		1F76B30619884378009C506E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1F76B30519884378009C506E /* LICENSE */; };
 		1F8E91A8193F9AD800F69759 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E91A7193F9AD800F69759 /* CoreMotion.framework */; };
 		1FCA795D192E47A5000164A9 /* WFBeaconMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */; };
 		1FCA7962192E70DF000164A9 /* wayFinderBeaconVaultData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA7961192E70DF000164A9 /* wayFinderBeaconVaultData.json */; };
@@ -49,6 +52,9 @@
 		1F2B767E19622258002392A3 /* ContextHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextHub.framework; sourceTree = "<group>"; };
 		1F3B59EF19363F6B001E30B3 /* CLBeaconRegion+ContextHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeaconRegion+ContextHub.h"; sourceTree = "<group>"; };
 		1F3B59F019363F6B001E30B3 /* CLBeaconRegion+ContextHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeaconRegion+ContextHub.m"; sourceTree = "<group>"; };
+		1F76B30119884371009C506E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1F76B30319884374009C506E /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		1F76B30519884378009C506E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1F8E91A7193F9AD800F69759 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		1FCA795B192E47A5000164A9 /* WFBeaconMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBeaconMetadataViewController.h; sourceTree = "<group>"; };
 		1FCA795C192E47A5000164A9 /* WFBeaconMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBeaconMetadataViewController.m; sourceTree = "<group>"; };
@@ -124,6 +130,9 @@
 		59FC2B6318E5CEF600887C2A = {
 			isa = PBXGroup;
 			children = (
+				1F76B30119884371009C506E /* README.md */,
+				1F76B30319884374009C506E /* release_notes.md */,
+				1F76B30519884378009C506E /* LICENSE */,
 				59FC2B7518E5CEF600887C2A /* WayFinder */,
 				59FC2B6E18E5CEF600887C2A /* Frameworks */,
 				59FC2B6D18E5CEF600887C2A /* Products */,
@@ -308,8 +317,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F76B30419884374009C506E /* release_notes.md in Resources */,
 				59FC2B8818E5CEF600887C2A /* Images.xcassets in Resources */,
 				1FCA7962192E70DF000164A9 /* wayFinderBeaconVaultData.json in Resources */,
+				1F76B30619884378009C506E /* LICENSE in Resources */,
+				1F76B30219884371009C506E /* README.md in Resources */,
 				59FC2B7A18E5CEF600887C2A /* InfoPlist.strings in Resources */,
 				59FC2B8318E5CEF600887C2A /* Main.storyboard in Resources */,
 			);
